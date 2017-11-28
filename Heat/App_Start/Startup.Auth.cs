@@ -58,11 +58,11 @@ namespace Heat
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "271978610325-3sde8n87dviraibok3cd2rq2jj4f7gbu.apps.googleusercontent.com",
+                ClientSecret = "mL8LvEgB9w8M2hWVEUwY4dKq"
+            });
         }
     }
 }

@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="HeatModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Combo">
+          <Key>
+            <PropertyRef Name="CouplesComboID" />
+          </Key>
+          <Property Name="CouplesComboID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Combo" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Couple">
+          <Key>
+            <PropertyRef Name="CouplesID" />
+          </Key>
+          <Property Name="CouplesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Partner" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="ProID" Type="int" Nullable="false" />
+          <Property Name="HeatID" Type="int" Nullable="false" />
+          <Property Name="Number" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="DanceLevelID" Type="int" Nullable="false" />
+          <Property Name="CouplesComboID" Type="int" Nullable="false" />
+          <Property Name="DanceTypeID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DanceLevel">
+          <Key>
+            <PropertyRef Name="DanceLevelID" />
+          </Key>
+          <Property Name="DanceLevelID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DanceLevel" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="DanceType">
+          <Key>
+            <PropertyRef Name="DanceTypeID" />
+          </Key>
+          <Property Name="DanceTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Dance" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Heat">
+          <Key>
+            <PropertyRef Name="HeatID" />
+          </Key>
+          <Property Name="HeatID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Time" Type="datetime" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Pro">
+          <Key>
+            <PropertyRef Name="ProID" />
+          </Key>
+          <Property Name="ProID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Couple_Combo">
+          <End Role="Combo" Type="Self.Combo" Multiplicity="1" />
+          <End Role="Couple" Type="Self.Couple" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Combo">
+              <PropertyRef Name="CouplesComboID" />
+            </Principal>
+            <Dependent Role="Couple">
+              <PropertyRef Name="CouplesComboID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Couple_DanceLevel">
+          <End Role="DanceLevel" Type="Self.DanceLevel" Multiplicity="1" />
+          <End Role="Couple" Type="Self.Couple" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DanceLevel">
+              <PropertyRef Name="DanceLevelID" />
+            </Principal>
+            <Dependent Role="Couple">
+              <PropertyRef Name="DanceLevelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Couple_DanceType">
+          <End Role="DanceType" Type="Self.DanceType" Multiplicity="1" />
+          <End Role="Couple" Type="Self.Couple" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DanceType">
+              <PropertyRef Name="DanceTypeID" />
+            </Principal>
+            <Dependent Role="Couple">
+              <PropertyRef Name="DanceTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Couple_Heat">
+          <End Role="Heat" Type="Self.Heat" Multiplicity="1" />
+          <End Role="Couple" Type="Self.Couple" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Heat">
+              <PropertyRef Name="HeatID" />
+            </Principal>
+            <Dependent Role="Couple">
+              <PropertyRef Name="HeatID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Couple_Pro">
+          <End Role="Pro" Type="Self.Pro" Multiplicity="1" />
+          <End Role="Couple" Type="Self.Couple" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pro">
+              <PropertyRef Name="ProID" />
+            </Principal>
+            <Dependent Role="Couple">
+              <PropertyRef Name="ProID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HeatModelStoreContainer">
+          <EntitySet Name="Combo" EntityType="Self.Combo" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Couple" EntityType="Self.Couple" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DanceLevel" EntityType="Self.DanceLevel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DanceType" EntityType="Self.DanceType" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Heat" EntityType="Self.Heat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pro" EntityType="Self.Pro" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Couple_Combo" Association="Self.FK_Couple_Combo">
+            <End Role="Combo" EntitySet="Combo" />
+            <End Role="Couple" EntitySet="Couple" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Couple_DanceLevel" Association="Self.FK_Couple_DanceLevel">
+            <End Role="DanceLevel" EntitySet="DanceLevel" />
+            <End Role="Couple" EntitySet="Couple" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Couple_DanceType" Association="Self.FK_Couple_DanceType">
+            <End Role="DanceType" EntitySet="DanceType" />
+            <End Role="Couple" EntitySet="Couple" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Couple_Heat" Association="Self.FK_Couple_Heat">
+            <End Role="Heat" EntitySet="Heat" />
+            <End Role="Couple" EntitySet="Couple" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Couple_Pro" Association="Self.FK_Couple_Pro">
+            <End Role="Pro" EntitySet="Pro" />
+            <End Role="Couple" EntitySet="Couple" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="HeatModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Combo">
+          <Key>
+            <PropertyRef Name="CouplesComboID" />
+          </Key>
+          <Property Name="CouplesComboID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Combo1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Couples" Relationship="Self.FK_Couple_Combo" FromRole="Combo" ToRole="Couple" />
+        </EntityType>
+        <EntityType Name="Couple">
+          <Key>
+            <PropertyRef Name="CouplesID" />
+          </Key>
+          <Property Name="CouplesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Partner" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProID" Type="Int32" Nullable="false" />
+          <Property Name="HeatID" Type="Int32" Nullable="false" />
+          <Property Name="Number" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DanceLevelID" Type="Int32" Nullable="false" />
+          <Property Name="CouplesComboID" Type="Int32" Nullable="false" />
+          <Property Name="DanceTypeID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Combo" Relationship="Self.FK_Couple_Combo" FromRole="Couple" ToRole="Combo" />
+          <NavigationProperty Name="DanceLevel" Relationship="Self.FK_Couple_DanceLevel" FromRole="Couple" ToRole="DanceLevel" />
+          <NavigationProperty Name="DanceType" Relationship="Self.FK_Couple_DanceType" FromRole="Couple" ToRole="DanceType" />
+          <NavigationProperty Name="Heat" Relationship="Self.FK_Couple_Heat" FromRole="Couple" ToRole="Heat" />
+          <NavigationProperty Name="Pro" Relationship="Self.FK_Couple_Pro" FromRole="Couple" ToRole="Pro" />
+        </EntityType>
+        <EntityType Name="DanceLevel">
+          <Key>
+            <PropertyRef Name="DanceLevelID" />
+          </Key>
+          <Property Name="DanceLevelID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DanceLevel1" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Couples" Relationship="Self.FK_Couple_DanceLevel" FromRole="DanceLevel" ToRole="Couple" />
+        </EntityType>
+        <EntityType Name="DanceType">
+          <Key>
+            <PropertyRef Name="DanceTypeID" />
+          </Key>
+          <Property Name="DanceTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Dance" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Couples" Relationship="Self.FK_Couple_DanceType" FromRole="DanceType" ToRole="Couple" />
+        </EntityType>
+        <EntityType Name="Heat">
+          <Key>
+            <PropertyRef Name="HeatID" />
+          </Key>
+          <Property Name="HeatID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Couples" Relationship="Self.FK_Couple_Heat" FromRole="Heat" ToRole="Couple" />
+        </EntityType>
+        <EntityType Name="Pro">
+          <Key>
+            <PropertyRef Name="ProID" />
+          </Key>
+          <Property Name="ProID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Couples" Relationship="Self.FK_Couple_Pro" FromRole="Pro" ToRole="Couple" />
+        </EntityType>
+        <Association Name="FK_Couple_Combo">
+          <End Role="Combo" Type="Self.Combo" Multiplicity="1" />
+          <End Role="Couple" Type="Self.Couple" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Combo">
+              <PropertyRef Name="CouplesComboID" />
+            </Principal>
+            <Dependent Role="Couple">
+              <PropertyRef Name="CouplesComboID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Couple_DanceLevel">
+          <End Role="DanceLevel" Type="Self.DanceLevel" Multiplicity="1" />
+          <End Role="Couple" Type="Self.Couple" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DanceLevel">
+              <PropertyRef Name="DanceLevelID" />
+            </Principal>
+            <Dependent Role="Couple">
+              <PropertyRef Name="DanceLevelID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Couple_DanceType">
+          <End Role="DanceType" Type="Self.DanceType" Multiplicity="1" />
+          <End Role="Couple" Type="Self.Couple" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="DanceType">
+              <PropertyRef Name="DanceTypeID" />
+            </Principal>
+            <Dependent Role="Couple">
+              <PropertyRef Name="DanceTypeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Couple_Heat">
+          <End Role="Heat" Type="Self.Heat" Multiplicity="1" />
+          <End Role="Couple" Type="Self.Couple" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Heat">
+              <PropertyRef Name="HeatID" />
+            </Principal>
+            <Dependent Role="Couple">
+              <PropertyRef Name="HeatID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Couple_Pro">
+          <End Role="Pro" Type="Self.Pro" Multiplicity="1" />
+          <End Role="Couple" Type="Self.Couple" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pro">
+              <PropertyRef Name="ProID" />
+            </Principal>
+            <Dependent Role="Couple">
+              <PropertyRef Name="ProID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="HeatEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Comboes" EntityType="Self.Combo" />
+          <EntitySet Name="Couples" EntityType="Self.Couple" />
+          <EntitySet Name="DanceLevels" EntityType="Self.DanceLevel" />
+          <EntitySet Name="DanceTypes" EntityType="Self.DanceType" />
+          <EntitySet Name="Heats" EntityType="Self.Heat" />
+          <EntitySet Name="Pros" EntityType="Self.Pro" />
+          <AssociationSet Name="FK_Couple_Combo" Association="Self.FK_Couple_Combo">
+            <End Role="Combo" EntitySet="Comboes" />
+            <End Role="Couple" EntitySet="Couples" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Couple_DanceLevel" Association="Self.FK_Couple_DanceLevel">
+            <End Role="DanceLevel" EntitySet="DanceLevels" />
+            <End Role="Couple" EntitySet="Couples" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Couple_DanceType" Association="Self.FK_Couple_DanceType">
+            <End Role="DanceType" EntitySet="DanceTypes" />
+            <End Role="Couple" EntitySet="Couples" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Couple_Heat" Association="Self.FK_Couple_Heat">
+            <End Role="Heat" EntitySet="Heats" />
+            <End Role="Couple" EntitySet="Couples" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Couple_Pro" Association="Self.FK_Couple_Pro">
+            <End Role="Pro" EntitySet="Pros" />
+            <End Role="Couple" EntitySet="Couples" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="HeatModelStoreContainer" CdmEntityContainer="HeatEntities">
+          <EntitySetMapping Name="Comboes">
+            <EntityTypeMapping TypeName="HeatModel.Combo">
+              <MappingFragment StoreEntitySet="Combo">
+                <ScalarProperty Name="CouplesComboID" ColumnName="CouplesComboID" />
+                <ScalarProperty Name="Combo1" ColumnName="Combo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Couples">
+            <EntityTypeMapping TypeName="HeatModel.Couple">
+              <MappingFragment StoreEntitySet="Couple">
+                <ScalarProperty Name="CouplesID" ColumnName="CouplesID" />
+                <ScalarProperty Name="Partner" ColumnName="Partner" />
+                <ScalarProperty Name="ProID" ColumnName="ProID" />
+                <ScalarProperty Name="HeatID" ColumnName="HeatID" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="DanceLevelID" ColumnName="DanceLevelID" />
+                <ScalarProperty Name="CouplesComboID" ColumnName="CouplesComboID" />
+                <ScalarProperty Name="DanceTypeID" ColumnName="DanceTypeID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DanceLevels">
+            <EntityTypeMapping TypeName="HeatModel.DanceLevel">
+              <MappingFragment StoreEntitySet="DanceLevel">
+                <ScalarProperty Name="DanceLevelID" ColumnName="DanceLevelID" />
+                <ScalarProperty Name="DanceLevel1" ColumnName="DanceLevel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DanceTypes">
+            <EntityTypeMapping TypeName="HeatModel.DanceType">
+              <MappingFragment StoreEntitySet="DanceType">
+                <ScalarProperty Name="DanceTypeID" ColumnName="DanceTypeID" />
+                <ScalarProperty Name="Dance" ColumnName="Dance" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Heats">
+            <EntityTypeMapping TypeName="HeatModel.Heat">
+              <MappingFragment StoreEntitySet="Heat">
+                <ScalarProperty Name="HeatID" ColumnName="HeatID" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pros">
+            <EntityTypeMapping TypeName="HeatModel.Pro">
+              <MappingFragment StoreEntitySet="Pro">
+                <ScalarProperty Name="ProID" ColumnName="ProID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
