@@ -1,0 +1,26 @@
+﻿@model Heat.Models.DanceType
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DanceType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Dance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dance)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DanceTypeID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

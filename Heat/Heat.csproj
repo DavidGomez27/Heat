@@ -198,8 +198,14 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CombosController.cs" />
+    <Compile Include="Controllers\CouplesController.cs" />
+    <Compile Include="Controllers\DanceLevelsController.cs" />
+    <Compile Include="Controllers\DanceTypesController.cs" />
+    <Compile Include="Controllers\HeatsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\ProsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -319,6 +325,36 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Combos\Create.cshtml" />
+    <Content Include="Views\Combos\Delete.cshtml" />
+    <Content Include="Views\Combos\Details.cshtml" />
+    <Content Include="Views\Combos\Edit.cshtml" />
+    <Content Include="Views\Combos\Index.cshtml" />
+    <Content Include="Views\Couples\Create.cshtml" />
+    <Content Include="Views\Couples\Delete.cshtml" />
+    <Content Include="Views\Couples\Details.cshtml" />
+    <Content Include="Views\Couples\Edit.cshtml" />
+    <Content Include="Views\Couples\Index.cshtml" />
+    <Content Include="Views\DanceLevels\Create.cshtml" />
+    <Content Include="Views\DanceLevels\Delete.cshtml" />
+    <Content Include="Views\DanceLevels\Details.cshtml" />
+    <Content Include="Views\DanceLevels\Edit.cshtml" />
+    <Content Include="Views\DanceLevels\Index.cshtml" />
+    <Content Include="Views\DanceTypes\Create.cshtml" />
+    <Content Include="Views\DanceTypes\Delete.cshtml" />
+    <Content Include="Views\DanceTypes\Details.cshtml" />
+    <Content Include="Views\DanceTypes\Edit.cshtml" />
+    <Content Include="Views\DanceTypes\Index.cshtml" />
+    <Content Include="Views\Heats\Create.cshtml" />
+    <Content Include="Views\Heats\Delete.cshtml" />
+    <Content Include="Views\Heats\Details.cshtml" />
+    <Content Include="Views\Heats\Edit.cshtml" />
+    <Content Include="Views\Heats\Index.cshtml" />
+    <Content Include="Views\Pros\Create.cshtml" />
+    <Content Include="Views\Pros\Delete.cshtml" />
+    <Content Include="Views\Pros\Details.cshtml" />
+    <Content Include="Views\Pros\Edit.cshtml" />
+    <Content Include="Views\Pros\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
