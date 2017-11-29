@@ -1,0 +1,80 @@
+﻿@model Heat.Models.Couple
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Couple</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Partner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Partner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Combo.Combo1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Combo.Combo1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DanceLevel.DanceLevel1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DanceType.Dance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DanceType.Dance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeatList.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeatList.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pro.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pro.Name)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -6,16 +6,16 @@
     <edmx:Diagrams>
       <Diagram DiagramId="b64952a5bea3452286140a578ffdcee9" Name="Diagram1">
         <EntityTypeShape EntityType="HeatModel.Combo" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
-        <EntityTypeShape EntityType="HeatModel.Couple" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <EntityTypeShape EntityType="HeatModel.DanceLevel" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
         <EntityTypeShape EntityType="HeatModel.DanceType" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
         <EntityTypeShape EntityType="HeatModel.Pro" Width="1.5" PointX="0.75" PointY="12.5" IsExpanded="true" />
-        <AssociationConnector Association="HeatModel.FK_Couple_Combo" ManuallyRouted="false" />
-        <AssociationConnector Association="HeatModel.FK_Couple_DanceLevel" ManuallyRouted="false" />
-        <AssociationConnector Association="HeatModel.FK_Couple_DanceType" ManuallyRouted="false" />
-        <AssociationConnector Association="HeatModel.FK_Couple_Pro" ManuallyRouted="false" />
         <EntityTypeShape EntityType="HeatModel.HeatList" Width="1.5" PointX="0.75" PointY="14.875" />
+        <EntityTypeShape EntityType="HeatModel.Couple" Width="1.5" PointX="3" PointY="7.625" />
+        <AssociationConnector Association="HeatModel.FK_Couple_Combo" />
+        <AssociationConnector Association="HeatModel.FK_Couple_DanceLevel" />
+        <AssociationConnector Association="HeatModel.FK_Couple_DanceType" />
         <AssociationConnector Association="HeatModel.FK_Couple_HeatList" />
+        <AssociationConnector Association="HeatModel.FK_Couple_Pro" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

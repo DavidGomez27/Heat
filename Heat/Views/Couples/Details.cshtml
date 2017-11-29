@@ -1,0 +1,74 @@
+﻿@model Heat.Models.Couple
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Couple</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Partner)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Partner)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Number)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Number)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Combo.Combo1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Combo.Combo1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DanceLevel.DanceLevel1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DanceType.Dance)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DanceType.Dance)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HeatList.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HeatList.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pro.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pro.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CouplesID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

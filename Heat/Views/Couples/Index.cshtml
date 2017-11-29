@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Heat.Models.Couple>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Partner)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Number)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Combo.Combo1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DanceType.Dance)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeatList.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pro.Name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Partner)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Number)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Combo.Combo1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DanceLevel.DanceLevel1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DanceType.Dance)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HeatList.Status)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pro.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CouplesID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CouplesID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CouplesID })
+        </td>
+    </tr>
+}
+
+</table>

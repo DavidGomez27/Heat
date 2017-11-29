@@ -202,7 +202,7 @@
     <Compile Include="Controllers\CouplesController.cs" />
     <Compile Include="Controllers\DanceLevelsController.cs" />
     <Compile Include="Controllers\DanceTypesController.cs" />
-    <Compile Include="Controllers\HeatsController.cs" />
+    <Compile Include="Controllers\HeatListsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\ProsController.cs" />
@@ -222,9 +222,6 @@
     <Compile Include="Models\DanceType.cs">
       <DependentUpon>HeatDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Heat.cs">
-      <DependentUpon>HeatDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\HeatDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -239,6 +236,9 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>HeatDB.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HeatList.cs">
+      <DependentUpon>HeatDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -330,11 +330,6 @@
     <Content Include="Views\Combos\Details.cshtml" />
     <Content Include="Views\Combos\Edit.cshtml" />
     <Content Include="Views\Combos\Index.cshtml" />
-    <Content Include="Views\Couples\Create.cshtml" />
-    <Content Include="Views\Couples\Delete.cshtml" />
-    <Content Include="Views\Couples\Details.cshtml" />
-    <Content Include="Views\Couples\Edit.cshtml" />
-    <Content Include="Views\Couples\Index.cshtml" />
     <Content Include="Views\DanceLevels\Create.cshtml" />
     <Content Include="Views\DanceLevels\Delete.cshtml" />
     <Content Include="Views\DanceLevels\Details.cshtml" />
@@ -345,16 +340,21 @@
     <Content Include="Views\DanceTypes\Details.cshtml" />
     <Content Include="Views\DanceTypes\Edit.cshtml" />
     <Content Include="Views\DanceTypes\Index.cshtml" />
-    <Content Include="Views\Heats\Create.cshtml" />
-    <Content Include="Views\Heats\Delete.cshtml" />
-    <Content Include="Views\Heats\Details.cshtml" />
-    <Content Include="Views\Heats\Edit.cshtml" />
-    <Content Include="Views\Heats\Index.cshtml" />
     <Content Include="Views\Pros\Create.cshtml" />
     <Content Include="Views\Pros\Delete.cshtml" />
     <Content Include="Views\Pros\Details.cshtml" />
     <Content Include="Views\Pros\Edit.cshtml" />
     <Content Include="Views\Pros\Index.cshtml" />
+    <Content Include="Views\HeatLists\Create.cshtml" />
+    <Content Include="Views\HeatLists\Delete.cshtml" />
+    <Content Include="Views\HeatLists\Details.cshtml" />
+    <Content Include="Views\HeatLists\Edit.cshtml" />
+    <Content Include="Views\HeatLists\Index.cshtml" />
+    <Content Include="Views\Couples\Create.cshtml" />
+    <Content Include="Views\Couples\Delete.cshtml" />
+    <Content Include="Views\Couples\Details.cshtml" />
+    <Content Include="Views\Couples\Edit.cshtml" />
+    <Content Include="Views\Couples\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
