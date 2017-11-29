@@ -22,11 +22,12 @@ namespace Heat.Models
         public int DanceLevelID { get; set; }
         public int CouplesComboID { get; set; }
         public int DanceTypeID { get; set; }
+        public int HeatListID { get; set; }
     
         public virtual Combo Combo { get; set; }
         public virtual DanceLevel DanceLevel { get; set; }
         public virtual DanceType DanceType { get; set; }
-        public virtual Heat Heat { get; set; }
         public virtual Pro Pro { get; set; }
+        public virtual HeatList HeatList { get; set; }
     }
 }

@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="HeatModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="HeatModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Combo">
           <Key>
             <PropertyRef Name="CouplesComboID" />
@@ -19,7 +19,7 @@
           <Property Name="CouplesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Partner" Type="nvarchar" MaxLength="100" Nullable="false" />
           <Property Name="ProID" Type="int" Nullable="false" />
-          <Property Name="HeatID" Type="int" Nullable="false" />
+          <Property Name="HeatListID" Type="int" Nullable="false" />
           <Property Name="Number" Type="nvarchar" MaxLength="10" Nullable="false" />
           <Property Name="DanceLevelID" Type="int" Nullable="false" />
           <Property Name="CouplesComboID" Type="int" Nullable="false" />
@@ -39,11 +39,11 @@
           <Property Name="DanceTypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Dance" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
-        <EntityType Name="Heat">
+        <EntityType Name="HeatList">
           <Key>
-            <PropertyRef Name="HeatID" />
+            <PropertyRef Name="HeatListID" />
           </Key>
-          <Property Name="HeatID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="HeatListID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Status" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Time" Type="datetime" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="100" />
@@ -91,15 +91,15 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Couple_Heat">
-          <End Role="Heat" Type="Self.Heat" Multiplicity="1" />
+        <Association Name="FK_Couple_HeatList">
+          <End Role="HeatList" Type="Self.HeatList" Multiplicity="1" />
           <End Role="Couple" Type="Self.Couple" Multiplicity="*" />
           <ReferentialConstraint>
-            <Principal Role="Heat">
-              <PropertyRef Name="HeatID" />
+            <Principal Role="HeatList">
+              <PropertyRef Name="HeatListID" />
             </Principal>
             <Dependent Role="Couple">
-              <PropertyRef Name="HeatID" />
+              <PropertyRef Name="HeatListID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -120,7 +120,7 @@
           <EntitySet Name="Couple" EntityType="Self.Couple" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DanceLevel" EntityType="Self.DanceLevel" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="DanceType" EntityType="Self.DanceType" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Heat" EntityType="Self.Heat" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="HeatList" EntityType="Self.HeatList" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Pro" EntityType="Self.Pro" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Couple_Combo" Association="Self.FK_Couple_Combo">
             <End Role="Combo" EntitySet="Combo" />
@@ -134,8 +134,8 @@
             <End Role="DanceType" EntitySet="DanceType" />
             <End Role="Couple" EntitySet="Couple" />
           </AssociationSet>
-          <AssociationSet Name="FK_Couple_Heat" Association="Self.FK_Couple_Heat">
-            <End Role="Heat" EntitySet="Heat" />
+          <AssociationSet Name="FK_Couple_HeatList" Association="Self.FK_Couple_HeatList">
+            <End Role="HeatList" EntitySet="HeatList" />
             <End Role="Couple" EntitySet="Couple" />
           </AssociationSet>
           <AssociationSet Name="FK_Couple_Pro" Association="Self.FK_Couple_Pro">
@@ -143,8 +143,7 @@
             <End Role="Couple" EntitySet="Couple" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="HeatModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -171,8 +170,9 @@
           <NavigationProperty Name="Combo" Relationship="Self.FK_Couple_Combo" FromRole="Couple" ToRole="Combo" />
           <NavigationProperty Name="DanceLevel" Relationship="Self.FK_Couple_DanceLevel" FromRole="Couple" ToRole="DanceLevel" />
           <NavigationProperty Name="DanceType" Relationship="Self.FK_Couple_DanceType" FromRole="Couple" ToRole="DanceType" />
-          <NavigationProperty Name="Heat" Relationship="Self.FK_Couple_Heat" FromRole="Couple" ToRole="Heat" />
           <NavigationProperty Name="Pro" Relationship="Self.FK_Couple_Pro" FromRole="Couple" ToRole="Pro" />
+          <Property Name="HeatListID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="HeatList" Relationship="HeatModel.FK_Couple_HeatList" FromRole="Couple" ToRole="HeatList" />
         </EntityType>
         <EntityType Name="DanceLevel">
           <Key>
@@ -189,16 +189,6 @@
           <Property Name="DanceTypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Dance" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Couples" Relationship="Self.FK_Couple_DanceType" FromRole="DanceType" ToRole="Couple" />
-        </EntityType>
-        <EntityType Name="Heat">
-          <Key>
-            <PropertyRef Name="HeatID" />
-          </Key>
-          <Property Name="HeatID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Couples" Relationship="Self.FK_Couple_Heat" FromRole="Heat" ToRole="Couple" />
         </EntityType>
         <EntityType Name="Pro">
           <Key>
@@ -244,18 +234,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Couple_Heat">
-          <End Role="Heat" Type="Self.Heat" Multiplicity="1" />
-          <End Role="Couple" Type="Self.Couple" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Heat">
-              <PropertyRef Name="HeatID" />
-            </Principal>
-            <Dependent Role="Couple">
-              <PropertyRef Name="HeatID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="FK_Couple_Pro">
           <End Role="Pro" Type="Self.Pro" Multiplicity="1" />
           <End Role="Couple" Type="Self.Couple" Multiplicity="*" />
@@ -273,7 +251,6 @@
           <EntitySet Name="Couples" EntityType="Self.Couple" />
           <EntitySet Name="DanceLevels" EntityType="Self.DanceLevel" />
           <EntitySet Name="DanceTypes" EntityType="Self.DanceType" />
-          <EntitySet Name="Heats" EntityType="Self.Heat" />
           <EntitySet Name="Pros" EntityType="Self.Pro" />
           <AssociationSet Name="FK_Couple_Combo" Association="Self.FK_Couple_Combo">
             <End Role="Combo" EntitySet="Comboes" />
@@ -287,15 +264,38 @@
             <End Role="DanceType" EntitySet="DanceTypes" />
             <End Role="Couple" EntitySet="Couples" />
           </AssociationSet>
-          <AssociationSet Name="FK_Couple_Heat" Association="Self.FK_Couple_Heat">
-            <End Role="Heat" EntitySet="Heats" />
-            <End Role="Couple" EntitySet="Couples" />
-          </AssociationSet>
           <AssociationSet Name="FK_Couple_Pro" Association="Self.FK_Couple_Pro">
             <End Role="Pro" EntitySet="Pros" />
             <End Role="Couple" EntitySet="Couples" />
           </AssociationSet>
+          <EntitySet Name="HeatLists" EntityType="HeatModel.HeatList" />
+          <AssociationSet Name="FK_Couple_HeatList" Association="HeatModel.FK_Couple_HeatList">
+            <End Role="HeatList" EntitySet="HeatLists" />
+            <End Role="Couple" EntitySet="Couples" />
+          </AssociationSet>
         </EntityContainer>
+        <EntityType Name="HeatList">
+          <Key>
+            <PropertyRef Name="HeatListID" />
+          </Key>
+          <Property Name="HeatListID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Status" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Time" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Couples" Relationship="HeatModel.FK_Couple_HeatList" FromRole="HeatList" ToRole="Couple" />
+        </EntityType>
+        <Association Name="FK_Couple_HeatList">
+          <End Type="HeatModel.HeatList" Role="HeatList" Multiplicity="1" />
+          <End Type="HeatModel.Couple" Role="Couple" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="HeatList">
+              <PropertyRef Name="HeatListID" />
+            </Principal>
+            <Dependent Role="Couple">
+              <PropertyRef Name="HeatListID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -313,10 +313,10 @@
           <EntitySetMapping Name="Couples">
             <EntityTypeMapping TypeName="HeatModel.Couple">
               <MappingFragment StoreEntitySet="Couple">
+                <ScalarProperty Name="HeatListID" ColumnName="HeatListID" />
                 <ScalarProperty Name="CouplesID" ColumnName="CouplesID" />
                 <ScalarProperty Name="Partner" ColumnName="Partner" />
                 <ScalarProperty Name="ProID" ColumnName="ProID" />
-                <ScalarProperty Name="HeatID" ColumnName="HeatID" />
                 <ScalarProperty Name="Number" ColumnName="Number" />
                 <ScalarProperty Name="DanceLevelID" ColumnName="DanceLevelID" />
                 <ScalarProperty Name="CouplesComboID" ColumnName="CouplesComboID" />
@@ -340,21 +340,21 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="Heats">
-            <EntityTypeMapping TypeName="HeatModel.Heat">
-              <MappingFragment StoreEntitySet="Heat">
-                <ScalarProperty Name="HeatID" ColumnName="HeatID" />
-                <ScalarProperty Name="Status" ColumnName="Status" />
-                <ScalarProperty Name="Time" ColumnName="Time" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="Pros">
             <EntityTypeMapping TypeName="HeatModel.Pro">
               <MappingFragment StoreEntitySet="Pro">
                 <ScalarProperty Name="ProID" ColumnName="ProID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="HeatLists">
+            <EntityTypeMapping TypeName="HeatModel.HeatList">
+              <MappingFragment StoreEntitySet="HeatList">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Time" ColumnName="Time" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="HeatListID" ColumnName="HeatListID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

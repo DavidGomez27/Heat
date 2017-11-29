@@ -29,7 +29,7 @@ namespace Heat.Models
         public virtual DbSet<Couple> Couples { get; set; }
         public virtual DbSet<DanceLevel> DanceLevels { get; set; }
         public virtual DbSet<DanceType> DanceTypes { get; set; }
-        public virtual DbSet<Heat> Heats { get; set; }
         public virtual DbSet<Pro> Pros { get; set; }
+        public virtual DbSet<HeatList> HeatLists { get; set; }
     }
 }

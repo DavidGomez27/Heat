@@ -12,15 +12,15 @@ namespace Heat.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Heat
+    public partial class HeatList
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Heat()
+        public HeatList()
         {
             this.Couples = new HashSet<Couple>();
         }
     
-        public int HeatID { get; set; }
+        public int HeatListID { get; set; }
         public string Status { get; set; }
         public System.DateTime Time { get; set; }
         public string Name { get; set; }
