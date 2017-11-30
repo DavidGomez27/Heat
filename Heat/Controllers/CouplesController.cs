@@ -18,14 +18,17 @@ namespace Heat.Controllers
         public ActionResult Index(string search)
         {
             var couples = db.Couples.Include(c => c.Combo).Include(c => c.DanceLevel).Include(c => c.DanceType).Include(c => c.HeatList).Include(c => c.Pro);
-
+            var dances = db.Couples.Include(c => c.DanceType);
             //search function for partner name only
             if (!String.IsNullOrEmpty(search))
             {
                 couples = from couple in couples
-                        where couple.Partner.Contains(search)
+                        where couple.Partner.Contains(search) || couple.Number.Contains(search)
+                        || couple.DanceType.Dance.Contains(search)
                         select couple;
             }
+
+           
 
             return View(couples.ToList());
         }
