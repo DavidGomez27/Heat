@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Heat.Models.HeatList>
+
+<div>
+    <table class="table">
+        @foreach (var heat in Model)
+        {
+            @{ var name = heat.Name }
+
+            <tr>
+                <td>
+                    @Html.DisplayFor(heat => heat.Name)
+                </td>
+            </tr>
+                @model IEnumerable<Heat.Models.Couple>
+
+                @foreach (var couple in Model)
+                {
+                    if (couple.HeatList.Name.Contains("1"))
+                    {
+
+                    }
+
+
+                }
+
+
+
+
+
+
+        }
+
+
+    </table>
+</div>
+
+@*//this gets the Heat display priority. Now I need to call from other tables. All those are connected by
+    // Couples table, so it would make more sense to prioritize that in the formatted view. HOWEVER.
+    // If I do THAT, then I will be doing FOREACH COUPLE and that will repeat heats. Which is not intuitive.
+    // Or at least not what we want to happen.
+    // This way is a wall.
+    //can I only call on one model?
+    // this nested loop will not be efficient.*@
+
+
