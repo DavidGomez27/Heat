@@ -17,6 +17,7 @@ namespace Heat.Controllers
         // GET: DanceTypes
         public ActionResult Index()
         {
+            
             return View(db.DanceTypes.ToList());
         }
 
