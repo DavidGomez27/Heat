@@ -56,6 +56,7 @@ namespace Heat.Controllers
             ViewBag.DanceLevelID = new SelectList(db.DanceLevels, "DanceLevelID", "DanceLevel1");
             ViewBag.DanceTypeID = new SelectList(db.DanceTypes, "DanceTypeID", "Dance");
             ViewBag.HeatListID = new SelectList(db.HeatLists, "HeatListID", "Status");
+            ViewBag.HeatListID = new SelectList(db.HeatLists, "HeatListID", "Name");
             ViewBag.ProID = new SelectList(db.Pros, "ProID", "Name");
             return View();
         }
