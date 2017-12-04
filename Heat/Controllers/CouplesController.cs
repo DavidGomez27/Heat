@@ -55,6 +55,7 @@ namespace Heat.Controllers
             ViewBag.CouplesComboID = new SelectList(db.Comboes, "CouplesComboID", "Combo1");
             ViewBag.DanceLevelID = new SelectList(db.DanceLevels, "DanceLevelID", "DanceLevel1");
             ViewBag.DanceTypeID = new SelectList(db.DanceTypes, "DanceTypeID", "Dance");
+            ViewBag.HeatListID = new SelectList(db.HeatLists, "HeatListID", "Status");
             ViewBag.HeatListID = new SelectList(db.HeatLists, "HeatListID", "Name");
             ViewBag.ProID = new SelectList(db.Pros, "ProID", "Name");
             return View();
@@ -77,7 +78,7 @@ namespace Heat.Controllers
             ViewBag.CouplesComboID = new SelectList(db.Comboes, "CouplesComboID", "Combo1", couple.CouplesComboID);
             ViewBag.DanceLevelID = new SelectList(db.DanceLevels, "DanceLevelID", "DanceLevel1", couple.DanceLevelID);
             ViewBag.DanceTypeID = new SelectList(db.DanceTypes, "DanceTypeID", "Dance", couple.DanceTypeID);
-            ViewBag.HeatListID = new SelectList(db.HeatLists, "HeatListID", "Status", couple.HeatListID);
+            ViewBag.HeatListID = new SelectList(db.HeatLists, "HeatListID", "Name", couple.HeatListID);
             ViewBag.ProID = new SelectList(db.Pros, "ProID", "Name", couple.ProID);
             return View(couple);
         }
@@ -97,7 +98,7 @@ namespace Heat.Controllers
             ViewBag.CouplesComboID = new SelectList(db.Comboes, "CouplesComboID", "Combo1", couple.CouplesComboID);
             ViewBag.DanceLevelID = new SelectList(db.DanceLevels, "DanceLevelID", "DanceLevel1", couple.DanceLevelID);
             ViewBag.DanceTypeID = new SelectList(db.DanceTypes, "DanceTypeID", "Dance", couple.DanceTypeID);
-            ViewBag.HeatListID = new SelectList(db.HeatLists, "HeatListID", "Status", couple.HeatListID);
+            ViewBag.HeatListID = new SelectList(db.HeatLists, "HeatListID", "Name", couple.HeatListID);
             ViewBag.ProID = new SelectList(db.Pros, "ProID", "Name", couple.ProID);
             return View(couple);
         }
@@ -118,7 +119,7 @@ namespace Heat.Controllers
             ViewBag.CouplesComboID = new SelectList(db.Comboes, "CouplesComboID", "Combo1", couple.CouplesComboID);
             ViewBag.DanceLevelID = new SelectList(db.DanceLevels, "DanceLevelID", "DanceLevel1", couple.DanceLevelID);
             ViewBag.DanceTypeID = new SelectList(db.DanceTypes, "DanceTypeID", "Dance", couple.DanceTypeID);
-            ViewBag.HeatListID = new SelectList(db.HeatLists, "HeatListID", "Status", couple.HeatListID);
+            ViewBag.HeatListID = new SelectList(db.HeatLists, "HeatListID", "Name", couple.HeatListID);
             ViewBag.ProID = new SelectList(db.Pros, "ProID", "Name", couple.ProID);
             return View(couple);
         }
