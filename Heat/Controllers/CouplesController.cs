@@ -18,8 +18,8 @@ namespace Heat.Controllers
         public ActionResult Index(string search)
         {
             var couples = db.Couples.Include(c => c.Combo).Include(c => c.DanceLevel).Include(c => c.DanceType).Include(c => c.HeatList).Include(c => c.Pro);
-            var dances = db.Couples.Include(c => c.DanceType);
-            //search function for partner name only
+                        
+            //search function 
             if (!String.IsNullOrEmpty(search))
             {
                 couples = from couple in couples
@@ -157,7 +157,18 @@ namespace Heat.Controllers
 
 
         //Couple To Heat List
+        // GET: Couples
+        public ActionResult Index(//needs something??)
+        {
+            
+            var couples = db.Couples.Include(i => i.HeatListID);
 
+            for(int i = 0; i <  ; i++)
+            {
+                if(couples.HeatlistID)
+            }
+
+        }
 
 
 
