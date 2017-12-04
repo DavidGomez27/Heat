@@ -22,3 +22,58 @@ select,
 textarea {
     max-width: 280px;
 }
+
+#firstRow {
+    padding-top: 50px;
+}
+
+#thirdRow {
+    padding-bottom: 50px;
+}
+
+#picture1 {
+    background-image: url('Images/Kaitie Performance.jpeg');
+    height: 325px;
+    background-size: 490px;
+    background-position-x: right;
+}
+
+#picture2 {
+
+}
+
+#picture3 {
+    background-image: url('Images/White dress Smiles all over.jpeg');
+    height: 325px;
+    background-size: 490px;
+    background-position-x: center;
+}
+
+#picture4 {
+
+}
+
+#picture5 {
+    background-image: url('Images/grey shirt hands up.jpeg');
+    height: 325px;
+    background-size: 490px;
+    background-position-x: center;
+}
+
+#picture7 {
+    background-image: url('Images/White Dress Serious Faces.jpeg');
+    height: 325px;
+    background-size: 490px;
+    background-position-x: center;
+}
+
+#picture8 {
+
+}
+
+#picture9 {
+    background-image: url('Images/Kaitie Takes a Pose.jpeg');
+    height: 325px;
+    background-size: 490px;
+    background-position-x: center;
+}
