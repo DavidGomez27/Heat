@@ -1,34 +1,9 @@
-﻿@model IEnumerable<Heat.Models.HeatList>
-
-<div>
+﻿<div>
     <table class="table">
-        @foreach (var heat in Model)
-        {
-            @{ var name = heat.Name }
-
-            <tr>
-                <td>
-                    @Html.DisplayFor(heat => heat.Name)
-                </td>
-            </tr>
-                @model IEnumerable<Heat.Models.Couple>
-
-                @foreach (var couple in Model)
-                {
-                    if (couple.HeatList.Name.Contains("1"))
-                    {
-
-                    }
-
-
-                }
-
-
-
-
-
-
-        }
+        @model IEnumerable<Heat.Models.Couple>
+            @var 
+        
+        
 
 
     </table>
