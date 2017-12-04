@@ -23,13 +23,16 @@ namespace Heat.Controllers
             if (!String.IsNullOrEmpty(search))
             {
                 couples = from couple in couples
-                        where couple.Partner.Contains(search) || couple.Number.Contains(search)
-                        || couple.DanceType.Dance.Contains(search) || couple.DanceLevel.DanceLevel1.Contains(search) || couple.Pro.Name.Contains(search)
-                        || couple.Combo.Combo1.Contains(search) || couple.HeatList.Name.Contains(search)
-                        select couple;
+                          where couple.Partner.Contains(search) || couple.Number.Contains(search)
+                          || couple.DanceType.Dance.Contains(search) || couple.DanceLevel.DanceLevel1.Contains(search) || couple.Pro.Name.Contains(search)
+                          || couple.Combo.Combo1.Contains(search) || couple.HeatList.Name.Contains(search)
+                          select couple;
+
             }
 
-           
+          
+
+
 
             return View(couples.ToList());
         }
@@ -46,6 +49,7 @@ namespace Heat.Controllers
             {
                 return HttpNotFound();
             }
+
             return View(couple);
         }
 
