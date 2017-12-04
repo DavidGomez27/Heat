@@ -1,7 +1,9 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
- 
+
+
+
  <!--this row contains 3 sets of columns so all of them need to be 4 length to equal to 12-->
 
 <div class="row" id="firstRow">
@@ -32,6 +34,50 @@
     <div class="col-md-4" id="picture9"></div>
 </div>
 
+<div class="row" id="eleventh">
+    <div class="col-md-12">
+        <div id="only-Carousel" class="carousel slide" data-ride="carousel">
+
+            <!-- indicators dot nav -->
+            <ol class="carousel-indicators">
+                <li data-target="#only-Carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#only-Carousel" data-slide-to="1"></li>
+                <li data-target="#only-Carousel" data-slide-to="2"></li>
+            </ol>
+
+            <!-- wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <div class="filler"></div>
+                    <div class="carousel-picture1">
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="filler"></div>
+                    <div class="carousel-picture2">
+
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="filler"></div>
+                    <div class="carousel-picture3">
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- controls || next and prevs button -->
+            <a class="left carousel-control" href="#only-Carousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+            </a>
+            <a class="right carousel-control" href="#only-Carousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+            </a>
+
+        </div>
+    </div>
+</div>
 
     @*<div class="col-md-4">
         <h2>Getting started</h2>
