@@ -33,9 +33,10 @@ namespace Heat.Controllers
             {
                 return HttpNotFound();
             }
-                        
+
             var viewModel = new HeatCoupleViewModel
-            {                
+            {
+                heatlist = heatList ,
                 couples = (from couple in db.Couples
                            where couple.HeatList.Name.Contains(heatList.Name)                                                      
                            select couple).ToList()

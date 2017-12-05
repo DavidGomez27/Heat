@@ -3,33 +3,35 @@
 <div>
     <h3>Heat List</h3>
     <hr />
+
     <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayFor(model => model.heatlist.Name)
-        </dt>
+
+        <dd>
+            @Html.DisplayNameFor(model => model.heatlist.Name)
+        </dd>
 
         <dd>
             @Html.DisplayFor(model => model.heatlist.Status)
         </dd>
 
-        <dt>
+        <dd>
             @Html.DisplayFor(model => model.heatlist.Time)
-        </dt>
+        </dd>
     </dl>
     <h3>Couples</h3>
     @foreach (var item in Model.couples)
     {
         <dl class="dl-horizontal">
-            <dt>
+            <dd>
                 @Html.DisplayFor(model => item.Number)
-            </dt>
+            </dd>
 
             <dd>
                 @Html.DisplayFor(model => item.Pro.Name)
             </dd>
-            <dt>
+            <dd>
                 @Html.DisplayFor(model => item.Partner)
-            </dt>
+            </dd>
         </dl>
         <hr />
     }
