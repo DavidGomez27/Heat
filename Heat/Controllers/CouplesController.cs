@@ -29,8 +29,8 @@ namespace Heat.Controllers
                         select couple;
             }
 
-           
 
+            
             return View(couples.ToList());
         }
 
