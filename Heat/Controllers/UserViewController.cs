@@ -15,7 +15,7 @@ namespace Heat.Controllers
         public ActionResult Index()
         {
             var couples = db.Couples.Include(c => c.Combo).Include(c => c.DanceLevel).Include(c => c.DanceType).Include(c => c.HeatList).Include(c => c.Pro);
-            
+
             //var heatName = (from Couple in db.Couples
             //                where Couple.HeatList.Name.Contains(HeatList.Name)
             //                select Couple).ToList();
