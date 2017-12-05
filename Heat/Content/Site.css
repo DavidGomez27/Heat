@@ -47,6 +47,37 @@ textarea {
     background-position-x: center;
 }
 
+.carousel-picture4 {
+    background-image: url('Images/smokey Purple.jpeg');
+    height: 325px;
+    background-size: 490px;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.carousel-picture5 {
+    background-image: url('Images/smiling practice.jpeg');
+    height: 325px;
+    background-size: 490px;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+.carousel-picture6 {
+    background-image: url('Images/group photo.jpeg');
+    height: 325px;
+    background-size: 490px;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    background-position-x: center;
+}
+
+#gridText {
+    text-align: center;
+}
+
 #firstRow {
     padding-top: 50px;
 }
