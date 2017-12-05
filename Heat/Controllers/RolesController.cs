@@ -9,7 +9,8 @@ using Microsoft.AspNet.Identity;
 
 namespace Heat.Controllers
 {
-    [Authorize(Roles = "Admin")]//This makes you sign in when viewing the manage users page.
+    [Authorize(Roles = "Admin")]
+    //This makes you sign in when viewing the manage users page.
     public class RolesController : Controller
         {
             //Default connection strings.
