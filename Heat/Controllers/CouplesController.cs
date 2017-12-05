@@ -159,23 +159,34 @@ namespace Heat.Controllers
 
         //Couple To Heat List
         // GET: Couples
-        public ActionResult HeatList()
-        {
-            var couples = db.Couples.Include(c => c.HeatList);
-            var heatlist = db.HeatLists.Include(h => h.HeatListID).Include(h => h.Name);
+        //public ActionResult HeatList()
+        //{
+        //    HeatList thisHeat = db.HeatLists;
+        //    var viewModel = new HeatCoupleViewModel
+        //    {
+        //        heatlist = thisHeat,
+        //        couples = (from couple in db.Couples
+        //                   where couple.HeatID.Contains(thisHeat.HeatID)
+        //                   select couple).ToList()
+        //    };
 
-            var coupleList = from couple in couples
-                             join heat in heatlist on couple.HeatListID equals heat.HeatListID
-                             select new
-                             {
-                                 heat.Name , 
-                                 couple.Number ,
-                                 couple.Pro ,
-                                 couple. Partner
-                             };            
+        //    return View(viewModel);
 
-            return View(coupleList); 
-        }
+        //}
+        
+            //var couples = db.Couples.Include(c => c.HeatList);
+            //var heatlist = db.HeatLists.Include(h => h.HeatListID).Include(h => h.Name);
+
+            //var coupleList = from couple in couples
+            //                 join heat in heatlist on couple.HeatListID equals heat.HeatListID
+            //                 select new 
+            //                 {
+            //                     heat.Name , 
+            //                     couple.Number                                 
+            //                 };            
+
+            //return View(coupleList.ToList()); 
+        //}
 
 
 

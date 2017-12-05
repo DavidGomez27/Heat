@@ -223,6 +223,7 @@
     <Compile Include="Models\DanceType.cs">
       <DependentUpon>HeatDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\HeatCoupleViewModel.cs" />
     <Compile Include="Models\HeatDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -360,7 +361,6 @@
     <Content Include="Views\Roles\Edit.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\ManageUsers.cshtml" />
-    <Content Include="Views\Home\ReformatTest.cshtml" />
     <Content Include="Views\Couples\HeatList.cshtml" />
   </ItemGroup>
   <ItemGroup>

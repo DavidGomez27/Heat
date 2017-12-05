@@ -1,7 +1,40 @@
-﻿
-@{
-    ViewBag.Title = "HeatList";
-}
+﻿@model Heat.Models.HeatCoupleViewModel
 
-<h2>HeatList</h2>
+<div>
+    <h3>Heat List</h3>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.heatlist.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.heatlist.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.heatlist.Time)
+        </dt>
+    </dl>
+    <h3>Couples</h3>
+    @foreach (var item in Model.couples)
+    {
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => item.Number)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => item.Pro.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => item.Partner)
+            </dt>
+        </dl>
+        <hr />
+    }
+</div>
+
+
+
 

@@ -32,7 +32,16 @@ namespace Heat.Controllers
             {
                 return HttpNotFound();
             }
-            return View(heatList);
+                        
+            var viewModel = new HeatCoupleViewModel
+            {                
+                couples = (from couple in db.Couples
+                           where couple.HeatList.Name.Contains(heatList.Name)                                                      
+                           select couple).ToList()
+            };
+
+            return View(viewModel);
+
         }
 
         // GET: HeatLists/Create
