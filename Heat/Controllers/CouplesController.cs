@@ -18,8 +18,8 @@ namespace Heat.Controllers
         public ActionResult Index(string search)
         {
             var couples = db.Couples.Include(c => c.Combo).Include(c => c.DanceLevel).Include(c => c.DanceType).Include(c => c.HeatList).Include(c => c.Pro);
-            var dances = db.Couples.Include(c => c.DanceType);
-            //search function for partner name only
+                        
+            //search function 
             if (!String.IsNullOrEmpty(search))
             {
                 couples = from couple in couples
@@ -29,9 +29,6 @@ namespace Heat.Controllers
                           select couple;
 
             }
-
-          
-
 
 
             return View(couples.ToList());
@@ -162,6 +159,7 @@ namespace Heat.Controllers
             base.Dispose(disposing);
         }
 
+<<<<<<< HEAD
         //Couple To Heat List
         // GET: Couples
         public ActionResult HeatList()
@@ -181,5 +179,43 @@ namespace Heat.Controllers
 
             return View(coupleList);
         }
+=======
+
+        //Couple To Heat List
+        // GET: Couples
+        //public ActionResult HeatList()
+        //{
+        //    HeatList thisHeat = db.HeatLists;
+        //    var viewModel = new HeatCoupleViewModel
+        //    {
+        //        heatlist = thisHeat,
+        //        couples = (from couple in db.Couples
+        //                   where couple.HeatID.Contains(thisHeat.HeatID)
+        //                   select couple).ToList()
+        //    };
+
+        //    return View(viewModel);
+
+        //}
+        
+            //var couples = db.Couples.Include(c => c.HeatList);
+            //var heatlist = db.HeatLists.Include(h => h.HeatListID).Include(h => h.Name);
+
+            //var coupleList = from couple in couples
+            //                 join heat in heatlist on couple.HeatListID equals heat.HeatListID
+            //                 select new 
+            //                 {
+            //                     heat.Name , 
+            //                     couple.Number                                 
+            //                 };            
+
+            //return View(coupleList.ToList()); 
+        //}
+
+
+
+
+
+>>>>>>> 64b98e6c0653a06d8ab19398c1258a99373fdfe5
     }
 }

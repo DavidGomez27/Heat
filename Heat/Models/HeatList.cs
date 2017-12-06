@@ -11,8 +11,7 @@ namespace Heat.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class HeatList
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -21,14 +20,10 @@ namespace Heat.Models
             this.Couples = new HashSet<Couple>();
         }
     
-        
-        
         public int HeatListID { get; set; }
-        [Display(Name = "Heat")]
-        public string Name { get; set; }
         public string Status { get; set; }
         public Nullable<System.DateTime> Time { get; set; }
-        
+        public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Couple> Couples { get; set; }

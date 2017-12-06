@@ -1,0 +1,88 @@
+﻿@model IEnumerable<Heat.Models.Couple>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+<h2>@Html.DisplayNameFor(model => model.DanceType.Dance)</h2>
+<h2>@Html.DisplayNameFor(model => model.HeatList.Status)</h2>
+
+
+
+<h1>Heat @ViewBag.firstValue</h1>
+<div>
+    @foreach (var item in Model)
+    {
+
+        if (item.HeatList.Status == "Now")
+        {
+            <ul>
+                <li>
+                    @Html.DisplayNameFor(model => model.HeatList.Name): @Html.DisplayFor(modelItem => item.HeatList.Name)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.HeatList.Status): @Html.DisplayFor(modelItem => item.HeatList.Status)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.DanceType.Dance): @Html.DisplayFor(modelItem => item.DanceType.Dance)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1): @Html.DisplayFor(modelItem => item.DanceLevel.DanceLevel1)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.Combo.Combo1): @Html.DisplayFor(modelItem => item.Combo.Combo1)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.Number): @Html.DisplayFor(modelItem => item.Number)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.Pro.Name): @Html.DisplayFor(modelItem => item.Pro.Name)
+                </li>
+            </ul>
+        }
+    }
+
+    <h1>In the hole</h1>
+    @foreach (var item in Model)
+    {
+        if (item.HeatList.Status == "In the hole")
+        {
+            <ul>
+                <li>
+                    @Html.DisplayNameFor(model => model.HeatList.Name): @Html.DisplayFor(modelItem => item.HeatList.Name)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.HeatList.Status): @Html.DisplayFor(modelItem => item.HeatList.Status)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.DanceType.Dance): @Html.DisplayFor(modelItem => item.DanceType.Dance)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1): @Html.DisplayFor(modelItem => item.DanceLevel.DanceLevel1)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.Combo.Combo1): @Html.DisplayFor(modelItem => item.Combo.Combo1)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.Number): @Html.DisplayFor(modelItem => item.Number)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.Pro.Name): @Html.DisplayFor(modelItem => item.Pro.Name)
+                </li>
+            </ul>
+        }
+    }
+
+
+    <div class="col-sm-6 col-md-4 col">
+        <div class="caption">
+
+
+
+
+
+        </div>
+    </div>
+</div>
+

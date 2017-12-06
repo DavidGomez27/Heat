@@ -21,8 +21,12 @@
 </div>
 <table class="table">
     <tr>
+      
         <th>
             @Html.DisplayNameFor(model => model.HeatList.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HeatList.Status)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.DanceType.Dance)
@@ -54,6 +58,9 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.HeatList.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HeatList.Status)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DanceType.Dance)
