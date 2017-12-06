@@ -28,7 +28,7 @@ namespace Heat.Controllers
                         || couple.Combo.Combo1.Contains(search) || couple.HeatList.Name.Contains(search)
                         select couple;
             }
-                        
+
             return View(couples.ToList());
         }
 
