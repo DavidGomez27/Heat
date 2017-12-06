@@ -1,0 +1,64 @@
+﻿body {
+
+
+
+}
+
+
+
+.container {
+    width: 100%;
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*.responsive-image {
+  height: auto;
+  width: 100%;
+}*/
+
+splashpage.span12{
+    width: 100%;
+}
+
+
+.left {
+    background-image: url(couplesideviewedit.jpg);
+    background-color: rgb(204, 204, 204);
+    width: 100%;
+    flex-basis: 66.66%;
+    align-content: center;
+}
+
+.alert.row{
+    height: 50px;
+}
+
+.wrap {
+  display: flex;
+}
+
+.placeholder{
+    width: 150px;
+}
+
+.nowbox{
+    width: 320px;
+    padding: 10px;
+    border: 5px;
+    border-color: #383677;
+    margin: 0;
+    height: 200px;
+    width: 350px;
+    background-color:#bdf3fd;
+}
+
+
+.right {
+  background: -webkit-linear-gradient(-45deg, rgba(184,225,252,1) 0%,rgba(144,186,228,1) 18%,rgba(189,243,253,1) 32%,rgba(189,243,253,1) 36%,rgba(144,191,240,1) 50%,rgba(144,191,240,1) 57%,rgba(201,133,247,1) 74%,rgba(244,225,231,1) 88%,rgba(189,243,253,1) 100%,rgba(244,225,231,1) 100%,rgba(244,225,231,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  flex-basis: 33.33%;
+  height: 100vh; 
+  overflow: auto;
+}
