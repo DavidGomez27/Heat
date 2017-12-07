@@ -35,7 +35,15 @@
                     <p>@Html.DisplayNameFor(model => model.DanceType) : @Html.DisplayFor(modelItem => item.DanceType)</p>
                     <p>@Html.ActionLink("Details", "Details", new { id = item.CouplesID }, new { @class = "btn btn-primary", role = "button" })</p>
                     @*<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>*@
-                </div>
+                    @if (User.IsInRole("Admin") || User.IsInRole("Pro"))
+                    {
+                        <p>
+
+                            @Html.ActionLink("Edit", "Edit", new { id = item.CouplesID }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.CouplesID })
+                        </p>
+                    }
+                 </div>
             </div>
         </div>
     }
@@ -104,8 +112,8 @@
                 </td>
                 <td>
                     @Html.DisplayFor(modelItem => item.Partner)
-                </td>
-                <td>
+                </td>*@
+                @*<td>
                     @if (User.IsInRole("Admin") || User.IsInRole("Pro"))
                     {
                         <p>
