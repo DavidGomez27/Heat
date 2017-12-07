@@ -17,7 +17,7 @@
             <div class="thumbnail">
                 <div class="caption">
                     <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
-                    <p>@Html.DisplayNameFor(model => model.Status) : @Html.DisplayFor(modelItem => item.Status)</p>
+                    @*<p>@Html.DisplayNameFor(model => model.HeatListID) : @Html.DisplayFor(modelItem => item.HeatListID)</p>*@
                     <p>@Html.ActionLink("Details", "Details", new { id = item.HeatListID }, new { @class = "btn btn-primary", role = "button" })</p>
                     @*<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>*@
                 </div>
