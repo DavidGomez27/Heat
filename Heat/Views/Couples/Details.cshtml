@@ -69,6 +69,13 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.CouplesID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
+@if (User.IsInRole("Admin") || User.IsInRole("Pro"))
+{
+    <p>
+
+        @Html.ActionLink("Edit", "Edit", new { id = Model.CouplesID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = Model.CouplesID })
+    </p>
+}
