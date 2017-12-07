@@ -129,3 +129,9 @@ textarea {
     background-size: 490px;
     background-position-x: center;
 }
+
+/*This datalist for thumbnail Layout*/
+
+.thumbnail {
+    margin-top: 15px;
+}
