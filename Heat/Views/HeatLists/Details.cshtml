@@ -17,6 +17,10 @@
         <dd>
             @Html.DisplayFor(model => model.heatlist.Time)
         </dd>
+        
+    @* I just want to call on Couple.DanceType.Dance here in order to create a header for the detail look. *@
+
+    
     </dl>
     <h3>Couples</h3>
     @foreach (var item in Model.couples)
@@ -31,6 +35,12 @@
             </dd>
             <dd>
                 @Html.DisplayFor(model => item.Partner)
+            </dd>
+            <dd>
+                @Html.DisplayFor(model => item.DanceLevel.DanceLevel1)
+            </dd>
+            <dd>
+                @Html.DisplayFor(model => item.Combo.Combo1)
             </dd>
         </dl>
         <hr />

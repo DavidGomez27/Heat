@@ -255,6 +255,7 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+
     <Content Include="Content\Images\All black On Track.jpeg" />
     <Content Include="Content\Images\grey shirt hands up.jpeg" />
     <Content Include="Content\Images\group photo.jpeg" />
@@ -266,7 +267,12 @@
     <Content Include="Content\Images\White Dress Serious Faces.jpeg" />
     <Content Include="Content\Images\White dress Smiles all over.jpeg" />
     <Content Include="Content\Images\Yellow Dress Great Shot.jpeg" />
+
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\style.css" />
+
     <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
@@ -296,7 +302,13 @@
     <Content Include="Models\HeatDB.edmx.diagram">
       <DependentUpon>HeatDB.edmx</DependentUpon>
     </Content>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\HeatDisplay.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
@@ -312,6 +324,7 @@
     <Content Include="Slider\StyleSheet1.css" />
     <Content Include="SplashPage\HtmlPage1.html" />
     <Content Include="SplashPage\StyleSheet1.css" />
+    <Content Include="Views\Account\LoginStyleIndex.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -380,11 +393,8 @@
     <Content Include="Views\Roles\Edit.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\ManageUsers.cshtml" />
-
     <Content Include="Views\Couples\HeatList.cshtml" />
-
     <Content Include="Views\UserView\Index.cshtml" />
-
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
