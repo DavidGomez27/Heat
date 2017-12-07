@@ -1,17 +1,23 @@
-﻿using System;
+﻿using Heat.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Data.Entity;
 
 namespace Heat.Controllers
 {
-    [RequireHttps]
+    
     public class HomeController : Controller
     {
+        private HeatEntities db = new HeatEntities();
         public ActionResult Index()
         {
-            return View();
+            var couples = db.Couples.Include(c => c.Combo).Include(c => c.DanceLevel).Include(c => c.DanceType).Include(c => c.HeatList).Include(c => c.Pro);
+            return View(couples.ToList());
+            
+           
         }
 
         public ActionResult About()

@@ -1,38 +1,123 @@
-﻿@{
+﻿@model IEnumerable<Heat.Models.Couple>
+@{
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
 
-<div class="row">
+<h1>Now</h1>
+
+<!--Displays the now list.-->
+<div class="container" id="nowList">
+    <div class="row" id="nowCouples">
+        @foreach (var item in Model)
+        {
+            if (item.HeatList.Status == "Now")
+            {
+                <div class="col-sm-6 col-md-2">
+                    <div class="caption">
+                        <h1>@Html.DisplayFor(modelItem => item.Number)</h1>
+                        <p>@Html.DisplayFor(modelItem => item.Pro.Name)</p>
+                        <p></p>
+                    </div>
+                </div>
+            }
+        }
+    </div>
     
-    <div>
-        
-        <h1></h1>
-    </div>
-
-
-    @*<div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>*@
 </div>
+
+<!--Displays On the deck and In the hole-->
+<div class="row">
+    <div class="container col-md-6">
+        <h2>On the deck</h2>
+        @foreach (var item in Model)
+        {
+            if (item.HeatList.Status == "On the deck")
+            {
+                <div class="caption">
+                    <ul>
+                        <li><h3>@Html.DisplayFor(modelItem => item.Number) </h3><p>@Html.DisplayFor(modelItem => item.Pro.Name)</p></li>
+
+                    </ul>
+                </div>
+            }
+        }
+    </div>
+
+    <h2>In the hole</h2>
+    @foreach (var item in Model)
+    {
+        if (item.HeatList.Status == "In the hole")
+        {
+            <div class="caption">
+                <ul>
+                    <li><h3>@Html.DisplayFor(modelItem => item.Number) </h3><p>@Html.DisplayFor(modelItem => item.Pro.Name)</p></li>
+
+                </ul>
+            </div>
+        }
+    }
+</div>
+
+@*<div>
+    @foreach (var item in Model)
+    {
+
+        if (item.HeatList.Status == "Now")
+        {
+            <ul>
+                <li>
+                    @Html.DisplayNameFor(model => model.HeatList.Name): @Html.DisplayFor(modelItem => item.HeatList.Name)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.HeatList.Status): @Html.DisplayFor(modelItem => item.HeatList.Status)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.DanceType.Dance): @Html.DisplayFor(modelItem => item.DanceType.Dance)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1): @Html.DisplayFor(modelItem => item.DanceLevel.DanceLevel1)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.Combo.Combo1): @Html.DisplayFor(modelItem => item.Combo.Combo1)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.Number): @Html.DisplayFor(modelItem => item.Number)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.Pro.Name): @Html.DisplayFor(modelItem => item.Pro.Name)
+                </li>
+            </ul>
+        }
+    }
+
+    <h1>In the hole</h1>
+    @foreach (var item in Model)
+    {
+        if (item.HeatList.Status == "In the hole")
+        {
+            <ul>
+                <li>
+                    @Html.DisplayNameFor(model => model.HeatList.Name): @Html.DisplayFor(modelItem => item.HeatList.Name)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.HeatList.Status): @Html.DisplayFor(modelItem => item.HeatList.Status)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.DanceType.Dance): @Html.DisplayFor(modelItem => item.DanceType.Dance)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1): @Html.DisplayFor(modelItem => item.DanceLevel.DanceLevel1)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.Combo.Combo1): @Html.DisplayFor(modelItem => item.Combo.Combo1)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.Number): @Html.DisplayFor(modelItem => item.Number)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.Pro.Name): @Html.DisplayFor(modelItem => item.Pro.Name)
+                </li>
+            </ul>
+        }
+    }*@
