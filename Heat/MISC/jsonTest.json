@@ -1,0 +1,48 @@
+﻿
+
+
+//@model IEnumerable<Heat.Models.Couple>
+
+//@{
+//    ViewBag.Title = "Index";
+//}
+
+//<h2>Index</h2>
+
+//<p>@Html.ActionLink("Create New", "Create")</p>
+
+
+//<div id="response"></div>
+//<button id="getHeat" class="btn btn-primary">Get Heats</button>
+
+//@section Scripts {
+//    <script>
+//        var jsonTest = { "pro": "David", "partner": "Selena", "danceType": [{ "dance": "Salsa", "danceLevel": "Pro-Pro" }, { "dance": "Waltz", "danceLevel": "Pro-Am" }] }
+
+//        //now some jQuery
+//        $("#getHeat").click(function (){$("#response").text(jsonTest.danceType[0].danceLevel)});
+
+            
+
+//    </script>
+//}
+
+//@*$(document).ready(function () {
+
+//    $("#findButton").click(function () {
+//        console.log("Find Button was clicked.");
+//        var searchTerm = $("#veggieInput").val().toUpperCase();
+
+//        var listItems = $(".list-group li")
+
+//        listItems.each(function () {
+//            if (!$(this).text().includes(searchTerm)) {
+//                $(this).hide("slow");
+//            }
+
+//        });
+//        if (!$(listItems).text().toUpperCase().includes(searchTerm)) {
+//            alert("Does not exist");
+//        }
+//    });
+//});*@

@@ -160,9 +160,6 @@ namespace Heat.Controllers
             base.Dispose(disposing);
         }
 
-<<<<<<< HEAD
-        //Couple To Heat List
-        // GET: Couples
         public ActionResult HeatList()
         {
             var couples = db.Couples.Include(c => c.HeatList);
@@ -180,7 +177,6 @@ namespace Heat.Controllers
 
             return View(coupleList);
         }
-=======
 
         //Couple To Heat List
         // GET: Couples
@@ -217,6 +213,6 @@ namespace Heat.Controllers
 
 
 
->>>>>>> 64b98e6c0653a06d8ab19398c1258a99373fdfe5
+
     }
 }

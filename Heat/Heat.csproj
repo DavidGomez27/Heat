@@ -296,6 +296,7 @@
     <Content Include="Models\HeatDB.edmx.diagram">
       <DependentUpon>HeatDB.edmx</DependentUpon>
     </Content>
+    <Content Include="MISC\jsonTest.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -380,13 +381,8 @@
     <Content Include="Views\Roles\Edit.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\ManageUsers.cshtml" />
-
-
     <Content Include="Views\Couples\HeatList.cshtml" />
-
     <Content Include="Views\UserView\Index.cshtml" />
-
-
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
