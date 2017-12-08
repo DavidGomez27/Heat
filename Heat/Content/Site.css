@@ -8,10 +8,7 @@
 */
 .dl-horizontal dt {
     white-space: normal;
-}
-
-.dl-horizontal1 {
-    text-align: center;
+    text-align: left;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -76,12 +73,7 @@ textarea {
 }
 
 #gridText {
-
-}
-
-.textInGrid {
     text-align: center;
-    margin-top: 125px;
 }
 
 #firstRow {
@@ -143,8 +135,4 @@ textarea {
 
 .thumbnail {
     margin-top: 15px;
-}
-
-.heatlist.title {
-    text-align: center;
 }
