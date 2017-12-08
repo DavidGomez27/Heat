@@ -144,3 +144,7 @@ textarea {
 .thumbnail {
     margin-top: 15px;
 }
+
+.heatlist.title {
+    text-align: center;
+}
