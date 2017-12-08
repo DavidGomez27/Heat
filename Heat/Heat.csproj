@@ -255,22 +255,22 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-
     <Content Include="Content\Images\All black On Track.jpeg" />
+    <Content Include="Content\Images\brit.JPG" />
     <Content Include="Content\Images\grey shirt hands up.jpeg" />
     <Content Include="Content\Images\group photo.jpeg" />
     <Content Include="Content\Images\Kaitie Performance.jpeg" />
     <Content Include="Content\Images\Kaitie Takes a Pose.jpeg" />
+    <Content Include="Content\Images\kiz.JPG" />
     <Content Include="Content\Images\practice makes perfect.jpeg" />
     <Content Include="Content\Images\smiling practice.jpeg" />
     <Content Include="Content\Images\smokey Purple.jpeg" />
     <Content Include="Content\Images\White Dress Serious Faces.jpeg" />
     <Content Include="Content\Images\White dress Smiles all over.jpeg" />
     <Content Include="Content\Images\Yellow Dress Great Shot.jpeg" />
-
     <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\KaitieStyleSheet.css" />
     <Content Include="Content\style.css" />
-
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
