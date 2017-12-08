@@ -14,10 +14,8 @@ namespace Heat.Controllers
         private HeatEntities db = new HeatEntities();
         public ActionResult Index()
         {
-            var couples = db.Couples.Include(c => c.Combo).Include(c => c.DanceLevel).Include(c => c.DanceType).Include(c => c.HeatList).Include(c => c.Pro);
-            return View(couples.ToList());
-            
-           
+            var couples = db.Couples.Include(c => c.Combo).Include(c => c.DanceLevel).Include(c => c.DanceType).Include(c => c.HeatList).Include(c => c.Pro);      
+            return View(couples.ToList());        
         }
 
         public ActionResult About()
