@@ -270,8 +270,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="MISC\HtmlPage1.html" />
-    <Content Include="MISC\StyleSheet1.css" />
+    <Content Include="SPLASH\HtmlPage1.html" />
     <Content Include="Models\HeatDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>HeatDB.edmx</DependentUpon>
@@ -308,8 +307,6 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Slider\HtmlPage1.html" />
-    <Content Include="Slider\StyleSheet1.css" />
     <Content Include="SplashPage\HtmlPage1.html" />
     <Content Include="SplashPage\StyleSheet1.css" />
     <Content Include="Web.config" />
@@ -380,11 +377,8 @@
     <Content Include="Views\Roles\Edit.cshtml" />
     <Content Include="Views\Roles\Index.cshtml" />
     <Content Include="Views\Roles\ManageUsers.cshtml" />
-
     <Content Include="Views\Couples\HeatList.cshtml" />
-
     <Content Include="Views\UserView\Index.cshtml" />
-
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
