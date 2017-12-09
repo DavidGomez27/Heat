@@ -8,13 +8,6 @@
 */
 .dl-horizontal dt {
     white-space: normal;
-    text-align: left;
-}
-
-.dl-horizontal {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    text-align: left;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -22,16 +15,6 @@ input,
 select,
 textarea {
     max-width: 280px;
-}
-
-
-<<<<<<< HEAD
-.nowCouples{
-    align-content:center;
-}
-
-ul {
-    list-style-type: none;
 }
 
 .carousel-picture1 {
@@ -147,14 +130,8 @@ ul {
     background-position-x: center;
 }
 
-=======
->>>>>>> f7be14b048938d54f4abe024f016b45a17712b8a
 /*This datalist for thumbnail Layout*/
 
 .thumbnail {
     margin-top: 15px;
-<<<<<<< HEAD
-
-=======
->>>>>>> f7be14b048938d54f4abe024f016b45a17712b8a
 }

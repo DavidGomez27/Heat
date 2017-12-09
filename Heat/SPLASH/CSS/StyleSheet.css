@@ -1,0 +1,85 @@
+﻿body {
+    width: 1200px;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    font-family: 'Kaushan Script', cursive;
+    font-family: 'Yellowtail', cursive;
+    font-family: 'Damion', cursive;
+    font-family: 'Mr Dafoe', cursive;
+    font-family: 'Mrs Sheppards', cursive;
+    font-family: 'Aldrich', sans-serif;
+    font-family: 'Audiowide', cursive;
+    font-family: 'Carrois Gothic SC', sans-serif;
+    font-family: 'Coda Caption', sans-serif;
+    font-family: 'Coda', cursive;
+    font-family: 'Electrolize', sans-serif;
+    font-family: 'Fira Mono', monospace;
+    font-family: 'Iceland', cursive;
+    font-family: 'Orbitron', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+    font-family: 'Rajdhani', sans-serif;
+    font-family: 'Rationale', sans-serif;
+    font-family: 'Share Tech Mono', monospace;
+    background-image: url('../images/couplesideviewedit.jpg');
+}
+
+
+.splashpage.container {
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+
+.splashpage.span12{
+    width: 100%;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+}
+
+
+.left {
+    background-image: url(couplesideviewedit.jpg);
+    background-color: rgb(204, 204, 204);
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+   
+}
+
+/*.background.span8{
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    width: 66.66%;
+}*/
+
+.alert.row{
+    height: 50px;
+}
+
+.wrap {
+  display: flex;
+}
+
+.placeholder{
+    width: 150px;
+}
+
+.nowbox{
+    width: 320px;
+    padding: 10px;
+    border: 5px;
+    border-color: #383677;
+    margin: 0;
+    height: 200px;
+    width: 350px;
+    background-color:#bdf3fd;
+}
+
+
+.right {
+  background: -webkit-linear-gradient(-45deg, rgba(184,225,252,1) 0%,rgba(144,186,228,1) 18%,rgba(189,243,253,1) 32%,rgba(189,243,253,1) 36%,rgba(144,191,240,1) 50%,rgba(144,191,240,1) 57%,rgba(201,133,247,1) 74%,rgba(244,225,231,1) 88%,rgba(189,243,253,1) 100%,rgba(244,225,231,1) 100%,rgba(244,225,231,1) 100%); /* Chrome10-25,Safari5.1-6 */
+  /*height: 100vh;*/ 
+  overflow: auto;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
