@@ -1,10 +1,25 @@
 ﻿@model IEnumerable<Heat.Models.Couple>
+@using Heat.Models
 @{
     ViewBag.Title = "Home Page";
+
+    
 }
 
 
-<h1>Now</h1>
+@*@{
+
+    Couple firstCouple = (from h in Model
+                       where h.HeatList.Status == "Now"
+                       select h).First();
+
+    string currentHeat = firstCouple.HeatList.Name;
+    string danceLevel = firstCouple.DanceLevel.DanceLevel1;
+    string combo = firstCouple.Combo.Combo1;
+    string danceType = firstCouple.DanceType.Dance;
+
+ }*@
+<h1>Now</h1> <h3>Heat: @ViewBag.CurrentHeat Level: @ViewBag.DanceLevel Combination: @ViewBag.Combo Dance: @ViewBag.DanceType </h3>
 <!--Displays the now list.-->
 <div class="container" id="nowList">
     <div class="row" id="nowCouples">
@@ -16,7 +31,7 @@
                 <div class="col-sm-6 col-md-2">
                     <div class="caption">
                         <h1>@Html.DisplayFor(modelItem => item.Number)</h1>
-                        <p>@Html.DisplayFor(modelItem => item.Pro.Name)</p>
+                        <p>@Html.DisplayFor(modelItem => item.Pro.Name)</p>       
                         <p></p>
                     </div>
                 </div>
@@ -89,7 +104,7 @@
                 </li>
             </ul>
         }
-    }*@
+    }
 
     @*<h1>In the hole</h1>
     @foreach (var item in Model)
