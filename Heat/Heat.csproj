@@ -329,11 +329,15 @@
     <Content Include="bin\WebGrease.dll" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\codafont.css" />
+    <Content Include="Content\codafont.PNG" />
     <Content Include="Content\Images\All black On Track.jpeg" />
+    <Content Include="Content\Images\brit.JPG" />
     <Content Include="Content\Images\grey shirt hands up.jpeg" />
     <Content Include="Content\Images\group photo.jpeg" />
     <Content Include="Content\Images\Kaitie Performance.jpeg" />
     <Content Include="Content\Images\Kaitie Takes a Pose.jpeg" />
+    <Content Include="Content\Images\kiz.JPG" />
     <Content Include="Content\Images\practice makes perfect.jpeg" />
     <Content Include="Content\Images\smiling practice.jpeg" />
     <Content Include="Content\Images\smokey Purple.jpeg" />
@@ -341,11 +345,57 @@
     <Content Include="Content\Images\White dress Smiles all over.jpeg" />
     <Content Include="Content\Images\Yellow Dress Great Shot.jpeg" />
     <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\KaitieStyleSheet.css" />
+    <Content Include="Content\style.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="HomePlanB\codafont.PNG" />
+    <Content Include="HomePlanB\css\bootstrap-responsive.min.css" />
+    <Content Include="HomePlanB\css\bootstrap.min.css" />
+    <Content Include="HomePlanB\css\fonts.css" />
+    <Content Include="HomePlanB\css\fonts\Icons.svg" />
+    <Content Include="HomePlanB\css\main.css" />
+    <Content Include="HomePlanB\css\responsive.css" />
+    <Content Include="HomePlanB\css\supersized.css" />
+    <Content Include="HomePlanB\css\supersized.shutter.css" />
+    <Content Include="HomePlanB\img\filter-icon.png" />
+    <Content Include="HomePlanB\img\filter-icon_%402x.png" />
+    <Content Include="HomePlanB\img\logo.png" />
+    <Content Include="HomePlanB\img\logo_%402x.png" />
+    <Content Include="HomePlanB\img\menu-mobile.png" />
+    <Content Include="HomePlanB\img\menu-mobile_%402x.png" />
+    <Content Include="HomePlanB\img\slider-images\image01.jpg" />
+    <Content Include="HomePlanB\img\slider-images\image02.JPG" />
+    <Content Include="HomePlanB\img\slider-images\image03.JPG" />
+    <Content Include="HomePlanB\img\slider-images\image04.JPG" />
+    <Content Include="HomePlanB\img\supersized\back.png" />
+    <Content Include="HomePlanB\img\supersized\bg-black.png" />
+    <Content Include="HomePlanB\img\supersized\bg-hover.png" />
+    <Content Include="HomePlanB\img\supersized\button-tray-down.png" />
+    <Content Include="HomePlanB\img\supersized\button-tray-up.png" />
+    <Content Include="HomePlanB\img\supersized\forward.png" />
+    <Content Include="HomePlanB\img\supersized\nav-bg.png" />
+    <Content Include="HomePlanB\img\supersized\nav-dot.png" />
+    <Content Include="HomePlanB\img\supersized\pause.png" />
+    <Content Include="HomePlanB\img\supersized\play.png" />
+    <Content Include="HomePlanB\img\supersized\progress-back.png" />
+    <Content Include="HomePlanB\img\supersized\progress-bar.png" />
+    <Content Include="HomePlanB\img\supersized\progress.gif" />
+    <Content Include="HomePlanB\img\supersized\supersized-logo.png" />
+    <Content Include="HomePlanB\img\supersized\thumb-back.png" />
+    <Content Include="HomePlanB\img\supersized\thumb-forward.png" />
+    <Content Include="HomePlanB\js\bootstrap.min.js" />
+    <Content Include="HomePlanB\js\main.js" />
+    <Content Include="HomePlanB\js\modernizr.js" />
+    <Content Include="HomePlanB\js\placeholder.js" />
+    <Content Include="HomePlanB\js\plugins.js" />
+    <Content Include="HomePlanB\js\supersized.3.2.7.min.js" />
+    <Content Include="HomePlanB\js\waypoints-sticky.js" />
+    <Content Include="HomePlanB\js\waypoints.js" />
+    <Content Include="HomePlanB\HomePlanB.html" />
     <Content Include="obj\Debug\Heat.csproj.FileListAbsolute.txt" />
     <Content Include="obj\Debug\Heat.dll" />
     <Content Include="obj\Debug\Heat.pdb" />
@@ -365,16 +415,6 @@
     <Content Include="ReviewContent\Images\White dress Smiles all over.jpeg" />
     <Content Include="ReviewContent\Images\Yellow Dress Great Shot.jpeg" />
     <Content Include="ReviewContent\Site.css" />
-    <Content Include="SplashPageSplitScreen\couplesideviewedit.jpg" />
-    <Content Include="SplashPageSplitScreen\HtmlPage1.html" />
-    <Content Include="SplashPageSplitScreen\Splash Page NOW first layout.png" />
-    <Content Include="SplashPageSplitScreen\StyleSheet1.css" />
-    <Content Include="SPLASH\CSS\bootstrap-responsive.min.css" />
-    <Content Include="SPLASH\CSS\bootstrap.min.css" />
-    <Content Include="SPLASH\CSS\Splash Page NOW first layout.png" />
-    <Content Include="SPLASH\CSS\StyleSheet.css" />
-    <Content Include="SPLASH\CSS\w3.css" />
-    <Content Include="SPLASH\HtmlPage1.html" />
     <Content Include="Models\HeatDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>HeatDB.edmx</DependentUpon>
@@ -414,6 +454,14 @@
     <Content Include="obj\Debug\edmxResourcesToEmbed\Models\HeatDB.msl" />
     <Content Include="obj\Debug\edmxResourcesToEmbed\Models\HeatDB.ssdl" />
     <Content Include="obj\Debug\Heat.csprojResolveAssemblyReference.cache" />
+    <Content Include="HomePlanB\css\fonts\.DS_Store" />
+    <Content Include="HomePlanB\css\fonts\Icons.eot" />
+    <Content Include="HomePlanB\css\fonts\Icons.ttf" />
+    <Content Include="HomePlanB\css\fonts\Icons.woff" />
+    <Content Include="HomePlanB\img\.DS_Store" />
+    <Content Include="HomePlanB\img\supersized\.DS_Store" />
+    <Content Include="HomePlanB\php\.DS_Store" />
+    <Content Include="HomePlanB\php\contact.php" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\HeatDisplay.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -427,21 +475,8 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="SPLASH\Images\Capture.PNG" />
-    <Content Include="SPLASH\Images\couplesideviewedit.jpg" />
-    <Content Include="SPLASH\Images\flashdance 1.PNG" />
-    <Content Include="SPLASH\Images\flashdance 2.PNG" />
-    <Content Include="SPLASH\Images\flashdance 3.PNG" />
-    <Content Include="SPLASH\Images\flashdance 4.PNG" />
-    <Content Include="SPLASH\Images\flashdance 5.PNG" />
-    <Content Include="SPLASH\Images\fonts 1.PNG" />
-    <Content Include="SPLASH\Images\fonts 2.PNG" />
-    <Content Include="SPLASH\Images\sideviewofsilhouettecouple.JPG" />
-    <Content Include="SPLASH\Images\silhouettecouple.JPG" />
-    <Content Include="SPLASH\Images\singlewomanarms.JPG" />
-    <Content Include="SPLASH\Images\singlewomanfull.JPG" />
-    <Content Include="SPLASH\Images\Splash Page NOW first layout.png" />
     <Content Include="Views\Account\LoginStyleIndex.html" />
+    <Content Include="Views\Home\Splash Page NOW first layout.png" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -512,11 +547,9 @@
     <Content Include="Views\Roles\ManageUsers.cshtml" />
     <Content Include="Views\Couples\HeatList.cshtml" />
     <Content Include="Views\UserView\Index.cshtml" />
-    <Content Include="SplashPageSplitScreen\HEAT Splash NOW first.pdf" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Carousel\" />
     <Folder Include="Service References\" />
     <Folder Include="Views\Test\" />
   </ItemGroup>
@@ -549,7 +582,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>58319</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>https://localhost:44327/</IISUrl>
+          <IISUrl>https://localhost:44327</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
