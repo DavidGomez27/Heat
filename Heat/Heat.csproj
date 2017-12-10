@@ -436,6 +436,10 @@
     <Content Include="SPLASH\Images\flashdance 5.PNG" />
     <Content Include="SPLASH\Images\fonts 1.PNG" />
     <Content Include="SPLASH\Images\fonts 2.PNG" />
+    <Content Include="SPLASH\Images\sideviewofsilhouettecouple.JPG" />
+    <Content Include="SPLASH\Images\silhouettecouple.JPG" />
+    <Content Include="SPLASH\Images\singlewomanarms.JPG" />
+    <Content Include="SPLASH\Images\singlewomanfull.JPG" />
     <Content Include="SPLASH\Images\Splash Page NOW first layout.png" />
     <Content Include="Views\Account\LoginStyleIndex.html" />
     <Content Include="Web.config" />

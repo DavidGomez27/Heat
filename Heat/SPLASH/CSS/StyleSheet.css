@@ -29,10 +29,17 @@
     padding: 0px 0px 0px 0px;
 }
 
+.img-responsive{
+    background-image: url(couplesideviewedit.jpg);
+    background-color: rgb(204, 204, 204);
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background-repeat: no-repeat;
+}
 
 .splashpage.span12{
     width: 100%;
-    margin: 0px 0px 0px 0px;
+    margin: 0px 40px 0px 40px;
     padding: 0px 0px 0px 0px;
 }
 
