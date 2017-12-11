@@ -3,11 +3,16 @@
 @{
     ViewBag.Title = "Home Page";
 
+<<<<<<< HEAD
 
+=======
+    
+>>>>>>> htmlbranch
 }
 
 @*@{
 
+<<<<<<< HEAD
        Couple firstCouple = (from h in Model
                           where h.HeatList.Status == "Now"
                           select h).First();
@@ -19,28 +24,58 @@
 
     }*@
 <h1>Now</h1>
+=======
+    Couple firstCouple = (from h in Model
+                       where h.HeatList.Status == "Now"
+                       select h).First();
+
+    string currentHeat = firstCouple.HeatList.Name;
+    string danceLevel = firstCouple.DanceLevel.DanceLevel1;
+    string combo = firstCouple.Combo.Combo1;
+    string danceType = firstCouple.DanceType.Dance;
+
+ }*@
+
+
+<h1>Now</h1> 
+
+>>>>>>> htmlbranch
 <h3>Heat: @ViewBag.CurrentHeat Level: @ViewBag.DanceLevel Combination: @ViewBag.Combo Dance: @ViewBag.DanceType </h3>
 <!--Displays the now list.-->
 <div class="container" id="nowList">
     <div class="row" id="nowCouples">
         @foreach (var item in Model)
         {
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> htmlbranch
             if (item.HeatList.Status == "Now")
             {
                 <div class="col-sm-6 col-md-2">
                     <div class="caption">
                         <h1>@Html.DisplayFor(modelItem => item.Number)</h1>
+<<<<<<< HEAD
                         <p>@Html.DisplayFor(modelItem => item.Pro.Name)</p>
+=======
+                        <p>@Html.DisplayFor(modelItem => item.Pro.Name)</p>       
+>>>>>>> htmlbranch
                         <p></p>
                     </div>
                 </div>
             }
         }
     </div>
+<<<<<<< HEAD
 
 </div>
 
+=======
+    
+</div>
+
+>>>>>>> htmlbranch
 <div class="row">
     <div class="container col-md-6">
         <h2>On the deck</h2>
@@ -51,6 +86,7 @@
                 <div class="caption">
                     <ul>
                         <li><h3>@Html.DisplayFor(modelItem => item.Number) </h3><p>@Html.DisplayFor(modelItem => item.Pro.Name)</p></li>
+<<<<<<< HEAD
 
                     </ul>
                 </div>
@@ -184,6 +220,126 @@
         </div>
         <div class="col-md-4" id="picture9"></div>
     </div>*@
+=======
+
+                    </ul>
+                </div>
+            }
+        }
+    </div>
+<!--Last row that have a column of 3 and that makes up the grid -->
+
+    <h2>In the hole</h2>
+    @foreach (var item in Model)
+    {
+        if (item.HeatList.Status == "In the hole")
+        {
+            <div class="caption">
+                <ul>
+                    <li><h3>@Html.DisplayFor(modelItem => item.Number) </h3><p>@Html.DisplayFor(modelItem => item.Pro.Name)</p></li>
+
+                </ul>
+            </div>
+        }
+    }
+</div>
+
+@*<div>
+    @foreach (var item in Model)
+    {
+
+        if (item.HeatList.Status == "Now")
+        {
+            <ul>
+                <li>
+                    @Html.DisplayNameFor(model => model.HeatList.Name): @Html.DisplayFor(modelItem => item.HeatList.Name)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.HeatList.Status): @Html.DisplayFor(modelItem => item.HeatList.Status)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.DanceType.Dance): @Html.DisplayFor(modelItem => item.DanceType.Dance)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1): @Html.DisplayFor(modelItem => item.DanceLevel.DanceLevel1)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.Combo.Combo1): @Html.DisplayFor(modelItem => item.Combo.Combo1)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.Number): @Html.DisplayFor(modelItem => item.Number)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.Pro.Name): @Html.DisplayFor(modelItem => item.Pro.Name)
+                </li>
+            </ul>
+        }
+    }
+
+    @*<h1>In the hole</h1>
+    @foreach (var item in Model)
+    {
+        if (item.HeatList.Status == "In the hole")
+        {
+            <ul>
+                <li>
+                    @Html.DisplayNameFor(model => model.HeatList.Name): @Html.DisplayFor(modelItem => item.HeatList.Name)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.HeatList.Status): @Html.DisplayFor(modelItem => item.HeatList.Status)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.DanceType.Dance): @Html.DisplayFor(modelItem => item.DanceType.Dance)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1): @Html.DisplayFor(modelItem => item.DanceLevel.DanceLevel1)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.Combo.Combo1): @Html.DisplayFor(modelItem => item.Combo.Combo1)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.Number): @Html.DisplayFor(modelItem => item.Number)
+                </li>
+                <li>
+                    @Html.DisplayNameFor(model => model.Pro.Name): @Html.DisplayFor(modelItem => item.Pro.Name)
+                </li>
+            </ul>
+        }
+    }*@
+
+    <!--Displays On the deck and In the hole-->
+    <!--this row contains 3 sets of columns so all of them need to be 4 length to equal to 12-->
+    @*<div class="row" id="firstRow">
+            <div class="col-md-4" id="picture1"></div>
+            <div class="col-md-4" id="gridText">
+                <h3>Ipsum Stuff</h3>
+                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
+            </div>
+            <div class="col-md-4" id="picture3"></div>
+        </div>*@
+
+    <!--Also 3 columns so 4 length-->
+    @*<div class="row" id="secondRow">
+            <div class="col-md-4" id="gridText">
+                <h3>Ipsum Stuff</h3>
+                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
+            </div>
+            <div class="col-md-4" id="picture5"></div>
+            <div class="col-md-4" id="gridText">
+                <h3>Ipsum Stuff</h3>
+                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
+            </div>
+        </div>*@
+
+@*<div class="row" id="thirdRow">
+    <div class="col-md-4" id="picture7"></div>
+    <div class="col-md-4" id="gridText">
+        <h3>Ipsum Stuff</h3>
+        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
+    </div>
+    <div class="col-md-4" id="picture9"></div>
+</div>*@
+>>>>>>> htmlbranch
 @*<div class="row" id="fourthRow">
     <div class="col-md-6" id="Carousel1">
         <div class="col-md-12">
@@ -278,6 +434,7 @@
     </div>
 
     </div>*@
+<<<<<<< HEAD
 
 @*<div class="col-md-4">
         <h2>Getting started</h2>
@@ -298,3 +455,27 @@
         <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>*@
+=======
+   
+
+
+    @*<div class="col-md-4">
+            <h2>Getting started</h2>
+            <p>
+                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+                enables a clean separation of concerns and gives you full control over markup
+                for enjoyable, agile development.
+            </p>
+            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Get more libraries</h2>
+            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        </div>
+        <div class="col-md-4">
+            <h2>Web Hosting</h2>
+            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        </div>*@
+>>>>>>> htmlbranch

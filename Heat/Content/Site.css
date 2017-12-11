@@ -1,6 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: 'Coda Caption', sans-serif;
+    font-family: 'Coda', cursive;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -24,8 +26,11 @@ textarea {
     max-width: 280px;
 }
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
+=======
+>>>>>>> htmlbranch
 .nowCouples{
     align-content:center;
 }
@@ -147,8 +152,12 @@ ul {
     background-position-x: center;
 }
 
+<<<<<<< HEAD
 =======
 >>>>>>> f7be14b048938d54f4abe024f016b45a17712b8a
+=======
+
+>>>>>>> htmlbranch
 /*This datalist for thumbnail Layout*/
 
 .thumbnail {
