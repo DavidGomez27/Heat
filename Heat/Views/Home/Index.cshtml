@@ -6,8 +6,6 @@
 }
 
 @*@{
-
-
        Couple firstCouple = (from h in Model
                           where h.HeatList.Status == "Now"
                           select h).First();
@@ -18,23 +16,10 @@
        string danceType = firstCouple.DanceType.Dance;
 
     }*@
+
 <h1>Now</h1>
 
-    Couple firstCouple = (from h in Model
-                       where h.HeatList.Status == "Now"
-                       select h).First();
-
-    string currentHeat = firstCouple.HeatList.Name;
-    string danceLevel = firstCouple.DanceLevel.DanceLevel1;
-    string combo = firstCouple.Combo.Combo1;
-    string danceType = firstCouple.DanceType.Dance;
-
- }*@
-
-
-<h1>Now</h1> 
-
-<h3>Heat: @ViewBag.CurrentHeat Level: @ViewBag.DanceLevel Combination: @ViewBag.Combo Dance: @ViewBag.DanceType </h3>
+<h3>@*Heat:*@ @ViewBag.CurrentHeat @*Level: @ViewBag.DanceLevel Combination: @ViewBag.Combo Dance: @ViewBag.DanceType*@ </h3>
 <!--Displays the now list.-->
 <div class="container" id="nowList">
     <div class="row" id="nowCouples">
@@ -54,16 +39,14 @@
             }
         }
     </div>
-
-
 </div>
 
 <div class="row">
     <div class="container col-md-6">
-        <h2>On the deck</h2>
+        <h2>On deck</h2>
         @foreach (var item in Model)
         {
-            if (item.HeatList.Status == "On the deck")
+            if (item.HeatList.Status == "On deck")
             {
                 <div class="caption">
                     <ul>
@@ -74,7 +57,6 @@
             }
         }
     </div>
-    <!--Last row that have a column of 3 and that makes up the grid -->
 
     <h2>In the hole</h2>
     @foreach (var item in Model)
@@ -105,305 +87,6 @@
     </script>
 }
 
-@*<div>
-    @foreach (var item in Model)
-    {
-
-        if (item.HeatList.Status == "Now")
-        {
-            <ul>
-                <li>
-                    @Html.DisplayNameFor(model => model.HeatList.Name): @Html.DisplayFor(modelItem => item.HeatList.Name)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.HeatList.Status): @Html.DisplayFor(modelItem => item.HeatList.Status)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.DanceType.Dance): @Html.DisplayFor(modelItem => item.DanceType.Dance)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1): @Html.DisplayFor(modelItem => item.DanceLevel.DanceLevel1)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Combo.Combo1): @Html.DisplayFor(modelItem => item.Combo.Combo1)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Number): @Html.DisplayFor(modelItem => item.Number)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Pro.Name): @Html.DisplayFor(modelItem => item.Pro.Name)
-                </li>
-            </ul>
-        }
-    }
-
-    @*<h1>In the hole</h1>
-    @foreach (var item in Model)
-    {
-        if (item.HeatList.Status == "In the hole")
-        {
-            <ul>
-                <li>
-                    @Html.DisplayNameFor(model => model.HeatList.Name): @Html.DisplayFor(modelItem => item.HeatList.Name)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.HeatList.Status): @Html.DisplayFor(modelItem => item.HeatList.Status)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.DanceType.Dance): @Html.DisplayFor(modelItem => item.DanceType.Dance)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1): @Html.DisplayFor(modelItem => item.DanceLevel.DanceLevel1)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Combo.Combo1): @Html.DisplayFor(modelItem => item.Combo.Combo1)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Number): @Html.DisplayFor(modelItem => item.Number)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Pro.Name): @Html.DisplayFor(modelItem => item.Pro.Name)
-                </li>
-            </ul>
-        }
-    }*@
-
-<!--Displays On the deck and In the hole-->
-<!--this row contains 3 sets of columns so all of them need to be 4 length to equal to 12-->
-@*<div class="row" id="firstRow">
-        <div class="col-md-4" id="picture1"></div>
-        <div class="col-md-4" id="gridText">
-            <h3>Ipsum Stuff</h3>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
-        </div>
-        <div class="col-md-4" id="picture3"></div>
-    </div>*@
-
-<!--Also 3 columns so 4 length-->
-@*<div class="row" id="secondRow">
-        <div class="col-md-4" id="gridText">
-            <h3>Ipsum Stuff</h3>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
-        </div>
-        <div class="col-md-4" id="picture5"></div>
-        <div class="col-md-4" id="gridText">
-            <h3>Ipsum Stuff</h3>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
-        </div>
-    </div>*@
-
-@*<div class="row" id="thirdRow">
-        <div class="col-md-4" id="picture7"></div>
-        <div class="col-md-4" id="gridText">
-            <h3>Ipsum Stuff</h3>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
-        </div>
-        <div class="col-md-4" id="picture9"></div>
-    </div>*@
-<!--Last row that have a column of 3 and that makes up the grid -->
-
-    <h2>In the hole</h2>
-    @foreach (var item in Model)
-    {
-        if (item.HeatList.Status == "In the hole")
-        {
-            <div class="caption">
-                <ul>
-                    <li><h3>@Html.DisplayFor(modelItem => item.Number) </h3><p>@Html.DisplayFor(modelItem => item.Pro.Name)</p></li>
-
-                </ul>
-            </div>
-        }
-    }
+  
 
 
-@*<div>
-    @foreach (var item in Model)
-    {
-
-        if (item.HeatList.Status == "Now")
-        {
-            <ul>
-                <li>
-                    @Html.DisplayNameFor(model => model.HeatList.Name): @Html.DisplayFor(modelItem => item.HeatList.Name)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.HeatList.Status): @Html.DisplayFor(modelItem => item.HeatList.Status)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.DanceType.Dance): @Html.DisplayFor(modelItem => item.DanceType.Dance)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1): @Html.DisplayFor(modelItem => item.DanceLevel.DanceLevel1)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Combo.Combo1): @Html.DisplayFor(modelItem => item.Combo.Combo1)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Number): @Html.DisplayFor(modelItem => item.Number)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Pro.Name): @Html.DisplayFor(modelItem => item.Pro.Name)
-                </li>
-            </ul>
-        }
-    }
-
-    @*<h1>In the hole</h1>
-    @foreach (var item in Model)
-    {
-        if (item.HeatList.Status == "In the hole")
-        {
-            <ul>
-                <li>
-                    @Html.DisplayNameFor(model => model.HeatList.Name): @Html.DisplayFor(modelItem => item.HeatList.Name)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.HeatList.Status): @Html.DisplayFor(modelItem => item.HeatList.Status)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.DanceType.Dance): @Html.DisplayFor(modelItem => item.DanceType.Dance)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1): @Html.DisplayFor(modelItem => item.DanceLevel.DanceLevel1)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Combo.Combo1): @Html.DisplayFor(modelItem => item.Combo.Combo1)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Number): @Html.DisplayFor(modelItem => item.Number)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Pro.Name): @Html.DisplayFor(modelItem => item.Pro.Name)
-                </li>
-            </ul>
-        }
-    }*@
-
-    <!--Displays On the deck and In the hole-->
-    <!--this row contains 3 sets of columns so all of them need to be 4 length to equal to 12-->
-    @*<div class="row" id="firstRow">
-            <div class="col-md-4" id="picture1"></div>
-            <div class="col-md-4" id="gridText">
-                <h3>Ipsum Stuff</h3>
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
-            </div>
-            <div class="col-md-4" id="picture3"></div>
-        </div>*@
-
-    <!--Also 3 columns so 4 length-->
-    @*<div class="row" id="secondRow">
-            <div class="col-md-4" id="gridText">
-                <h3>Ipsum Stuff</h3>
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
-            </div>
-            <div class="col-md-4" id="picture5"></div>
-            <div class="col-md-4" id="gridText">
-                <h3>Ipsum Stuff</h3>
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
-            </div>
-        </div>*@
-
-@*<div class="row" id="thirdRow">
-    <div class="col-md-4" id="picture7"></div>
-    <div class="col-md-4" id="gridText">
-        <h3>Ipsum Stuff</h3>
-        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
-    </div>
-    <div class="col-md-4" id="picture9"></div>
-</div>*@
-
-@*<div class="row" id="fourthRow">
-    <div class="col-md-6" id="Carousel1">
-        <div class="col-md-12">
-            <div id="only-Carousel" class="carousel slide" data-ride="carousel">
-
-                <!-- indicators dot nav -->
-                <ol class="carousel-indicators">
-                    <li data-target="#only-Carousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#only-Carousel" data-slide-to="1"></li>
-                    <li data-target="#only-Carousel" data-slide-to="2"></li>
-                </ol>
-
-                <!-- wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <div class="filler"></div>
-                        <div class="carousel-picture1">
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="filler"></div>
-                        <div class="carousel-picture2">
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="filler"></div>
-                        <div class="carousel-picture3">
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- controls || next and prevs button -->
-                <a class="left carousel-control" href="#only-Carousel" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <a class="right carousel-control" href="#only-Carousel" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
-
-            </div>
-        </div>
-    </div>
-
-
-
-    <div class="col-md-6" id="Carousel2">
-        <div class="col-md-12">
-            <div id="only-Carousel2" class="carousel slide" data-ride="carousel">
-
-                <!-- indicators dot nav -->
-                <ol class="carousel-indicators">
-                    <li data-target="#only-Carousel2" data-slide-to="0" class="active"></li>
-                    <li data-target="#only-Carousel2" data-slide-to="1"></li>
-                    <li data-target="#only-Carousel2" data-slide-to="2"></li>
-                </ol>
-
-                <!-- wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <div class="filler"></div>
-                        <div class="carousel-picture4">
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="filler"></div>
-                        <div class="carousel-picture5">
-
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="filler"></div>
-                        <div class="carousel-picture6">
-
-                        </div>
-                    </div>
-                </div>
-
-                <!-- controls || next and prevs button -->
-                <a class="left carousel-control" href="#only-Carousel2" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left"></span>
-                </a>
-                <a class="right carousel-control" href="#only-Carousel2" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right"></span>
-                </a>
-
-            </div>
-        </div>
-    </div>
-
-    </div>*@
