@@ -4,3 +4,7 @@ body {
     background-image: url('Images/brit.JPG');
     color: white;
 }
+
+.rounded{
+    border-radius: 20px;
+}
