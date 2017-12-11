@@ -6,8 +6,6 @@
 }
 
 @*@{
-
-
        Couple firstCouple = (from h in Model
                           where h.HeatList.Status == "Now"
                           select h).First();
@@ -19,20 +17,6 @@
 
     }*@
 <h1>Now</h1>
-
-    Couple firstCouple = (from h in Model
-                       where h.HeatList.Status == "Now"
-                       select h).First();
-
-    string currentHeat = firstCouple.HeatList.Name;
-    string danceLevel = firstCouple.DanceLevel.DanceLevel1;
-    string combo = firstCouple.Combo.Combo1;
-    string danceType = firstCouple.DanceType.Dance;
-
- }*@
-
-
-<h1>Now</h1> 
 
 <h3>Heat: @ViewBag.CurrentHeat Level: @ViewBag.DanceLevel Combination: @ViewBag.Combo Dance: @ViewBag.DanceType </h3>
 <!--Displays the now list.-->
@@ -54,8 +38,6 @@
             }
         }
     </div>
-
-
 </div>
 
 <div class="row">

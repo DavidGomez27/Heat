@@ -10,10 +10,7 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 
-<<<<<<< HEAD
 
-=======
->>>>>>> 042eaf4d960f60bfac6b26b2f30014c07fd45eaf
 <div class="row">
     @foreach (var item in Model)
     {
@@ -29,22 +26,8 @@
                     @if (User.IsInRole("Admin") || User.IsInRole("Pro"))
                     {
                         <p>
-<<<<<<< HEAD
-
-                            @Html.ActionLink("Edit", "Edit", new { id = item.HeatListID }) |
-
-
                             @Html.ActionLink("Edit", "Edit", new { id = item.HeatListID }) |
                             @Html.ActionLink("Details", "Details", new { id = item.HeatListID }) |
-                            @Html.ActionLink("Edit", "Edit", new { id = item.HeatListID }) |
-
-                            @Html.ActionLink("Delete", "Delete", new { id = item.HeatListID })
-=======
-
-                            @Html.ActionLink("Edit", "Edit", new { id = item.HeatListID }) |
-                            @Html.ActionLink("Details", "Details", new { id = item.HeatListID }) |
-
->>>>>>> 042eaf4d960f60bfac6b26b2f30014c07fd45eaf
                         </p>
                     }
                 </div>
