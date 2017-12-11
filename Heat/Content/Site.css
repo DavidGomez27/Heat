@@ -9,12 +9,15 @@
 .dl-horizontal dt {
     white-space: normal;
     text-align: left;
+
 }
 
 .dl-horizontal {
+    font-family: cursive;
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: left;
+    color: #e4a4dd ;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -29,4 +32,17 @@ textarea {
 
 .thumbnail {
     margin-top: 15px;
+    background: rgba(0, 0, 0, 0.70);
+    border-radius: 20px;
+}
+
+a.btn.btn-primary {
+    background-color: #e4a4dd ;
+    border-color: #e4a4dd;
+    color: rgba(0, 0, 0, 0.70);
+}
+
+.heatlistName {
+    color: #e4a4dd ;
+    font-family: cursive;
 }
