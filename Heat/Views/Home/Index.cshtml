@@ -6,8 +6,6 @@
 }
 
 @*@{
-
-
        Couple firstCouple = (from h in Model
                           where h.HeatList.Status == "Now"
                           select h).First();
@@ -18,6 +16,7 @@
        string danceType = firstCouple.DanceType.Dance;
 
     }*@
+<<<<<<< HEAD
 
     @*Couple firstCouple = (from h in Model
                        where h.HeatList.Status == "Now"
@@ -29,11 +28,12 @@
     string danceType = firstCouple.DanceType.Dance;
 
  }*@
+=======
+>>>>>>> 1b2c2153d53bf847e3b59f50e9a1ec893d229e52
 
+<h1>Now</h1>
 
-<h1>Now</h1> 
-
-<h3>Heat: @ViewBag.CurrentHeat Level: @ViewBag.DanceLevel Combination: @ViewBag.Combo Dance: @ViewBag.DanceType </h3>
+<h3>@*Heat:*@ @ViewBag.CurrentHeat @*Level: @ViewBag.DanceLevel Combination: @ViewBag.Combo Dance: @ViewBag.DanceType*@ </h3>
 <!--Displays the now list.-->
 <div class="container" id="nowList">
     <div class="row" id="nowCouples">
@@ -53,16 +53,14 @@
             }
         }
     </div>
-
-
 </div>
 
 <div class="row">
     <div class="container col-md-6">
-        <h2>On the deck</h2>
+        <h2>On deck</h2>
         @foreach (var item in Model)
         {
-            if (item.HeatList.Status == "On the deck")
+            if (item.HeatList.Status == "On deck")
             {
                 <div class="caption">
                     <ul>
@@ -73,7 +71,6 @@
             }
         }
     </div>
-    <!--Last row that have a column of 3 and that makes up the grid -->
 
     <h2>In the hole</h2>
     @foreach (var item in Model)
@@ -104,6 +101,7 @@
     </script>
 }
 
+<<<<<<< HEAD
 @*<div>
     @foreach (var item in Model)
     {
@@ -389,5 +387,8 @@
             </div>
         </div>
     </div>
+=======
+  
 
-    </div>*@
+>>>>>>> 1b2c2153d53bf847e3b59f50e9a1ec893d229e52
+
