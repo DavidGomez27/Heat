@@ -36,7 +36,7 @@ namespace Heat.Controllers
             ViewBag.DanceType = danceType;
 
             return View(couples.ToList()); 
-                   
+            
         }
 
         public ActionResult About()

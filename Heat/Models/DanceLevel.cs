@@ -11,8 +11,7 @@ namespace Heat.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class DanceLevel
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -20,9 +19,8 @@ namespace Heat.Models
         {
             this.Couples = new HashSet<Couple>();
         }
-        
+    
         public int DanceLevelID { get; set; }
-        [Display(Name = "Dance Level")]
         public string DanceLevel1 { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
