@@ -313,7 +313,9 @@
     <Content Include="Slider\StyleSheet1.css" />
     <Content Include="SplashPage\HtmlPage1.html" />
     <Content Include="SplashPage\StyleSheet1.css" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -383,6 +385,9 @@
     <Content Include="Views\Roles\ManageUsers.cshtml" />
     <Content Include="Views\Couples\HeatList.cshtml" />
     <Content Include="Views\UserView\Index.cshtml" />
+    <Content Include="Views\HeatLists\Heat1.cshtml" />
+    <Content Include="Views\Partial\GetPartialResult.cshtml" />
+    <Content Include="Views\HeatLists\Details1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

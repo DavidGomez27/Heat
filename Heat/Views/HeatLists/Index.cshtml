@@ -18,22 +18,58 @@
                 <div class="caption">
                     <h3>@Html.DisplayFor(modelItem => item.Name)</h3>
                     @*<p>@Html.DisplayNameFor(model => model.HeatListID) : @Html.DisplayFor(modelItem => item.HeatListID)</p>*@
-                    @*<p>@Html.ActionLink("Details", "Details", new { id = item.HeatListID }, new { @class = "btn btn-primary", role = "button" })</p>*@
+                    <button id="btn" class="btn btn-primary" data-id="@item.HeatListID" >Heat Members</button>
+                    @*<button id="btn" class="btn btn-primary" value="Get Partial View">Heat Members</button>*@
                     @*<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>*@
                     @if (User.IsInRole("Admin") || User.IsInRole("Pro"))
                     {
                         <p>
 
                             @Html.ActionLink("Edit", "Edit", new { id = item.HeatListID }) |
-                            @Html.ActionLink("Details", "Details", new { id = item.HeatListID }) |
+                            @Html.ActionLink("Details", "Heat1", new { id = item.HeatListID }) |
                             @Html.ActionLink("Delete", "Delete", new { id = item.HeatListID })
                         </p>
+
                     }
                 </div>
             </div>
         </div>
     }
+
+
 </div>
+
+
+@section Scripts {
+
+<script type="text/javascript">
+    $(function () {
+
+    //alert("in function")
+    $('.btn.btn-primary').click(function () {
+    //alert("onclick")
+            var $buttonClicked = $(this);
+            var id = $buttonClicked.attr('data-id');
+
+            $.ajax({
+                url: '@Url.Action("Details1/")'+id,
+                type: 'GET',
+                //data: { id: id },
+                success: function (partialView) {
+                    $('#detailsPlace').html(partialView);
+                    $('#detailsPlace').show();
+                }
+            });
+        });
+    });
+</script>
+
+ 
+    }
+
+@*<button id="btn" class="btn btn-primary" data-id="item.HeatListID" >Heat Members</button>*@
+<div id="detailsPlace"></div>
+
 
 @*<table class="table">
     <tr>
@@ -69,3 +105,13 @@
 }
 
 </table>*@
+
+@*<script type="text/javascript">
+$(document).ready(function () {
+    $('#btn').click(function () {
+        alert("Test")
+        $('#result').load('@Url.Action("Index", "HeatLists")');
+});
+});
+
+</script>*@

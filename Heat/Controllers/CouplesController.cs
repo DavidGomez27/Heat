@@ -50,6 +50,7 @@ namespace Heat.Controllers
             return View(couple);
         }
 
+       
         // GET: Couples/Create
         public ActionResult Create()
         {
