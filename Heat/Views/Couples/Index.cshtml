@@ -1,4 +1,5 @@
 ﻿@model IEnumerable<Heat.Models.Couple>
+ 
 
 @{
     ViewBag.Title = "Index";
@@ -30,6 +31,29 @@
                     <dl class="dl-horizontal">
                         <dt>@Html.DisplayNameFor(model => model.Pro.Name)</dt>
                         <dd>@Html.DisplayFor(modelItem => item.Pro.Name)</dd>
+<<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> htmlbranch
+                        <dt>@Html.DisplayNameFor(model => model.Partner)</dt>
+                        <dd>@Html.DisplayFor(modelItem => item.Partner)</dd>
+                        
+                        <dt>@Html.DisplayNameFor(model => model.HeatList)</dt>
+                        <dd>@Html.DisplayFor(modelItem => item.HeatList.Name)</dd>
+                        
+                        <dt>@Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1)</dt>
+                        <dd>@Html.DisplayFor(modelItem => item.DanceLevel.DanceLevel1)</dd>
+
+                        <dt>@Html.DisplayNameFor(model => model.Number)</dt>
+                        <dd>@Html.DisplayFor(modelItem => item.Number)</dd>
+                        
+                        <dt>@Html.DisplayNameFor(model => model.DanceType.Dance)</dt>
+                        <dd>@Html.DisplayFor(modelItem => item.DanceType.Dance)</dd>
+<<<<<<< HEAD
+                
+=======
+=======
 
                         <dt>@Html.DisplayNameFor(model => model.Partner)</dt>
                         <dd>@Html.DisplayFor(modelItem => item.Partner)</dd>
@@ -46,6 +70,8 @@
                         <dt>@Html.DisplayNameFor(model => model.DanceType.Dance)</dt>
                         <dd>@Html.DisplayFor(modelItem => item.DanceType.Dance)</dd>
                         
+>>>>>>> f7be14b048938d54f4abe024f016b45a17712b8a
+>>>>>>> htmlbranch
                         <dt>@Html.DisplayNameFor(model => model.Combo.Combo1)</dt>
                         <dd>@Html.DisplayFor(modelItem => item.Combo.Combo1)</dd>
                     </dl>
@@ -55,6 +81,13 @@
                         @if (User.IsInRole("Admin") || User.IsInRole("Pro"))
                         {
                             <p>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> f7be14b048938d54f4abe024f016b45a17712b8a
+>>>>>>> htmlbranch
                                 @Html.ActionLink("Edit", "Edit", new { id = item.CouplesID }) |
                                 @Html.ActionLink("Delete", "Delete", new { id = item.CouplesID })
                             </p>
