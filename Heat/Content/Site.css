@@ -1,6 +1,8 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    font-family: 'Coda Caption', sans-serif;
+    font-family: 'Coda', cursive;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -9,12 +11,15 @@
 .dl-horizontal dt {
     white-space: normal;
     text-align: left;
+
 }
 
 .dl-horizontal {
+    font-family: cursive;
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: left;
+    color: #e4a4dd ;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -24,8 +29,6 @@ textarea {
     max-width: 280px;
 }
 
-
-<<<<<<< HEAD
 .nowCouples{
     align-content:center;
 }
@@ -147,14 +150,21 @@ ul {
     background-position-x: center;
 }
 
-=======
->>>>>>> f7be14b048938d54f4abe024f016b45a17712b8a
 /*This datalist for thumbnail Layout*/
 
 .thumbnail {
     margin-top: 15px;
-<<<<<<< HEAD
+    background: rgba(0, 0, 0, 0.70);
+    border-radius: 20px;
+}
 
-=======
->>>>>>> f7be14b048938d54f4abe024f016b45a17712b8a
+a.btn.btn-primary {
+    background-color: #e4a4dd ;
+    border-color: #e4a4dd;
+    color: rgba(0, 0, 0, 0.70);
+}
+
+.heatlistName {
+    color: #e4a4dd;
+    font-family: cursive;
 }
