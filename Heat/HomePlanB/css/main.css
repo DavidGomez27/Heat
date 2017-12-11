@@ -1,11 +1,3 @@
-/*
-Theme Name: Brushed 
-Theme URI: http://www.themes.alessioatzeni.com/html/brushed/
-Author: Alessio Atzeni
-Author URI: http://www.alessioatzeni.com
-Description: Personal Website and Portfolio of Alessio Atzeni
-Version: 1.0
-*/
 
 
 /* ==================================================
@@ -35,7 +27,7 @@ body{
 
 
 a{
-	color:#DE5E60;
+	color:#b385f7;
 	text-decoration: none;
 	cursor: pointer;
 	
@@ -105,7 +97,7 @@ hr {
 }
 
 .color-text {
-    color: #DE5E60;
+    color: #b385f7;
 }
 
 .through{
@@ -114,7 +106,8 @@ hr {
 
 input, button, select, textarea {
 	font-weight: 300;
-	font-family: 'Titillium Web', sans-serif;
+	font-family: 'Coda Caption', sans-serif;
+    font-family: 'Coda', cursive;
 	outline: 0;
 }
 
@@ -151,7 +144,8 @@ pre {
             border-radius: 3px;
   	color: #232527;
   	font-size: 12px;
-  	font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  	font-family: 'Coda Caption', sans-serif;
+    font-family: 'Coda', cursive;
 }
 
 code {
@@ -206,7 +200,8 @@ h6{
 	margin:0 0 20px 0;
 	color:#FFFFFF;
 	font-weight:300;
-	font-family: 'Titillium Web', sans-serif;
+	font-family: 'Coda Caption', sans-serif;
+    font-family: 'Coda', cursive;
 	line-height:1.5em;
 }
 
@@ -374,7 +369,7 @@ h3.spec {
 
 #home-slider #nextslide:hover,
 #home-slider #prevslide:hover {
-	background-color:#DE5E60;
+	background-color:#b385f7;
 }
 
 #home-slider #nextslide i,
@@ -432,7 +427,7 @@ h3.spec {
 
 #home-slider ul#slide-list li.current-slide a,
 #home-slider ul#slide-list li.current-slide a:hover {
-	background-color:#DE5E60;
+	background-color:#b385f7;
 }
 
 #home-slider #nextsection {
@@ -450,7 +445,7 @@ h3.spec {
 }
 
 #home-slider #nextsection:hover {
-	background-color:#DE5E60;
+	background-color:#b385f7;
 }
 
 #home-slider #nextsection i {
@@ -471,6 +466,14 @@ h3.spec {
 /* ==================================================
    Header
 ================================================== */
+
+navbar.container{
+    height: 50px;
+    font-family: 'Coda Caption', sans-serif;
+    font-family: 'Coda', cursive;
+    color: #dde4e9
+
+}
 
 header {
 	width: 100%;
@@ -554,7 +557,7 @@ nav#menu #menu-nav li a {
 
 nav#menu #menu-nav li.current a,
 nav#menu #menu-nav li a:hover {
-	color: #DE5E60;
+	color: #b385f7;
 }
 
 
@@ -628,6 +631,45 @@ nav#menu #menu-nav li a:hover {
    Section Page
 ================================================== */
 
+.container.body-content{
+    background:#b6c0ed
+
+}
+
+
+.current.row{
+    padding: 0px 0px 0px 200px;
+    margin:0px 0px 0px 0px;
+    color:#7F8289;
+	font-weight:300;
+	font-size:16px;
+	font-family: 'Coda Caption', sans-serif;
+    font-family: 'Coda', cursive;
+	line-height:28px;
+}
+
+.nowstatusbox{
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.70);
+    color:#e4a4dd;
+    width: 540px;
+    height: 100px;
+    padding: 0px 0px 0px 0px;;
+    margin:0px 0px 0px 0px;
+    text-align: center;
+}
+
+.statusbox{
+    border-radius: 20px;
+    background: rgba(0, 0, 0, 0.70);
+    color:#e4a4dd;
+    width: 300px;
+    height: 75px;
+    padding: 0px 0px 0px 0px;;
+    margin:0px 0px 0px 0px;
+    text-align: center;
+}
+   
 .page {
 	background: #2F3238;
 	padding: 100px 0;
@@ -636,7 +678,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .page-alternate {
-	background: #26292E;
+	background: #b6c0ed;
 	padding: 100px 0;
 	position: relative;
 	z-index: 99;
@@ -693,7 +735,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .work-nav #filters li a.selected {
-	color: #DE5E60;
+	color: #b385f7;
 }
 
 #thumbs {
@@ -753,7 +795,7 @@ nav#menu #menu-nav li a:hover {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #DE5E60;
+	background: #b385f7;
 	
 	opacity: 0.80;
 	filter: alpha(opacity=80);
@@ -833,7 +875,7 @@ nav#menu #menu-nav li a:hover {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	background: #DE5E60;
+	background: #b385f7;
 	
 	opacity: 0.80;
 	filter: alpha(opacity=80);
@@ -980,7 +1022,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 #contact-form .submit:hover {
-    background: #DE5E60;
+    background: #b385f7;
     color: #FFFFFF;
 }
 
@@ -1101,7 +1143,7 @@ nav#menu #menu-nav li a:hover {
 
 #social ul li:hover a,
 #social ul li.active a {
-	background-color: #DE5E60;	
+	background-color: #b385f7;	
 	
 	-webkit-transform: rotateY(0deg);
 	   -moz-transform: rotateY(0deg);
@@ -1166,7 +1208,7 @@ footer .credits {
 }
 
 #back-to-top:hover {
-	background-color:#DE5E60;
+	background-color:#b385f7;
 }
 
 #back-to-top i {
@@ -1242,7 +1284,7 @@ footer .credits {
 	margin: -50px 0 0 -50px;
 	width: 100px;
 	height: 100px;
-	background: #DE5E60;
+	background: #b385f7;
 	-webkit-border-radius: 999px;
 	-moz-border-radius: 999px;
 	border-radius: 999px;
