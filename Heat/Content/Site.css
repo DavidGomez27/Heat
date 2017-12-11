@@ -41,3 +41,8 @@ a.btn.btn-primary {
     border-color: #e4a4dd;
     color: rgba(0, 0, 0, 0.70);
 }
+
+.heatlistName {
+    color: #e4a4dd ;
+    font-family: cursive;
+}
