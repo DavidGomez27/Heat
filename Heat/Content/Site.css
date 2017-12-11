@@ -150,17 +150,10 @@ ul {
     background-position-x: center;
 }
 
-<<<<<<< HEAD
-=======
->>>>>>> f7be14b048938d54f4abe024f016b45a17712b8a
-=======
-
->>>>>>> htmlbranch
 /*This datalist for thumbnail Layout*/
 
 .thumbnail {
     margin-top: 15px;
-<<<<<<< HEAD
     background: rgba(0, 0, 0, 0.70);
     border-radius: 20px;
 }
@@ -172,12 +165,6 @@ a.btn.btn-primary {
 }
 
 .heatlistName {
-    color: #e4a4dd ;
+    color: #e4a4dd;
     font-family: cursive;
-=======
-<<<<<<< HEAD
-
-=======
->>>>>>> f7be14b048938d54f4abe024f016b45a17712b8a
->>>>>>> e5b7701bd982c924f1af113ba0a588fbabb2a186
 }

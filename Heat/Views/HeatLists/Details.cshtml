@@ -5,12 +5,11 @@
     <hr />
 
     <dl class="dl-horizontal">
-<<<<<<< HEAD
-        @*<dt>
-=======
+
+        <dt>
 
         <dd>
->>>>>>> 899231bf6ec84893943416283dc8048867c072a7
+
             @Html.DisplayNameFor(model => model.heatlist.Name)
         </dd>
 
@@ -18,11 +17,11 @@
             @Html.DisplayFor(model => model.heatlist.Status)
         </dd>
 
-<<<<<<< HEAD
+
         <dt>
             @Html.DisplayNameFor(model => model.heatlist.Time)
-        </dt>*@
-=======
+        </dt>
+
         <dd>
             @Html.DisplayFor(model => model.heatlist.Time)
         </dd>
@@ -30,32 +29,26 @@
     @* I just want to call on Couple.DanceType.Dance here in order to create a header for the detail look. *@
 
     
->>>>>>> 899231bf6ec84893943416283dc8048867c072a7
     </dl>
     <h3>Couples</h3>
     @foreach (var item in Model.couples)
     {
         <dl class="dl-horizontal">
-<<<<<<< HEAD
             <dt>
                 @Html.DisplayNameFor(model => item.Pro.Name)
             </dt>
-=======
             <dd>
                 @Html.DisplayFor(model => item.Number)
             </dd>
->>>>>>> 899231bf6ec84893943416283dc8048867c072a7
 
             <dd>
                 @Html.DisplayFor(model => item.Pro.Name)
             </dd>
-<<<<<<< HEAD
             <dt>
                 @Html.DisplayNameFor(model => item.Partner)                
             </dt>
             <dd>
                 @Html.DisplayFor(modelItem => item.Partner)
-=======
             <dd>
                 @Html.DisplayFor(model => item.Partner)
             </dd>
@@ -64,7 +57,6 @@
             </dd>
             <dd>
                 @Html.DisplayFor(model => item.Combo.Combo1)
->>>>>>> 899231bf6ec84893943416283dc8048867c072a7
             </dd>
         </dl>
         <hr />
