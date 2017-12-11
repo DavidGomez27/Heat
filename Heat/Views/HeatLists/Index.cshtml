@@ -10,7 +10,6 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 
-   
 <div class="row">
     @foreach (var item in Model)
     {
@@ -19,12 +18,14 @@
                 <div class="caption">
                     <h3 class="heatlistName">@Html.DisplayFor(modelItem => item.Name)</h3>
                     @Html.ActionLink("Details", "Details", new { id = item.HeatListID }, new { @class = "btn btn-primary", role = "button" })
+
                     @*<p>@Html.DisplayNameFor(model => model.HeatListID) : @Html.DisplayFor(modelItem => item.HeatListID)</p>*@
                     @*<p>@Html.ActionLink("Details", "Details", new { id = item.HeatListID }, new { @class = "btn btn-primary", role = "button" })</p>*@
                     @*<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>*@
                     @if (User.IsInRole("Admin") || User.IsInRole("Pro"))
                     {
                         <p>
+
                             @Html.ActionLink("Edit", "Edit", new { id = item.HeatListID }) |
                             @Html.ActionLink("Details", "Details", new { id = item.HeatListID }) |
 
