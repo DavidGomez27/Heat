@@ -3,43 +3,42 @@
 @{
     ViewBag.Title = "Home Page";
 
-    
-}
 
-<<<<<<< HEAD
+}
 
 @*@{
 
-    Couple firstCouple = (from h in Model
-                       where h.HeatList.Status == "Now"
-                       select h).First();
+       Couple firstCouple = (from h in Model
+                          where h.HeatList.Status == "Now"
+                          select h).First();
 
-    string currentHeat = firstCouple.HeatList.Name;
-    string danceLevel = firstCouple.DanceLevel.DanceLevel1;
-    string combo = firstCouple.Combo.Combo1;
-    string danceType = firstCouple.DanceType.Dance;
+       string currentHeat = firstCouple.HeatList.Name;
+       string danceLevel = firstCouple.DanceLevel.DanceLevel1;
+       string combo = firstCouple.Combo.Combo1;
+       string danceType = firstCouple.DanceType.Dance;
 
- }*@
-<h1>Now</h1> <h3>Heat: @ViewBag.CurrentHeat Level: @ViewBag.DanceLevel Combination: @ViewBag.Combo Dance: @ViewBag.DanceType </h3>
+    }*@
+<h1>Now</h1>
+<h3>Heat: @ViewBag.CurrentHeat Level: @ViewBag.DanceLevel Combination: @ViewBag.Combo Dance: @ViewBag.DanceType </h3>
 <!--Displays the now list.-->
 <div class="container" id="nowList">
     <div class="row" id="nowCouples">
         @foreach (var item in Model)
         {
-            
+
             if (item.HeatList.Status == "Now")
             {
                 <div class="col-sm-6 col-md-2">
                     <div class="caption">
                         <h1>@Html.DisplayFor(modelItem => item.Number)</h1>
-                        <p>@Html.DisplayFor(modelItem => item.Pro.Name)</p>       
+                        <p>@Html.DisplayFor(modelItem => item.Pro.Name)</p>
                         <p></p>
                     </div>
                 </div>
             }
         }
     </div>
-    
+
 </div>
 
 <div class="row">
@@ -58,7 +57,7 @@
             }
         }
     </div>
-<!--Last row that have a column of 3 and that makes up the grid -->
+    <!--Last row that have a column of 3 and that makes up the grid -->
 
     <h2>In the hole</h2>
     @foreach (var item in Model)
@@ -74,6 +73,21 @@
         }
     }
 </div>
+
+@section Scripts {
+    <script type="text/javascript">
+        $(document).ready(function (){
+            function startRefresh() {
+                $.get('', function (data) {
+                    $(document.body).html(data);
+                });
+            }
+            $(function () {
+                setTimeout(startRefresh, 1000);
+            });})
+    </script>
+}
+
 
 @*<div>
     @foreach (var item in Model)
@@ -138,38 +152,38 @@
         }
     }*@
 
-    <!--Displays On the deck and In the hole-->
-    <!--this row contains 3 sets of columns so all of them need to be 4 length to equal to 12-->
-    @*<div class="row" id="firstRow">
-            <div class="col-md-4" id="picture1"></div>
-            <div class="col-md-4" id="gridText">
-                <h3>Ipsum Stuff</h3>
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
-            </div>
-            <div class="col-md-4" id="picture3"></div>
-        </div>*@
+<!--Displays On the deck and In the hole-->
+<!--this row contains 3 sets of columns so all of them need to be 4 length to equal to 12-->
+@*<div class="row" id="firstRow">
+        <div class="col-md-4" id="picture1"></div>
+        <div class="col-md-4" id="gridText">
+            <h3>Ipsum Stuff</h3>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
+        </div>
+        <div class="col-md-4" id="picture3"></div>
+    </div>*@
 
-    <!--Also 3 columns so 4 length-->
-    @*<div class="row" id="secondRow">
-            <div class="col-md-4" id="gridText">
-                <h3>Ipsum Stuff</h3>
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
-            </div>
-            <div class="col-md-4" id="picture5"></div>
-            <div class="col-md-4" id="gridText">
-                <h3>Ipsum Stuff</h3>
-                <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
-            </div>
-        </div>*@
+<!--Also 3 columns so 4 length-->
+@*<div class="row" id="secondRow">
+        <div class="col-md-4" id="gridText">
+            <h3>Ipsum Stuff</h3>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
+        </div>
+        <div class="col-md-4" id="picture5"></div>
+        <div class="col-md-4" id="gridText">
+            <h3>Ipsum Stuff</h3>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
+        </div>
+    </div>*@
 
 @*<div class="row" id="thirdRow">
-    <div class="col-md-4" id="picture7"></div>
-    <div class="col-md-4" id="gridText">
-        <h3>Ipsum Stuff</h3>
-        <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
-    </div>
-    <div class="col-md-4" id="picture9"></div>
-</div>*@
+        <div class="col-md-4" id="picture7"></div>
+        <div class="col-md-4" id="gridText">
+            <h3>Ipsum Stuff</h3>
+            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
+        </div>
+        <div class="col-md-4" id="picture9"></div>
+    </div>*@
 @*<div class="row" id="fourthRow">
     <div class="col-md-6" id="Carousel1">
         <div class="col-md-12">
@@ -264,31 +278,23 @@
     </div>
 
     </div>*@
-   
 
-=======
-
->>>>>>> f7be14b048938d54f4abe024f016b45a17712b8a
-    @*<div class="col-md-4">
-            <h2>Getting started</h2>
-            <p>
-                ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-                enables a clean separation of concerns and gives you full control over markup
-                for enjoyable, agile development.
-            </p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Get more libraries</h2>
-            <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-        </div>
-        <div class="col-md-4">
-            <h2>Web Hosting</h2>
-            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-            <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-        </div>*@
-<<<<<<< HEAD
-
-=======
->>>>>>> f7be14b048938d54f4abe024f016b45a17712b8a
+@*<div class="col-md-4">
+        <h2>Getting started</h2>
+        <p>
+            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+            enables a clean separation of concerns and gives you full control over markup
+            for enjoyable, agile development.
+        </p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Get more libraries</h2>
+        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>Web Hosting</h2>
+        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    </div>*@
