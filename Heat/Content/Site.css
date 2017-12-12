@@ -3,6 +3,9 @@
     padding-bottom: 20px;
     font-family: 'Coda Caption', sans-serif;
     font-family: 'Coda', cursive;
+    /*background-color: #4C4C4C;*/
+    background-color: #171717;
+    color: white;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -37,7 +40,7 @@ ul {
     list-style-type: none;
 }
 
-.carousel-picture1 {
+/*.carousel-picture1 {
     background-image: url('Images/practice makes perfect.jpeg');
     height: 325px;
     background-size: 490px;
@@ -89,7 +92,7 @@ ul {
     background-position-x: right;
     background-repeat: no-repeat;
     background-position-x: center;
-}
+}*/
 
 #gridText {
     text-align: center;
