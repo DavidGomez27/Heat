@@ -20,7 +20,7 @@
     height: 1000px;
 }
 
-.page-alternate {
+#couplesindex.container {
 	position: relative;
 	z-index: 99;
     margin: 0px 200px 0px 200px;
@@ -29,6 +29,7 @@
     background: #cabdcc;
 	opacity: 0.8;
     height: 1000px;
+    width: 949px;
 }
 
 
@@ -110,3 +111,78 @@
     color: #FFFFFF;
 
 }*/
+
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: 'Coda Caption', sans-serif;
+    font-family: 'Coda', cursive;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+    text-align: left;
+
+}
+
+.dl-horizontal {
+    font-family: cursive;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+    color: #e4a4dd ;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+.nowCouples{
+    align-content:center;
+}
+
+ul {
+    list-style-type: none;
+}
+
+
+/*This datalist for thumbnail Layout*/
+
+.thumbnail {
+    margin-top: 15px;
+    background: rgba(0, 0, 0, 0.70);
+    border-radius: 20px;
+    border-style: outset;
+    border-width: 3px;
+    border-color: #383677;
+}
+
+a.btn.btn-primary {
+    background-color: #cabdcc;
+    border-style: outset;
+    border-width: 2px;
+    border-color: #383677;
+    color: #000000;
+}
+
+.btn.btn-default {
+    background-color: #cabdcc;
+    border-style: outset;
+    border-width: 2px;
+    border-color: #383677;
+    color: #000000;
+}
+
+
+
+.heatlistName {
+    color: #e4a4dd;
+    font-family: cursive;
+}
