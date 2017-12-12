@@ -30,6 +30,7 @@
         </p>
     }
 
+<<<<<<< HEAD
     <div>
         @using (Html.BeginForm("Index", "Couples", FormMethod.Get))
         {
@@ -82,6 +83,37 @@
                             <dt>@Html.DisplayNameFor(model => model.Combo.Combo1)</dt>
                             <dd>@Html.DisplayFor(modelItem => item.Combo.Combo1)</dd>
                         </dl>
+=======
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+                <div class="caption">
+                    <dl class="dl-horizontal">
+                        <dt>@Html.DisplayNameFor(model => model.Pro.Name)</dt>
+                        <dd>@Html.DisplayFor(modelItem => item.Pro.Name)</dd>
+
+                        <dt>@Html.DisplayNameFor(model => model.Partner)</dt>
+                        <dd>@Html.DisplayFor(modelItem => item.Partner)</dd>
+                        
+                        <dt>@Html.DisplayNameFor(model => model.HeatList)</dt>
+                        <dd>@Html.DisplayFor(modelItem => item.HeatList.Name)</dd>
+                        
+                        <dt>@Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1)</dt>
+                        <dd>@Html.DisplayFor(modelItem => item.DanceLevel.DanceLevel1)</dd>
+
+                        <dt>@Html.DisplayNameFor(model => model.Number)</dt>
+                        <dd>@Html.DisplayFor(modelItem => item.Number)</dd>
+                        
+                        <dt>@Html.DisplayNameFor(model => model.DanceType.Dance)</dt>
+                        <dd>@Html.DisplayFor(modelItem => item.DanceType.Dance)</dd>
+
+                        <dt>@Html.DisplayNameFor(model => model.Combo.Combo1)</dt>
+                        <dd>@Html.DisplayFor(modelItem => item.Combo.Combo1)</dd>
+
+                    </dl>
+>>>>>>> 3859f284a965a14f0e043a94915e45a10f3db639
                         <br />
                         <p>@Html.ActionLink("Details", "Details", new { id = item.CouplesID }, new { @class = "btn btn-primary", role = "button" })</p>
                         @*<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>*@

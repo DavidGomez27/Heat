@@ -134,5 +134,29 @@ namespace Heat.Controllers
             }
             base.Dispose(disposing);
         }
+
+        public ActionResult Details1(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            HeatList heatList = db.HeatLists.Find(id);
+            if (heatList == null)
+            {
+                return HttpNotFound();
+            }
+
+            var viewModel = new HeatCoupleViewModel
+            {
+                heatlist = heatList,
+                couples = (from couple in db.Couples
+                           where couple.HeatList.Name.Contains(heatList.Name)
+                           select couple).ToList()
+            };
+
+            return PartialView(viewModel);
+
+        }
     }
 }
