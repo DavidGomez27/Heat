@@ -476,6 +476,8 @@
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Views\Account\LoginStyleIndex.html" />
+    <Content Include="Views\Couples\CouplesStyle.css" />
+    <Content Include="Views\Couples\CouplesIndex.html" />
     <Content Include="Views\Home\Splash Page NOW first layout.png" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />

@@ -34,7 +34,7 @@ body{
     font-family: 'Yellowtail', cursive;
     font-family: 'Condiment', cursive;
     font-family: 'Mrs Sheppards', cursive;
-    font-family: 'Ranga', cursive;;
+    font-family: 'Ranga', cursive;
 	line-height:28px;
 }
 
@@ -308,6 +308,7 @@ h3.spec {
 	position: relative;
 	overflow: hidden;
 	height: 100%;
+
 }
 
 #home-slider .overlay { 
@@ -341,9 +342,13 @@ h3.spec {
 
 #home-slider .slide-content {
 	font-size: 60px;
-	color: #FFFFFF;
-	letter-spacing: -3px;
-	text-transform: uppercase;	
+	color:#ff81ff;
+	/*letter-spacing: -3px;*/
+	/*text-transform: uppercase;*/
+    font-family: 'Ranga', cursive;
+    font: bold;
+    letter-spacing: 2px;
+    text-shadow: 4px 4px 4px #383677;	
 }
 
 #home-slider .control-nav {
@@ -607,7 +612,7 @@ nav#menu #menu-nav li a:hover {
 }
 
 .nowheat.box{
-    margin: 50px 200px 50px 200px;
+    margin: 100px 200px 50px 200px;
     border: 0px 0px 0px 0px;
     padding: 20px 20px 20px 20px;
     height: 275px;
@@ -1043,14 +1048,14 @@ footer .credits {
 	left: 50%;
 	z-index: 11;
 	margin: -50px 0 0 -50px;
-	width: 100px;
-	height: 100px;
+	width: 150px;
+	height: 150px;
 	background: #e4a4dd;
 	-webkit-border-radius: 999px;
 	-moz-border-radius: 999px;
 	border-radius: 999px;
-	opacity: 0;
-	filter: alpha(opacity=0);
+	opacity: .7;
+	filter: alpha(opacity=70);
 			
 	-webkit-animation: circle 1s infinite forwards;
 	   -moz-animation: circle 1s infinite forwards;

@@ -1,0 +1,112 @@
+﻿body {
+    font-family: 'Coda', cursive;
+    font-family: 'Ranga', cursive;
+	line-height:28px;
+    
+}
+
+
+
+/* ==================================================
+   couples index Page = searchable
+================================================== */
+
+.container.body-content{
+    margin: 0px 0px 0px 0px;
+    border: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background-image: url('../../homeplanb/img/slider-images/image02.jpg');
+    width: 100%;
+    height: 1000px;
+}
+
+.page-alternate {
+	position: relative;
+	z-index: 99;
+    margin: 0px 200px 0px 200px;
+    border: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    background: #cabdcc;
+	opacity: 0.8;
+    height: 1000px;
+}
+
+
+/*.nowheat.container{
+    margin: 0px 0px 0px 0px;
+    border: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    height: 300px;
+    width: 100%;
+    color: #cabdcc;
+   font-family: 'Coda', cursive;
+}
+
+.nowheat.box{
+    margin: 100px 200px 50px 200px;
+    border: 0px 0px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    height: 275px;
+    width: 549px;
+    background-color: #26292e;
+    color: #cabdcc;
+    border-radius: 20px;
+    font-family: 'Coda';
+    font-weight: normal;
+    line-height: 20px;
+    border-style: outset;
+    border-width: 5px;
+    border-color: #383677;
+    text-align:center;
+}
+
+.status.container{
+    margin: 50px 0px 50px 0px;
+    border: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 00px;
+    height: 300px;
+    width: 100%;
+
+}
+
+.ondeck.box{
+    margin: 0px 10px 0px 50px;
+    border: 0px 0px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    height: 200px;
+    width: 350px;
+    background-color: #26292e;
+    color: #cabdcc;
+    border-radius: 20px;
+    font-family: 'Coda', cursive;
+    float: left;
+    border-style: outset;
+    border-width: 3px;
+    border-color: #383677;
+    text-align:center;
+}
+
+
+.inhole.box{
+    margin: 0px 50px 0px 10px;
+    border: 0px 0px 0px 0px;
+    padding: 20px 20px 20px 20px;
+    height: 200px;
+    width: 350px;
+    background-color: #26292e;
+    color: #cabdcc;
+    border-radius: 20px;
+    font-family: 'Coda', cursive;
+    float: right;
+     border-style: outset;
+    border-width: 3px;
+    border-color: #383677;
+    text-align:center;
+}
+
+
+
+.dancedetails{
+    color: #FFFFFF;
+
+}*/

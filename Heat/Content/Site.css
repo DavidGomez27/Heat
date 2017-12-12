@@ -156,12 +156,17 @@ ul {
     margin-top: 15px;
     background: rgba(0, 0, 0, 0.70);
     border-radius: 20px;
+    border-style: outset;
+    border-width: 3px;
+    border-color: #383677;
 }
 
 a.btn.btn-primary {
-    background-color: #e4a4dd ;
-    border-color: #e4a4dd;
-    color: rgba(0, 0, 0, 0.70);
+    background-color: #cabdcc;
+    border-style: outset;
+    border-width: 2px;
+    border-color: #383677;
+    color: #000000;
 }
 
 .heatlistName {
