@@ -533,7 +533,6 @@
     <Content Include="Views\Pros\Index.cshtml" />
     <Content Include="Views\HeatLists\Create.cshtml" />
     <Content Include="Views\HeatLists\Delete.cshtml" />
-    <Content Include="Views\HeatLists\Details.cshtml" />
     <Content Include="Views\HeatLists\Edit.cshtml" />
     <Content Include="Views\HeatLists\Index.cshtml" />
     <Content Include="Views\Couples\Create.cshtml" />
