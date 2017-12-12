@@ -331,8 +331,10 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\codafont.css" />
     <Content Include="Content\codafont.PNG" />
+    <Content Include="Content\CouplesIndexStyle.css" />
     <Content Include="Content\Images\All black On Track.jpeg" />
     <Content Include="Content\Images\brit.JPG" />
+    <Content Include="Content\Images\britany.jpg" />
     <Content Include="Content\Images\grey shirt hands up.jpeg" />
     <Content Include="Content\Images\group photo.jpeg" />
     <Content Include="Content\Images\Kaitie Performance.jpeg" />
