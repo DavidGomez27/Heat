@@ -1,42 +1,128 @@
 ﻿@model IEnumerable<Heat.Models.Couple>
 @using Heat.Models
-@{
-    ViewBag.Title = "Home Page";
+
+
+@* REMEMBER TO GO THROUGH EACH THING TO MAKE SURE IT'S A THING. *@
+
+@section IndexCSS {
+    <!-- Meta Tags -->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    @*<title>HEAT</title>*@
+
+
+    <!-- Mobile Specifics -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="320" />
+
+    <!-- Mobile Internet Explorer ClearType Technology -->
+    <!-- Bootstrap -->
+    @*<link href="Content/css/bootstrap.min.css" rel="stylesheet" />*@
+
+
+
+    <!-- Supersized -->
+    <link href="~/Content/css/supersized.css" rel="stylesheet" />
+    <link href="~/Content/css/supersized.shutter.css" rel="stylesheet" />
+
+    <!-- Font Icons -->
+    <link href="~/Content/css/fonts.css" rel="stylesheet" />
+
+
+    <!-- Responsive -->
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/responsive.css" rel="stylesheet" />
+
+    <!-- Supersized -->
+    <link href="~/Content/css/supersized.css" rel="stylesheet" />
+    <link href="~/Content/css/supersized.shutter.css" rel="stylesheet" />
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Coda|Ranga:400,700" rel="stylesheet">
+
+    <!-- Fav Icon -->
+    <link rel="shortcut icon" href="#">
+
+    <link rel="apple-touch-icon" href="#">
+    <link rel="apple-touch-icon" sizes="114x114" href="#">
+    <link rel="apple-touch-icon" sizes="72x72" href="#">
+    <link rel="apple-touch-icon" sizes="144x144" href="#">
+
+        <!-- Main Style -->
+<link href="~/Content/css/main.css" rel="stylesheet" />
+    
 
 }
 
 
-<h1>Now</h1>
+<div class="container">
+    <!-- This section is for Splash Screen -->
+    <div class="ole">
+        <section id="jSplash">
+            <div id="circle"></div>
+        </section>
+    </div>
+    <!-- End of Splash Screen -->
+    <!-- Homepage Slider -->
+    <div id="home-slider">
+        <div class="overlay"></div>
 
-<h3>@*Heat:*@ @ViewBag.CurrentHeat @*Level: @ViewBag.DanceLevel Combination: @ViewBag.Combo Dance: @ViewBag.DanceType*@ </h3>
-<!--Displays the now list.-->
-<div class="container" id="nowList">
-    <div class="row" id="nowCouples">
-        @foreach (var item in Model)
-        {
-            if (item.HeatList.Status == "Now")
-            {
-                <div class="col-sm-6 col-md-2">
-                    <div class="caption">
-                        <h1>@Html.DisplayFor(modelItem => item.Number)</h1>
+        <div class="slider-text">
+            <div id="slidecaption"></div>
+        </div>
 
-                        <p>@Html.DisplayFor(modelItem => item.Pro.Name)</p>
+        <div class="control-nav">
+            <a id="prevslide" class="load-item"><i class="font-icon-arrow-simple-left"></i></a>
+            <a id="nextslide" class="load-item"><i class="font-icon-arrow-simple-right"></i></a>
+            <ul id="slide-list"></ul>
 
-                        <p></p>
-                    </div>
-                </div>
-            }
-        }
+            <a id="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a>
+        </div>
     </div>
 </div>
 
-<div class="row">
-    <div class="container col-md-6">
-        <h2>On deck</h2>
-        @foreach (var item in Model)
-        {
-            if (item.HeatList.Status == "On deck")
+
+
+
+@* This is the Now div *@
+<div class="container body-content" id="nowList">
+    <div id="now" class="page-alternate">
+        <div class="row nowheat container col-md-6" id="nowCouples">
+            <div class="nowheat box">
+                <h1 style="font-family: 'Ranga', cursive; color:#ff81ff; font-size: 80px; text-shadow: 4px 4px 4px #383677;">Now</h1>
+                <div class="dancedetails">
+                    <h3> @ViewBag.CurrentHeat </h3>
+                    @foreach (var item in Model)
             {
+                if (item.HeatList.Status == "Now")
+                {
+                            <div class="col-sm-6 col-md-2">
+                                <div class="caption">
+                                    
+                                    <p>@Html.DisplayFor(modelItem => item.Pro.Name)</p>
+                                    <p>@Html.DisplayFor(modelItem => item.Partner)</p>
+
+                                </div>
+                            </div>
+                        }
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*This is the On Deck div *@
+@*<div class="row">*@
+
+<div class="row status container col-md-6">
+    <div class="ondeck box col-md-6">
+        <h1 style="font-family: 'Ranga', cursive; color:#ff81ff; font-size: 60px; text-shadow: 2px 2px 2px #383677;">On Deck</h1>
+        @foreach (var item in Model)
+            {
+                if (item.HeatList.Status == "On deck")
+                {
                 <div class="caption">
                     <ul>
                         <li><h3>@Html.DisplayFor(modelItem => item.Number) </h3><p>@Html.DisplayFor(modelItem => item.Pro.Name)</p></li>
@@ -47,24 +133,46 @@
         }
     </div>
 
-    <h2>In the hole</h2>
-    @foreach (var item in Model)
-    {
-        if (item.HeatList.Status == "In the hole")
-        {
-            <div class="caption">
-                <ul>
-                    <li><h3>@Html.DisplayFor(modelItem => item.Number) </h3><p>@Html.DisplayFor(modelItem => item.Pro.Name)</p></li>
+    @* This is the In The Hole div *@
+    <div class="inhole box col-md-6">
+        <h1 style="font-family: 'Ranga', cursive; color:#ff81ff; font-size: 60px; text-shadow: 2px 2px 2px #383677;">In the hole</h1>
+        @foreach (var item in Model)
+            {
+                if (item.HeatList.Status == "In the hole")
+                {
+                <div class="caption">
+                    <ul>
+                        <li><h3>@Html.DisplayFor(modelItem => item.Number) </h3><p>@Html.DisplayFor(modelItem => item.Pro.Name)</p></li>
 
-                </ul>
-            </div>
+                    </ul>
+                </div>
+            }
         }
-    }
+    </div>
 </div>
 
-@section Scripts {
-    <script type="text/javascript">
-        $(document).ready(function (){
+
+<!-- End Footer -->
+<!-- Back To Top -->
+<a id="back-to-top" href="#">
+    <i class="font-icon-arrow-simple-up"></i>
+</a>
+<!-- End Back to Top -->
+@section scripts {
+    <!-- Js -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script> <!-- jQuery Core -->
+    <!-- Modernizr -->
+<script src="~/Scripts/modernizr.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script><!-- Bootstrap -->
+<script src="~/Scripts/supersized.3.2.7.min.js"></script> <!-- Slider -->
+<script src="~/Scripts/waypoints.js"></script> <!-- WayPoints -->
+<script src="~/Scripts/waypoints-sticky.js"></script><!-- Waypoints for Header -->
+<script src="~/Scripts/plugins.js"></script><!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
+
+<!-- End Js -->
+
+    @*<script type="text/javascript">
+        $(document).ready(function () {
             function startRefresh() {
                 $.get('', function (data) {
                     $(document.body).html(data);
@@ -72,167 +180,9 @@
             }
             $(function () {
                 setTimeout(startRefresh, 1000);
-            });})
-    </script>
+            });
+        })
+    </script>*@
 }
 
 
-@*<div>
-    @foreach (var item in Model)
-    {
-
-        if (item.HeatList.Status == "Now")
-        {
-            <ul>
-                <li>
-                    @Html.DisplayNameFor(model => model.HeatList.Name): @Html.DisplayFor(modelItem => item.HeatList.Name)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.HeatList.Status): @Html.DisplayFor(modelItem => item.HeatList.Status)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.DanceType.Dance): @Html.DisplayFor(modelItem => item.DanceType.Dance)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1): @Html.DisplayFor(modelItem => item.DanceLevel.DanceLevel1)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Combo.Combo1): @Html.DisplayFor(modelItem => item.Combo.Combo1)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Number): @Html.DisplayFor(modelItem => item.Number)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Pro.Name): @Html.DisplayFor(modelItem => item.Pro.Name)
-                </li>
-            </ul>
-        }
-    }
-
-    @*<h1>In the hole</h1>
-    @foreach (var item in Model)
-    {
-        if (item.HeatList.Status == "In the hole")
-        {
-            <ul>
-                <li>
-                    @Html.DisplayNameFor(model => model.HeatList.Name): @Html.DisplayFor(modelItem => item.HeatList.Name)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.HeatList.Status): @Html.DisplayFor(modelItem => item.HeatList.Status)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.DanceType.Dance): @Html.DisplayFor(modelItem => item.DanceType.Dance)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1): @Html.DisplayFor(modelItem => item.DanceLevel.DanceLevel1)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Combo.Combo1): @Html.DisplayFor(modelItem => item.Combo.Combo1)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Number): @Html.DisplayFor(modelItem => item.Number)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Pro.Name): @Html.DisplayFor(modelItem => item.Pro.Name)
-                </li>
-            </ul>
-        }
-    }*@
-
-<!--Displays On the deck and In the hole-->
-<!--this row contains 3 sets of columns so all of them need to be 4 length to equal to 12-->
-@*<div class="row" id="firstRow">
-        <div class="col-md-4" id="picture1"></div>
-        <div class="col-md-4" id="gridText">
-            <h3>Ipsum Stuff</h3>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
-        </div>
-        <div class="col-md-4" id="picture3"></div>
-    </div>*@
-
-<!--Also 3 columns so 4 length-->
-@*<div class="row" id="secondRow">
-        <div class="col-md-4" id="gridText">
-            <h3>Ipsum Stuff</h3>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
-        </div>
-        <div class="col-md-4" id="picture5"></div>
-        <div class="col-md-4" id="gridText">
-            <h3>Ipsum Stuff</h3>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
-        </div>
-    </div>*@
-
-@*<div class="row" id="thirdRow">
-        <div class="col-md-4" id="picture7"></div>
-        <div class="col-md-4" id="gridText">
-            <h3>Ipsum Stuff</h3>
-            <h4>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris a fermentum risus. In tristique imperdiet nisl, a fringilla dui molestie sed. Pellentesque semper orci tempor faucibus tincidunt. In consectetur ligula augue, sed dapibus erat malesuada nec.</h4>
-        </div>
-        <div class="col-md-4" id="picture9"></div>
-    </div>*@
-<!--Last row that have a column of 3 and that makes up the grid -->
-
-@*<div>
-    @foreach (var item in Model)
-    {
-
-        if (item.HeatList.Status == "Now")
-        {
-            <ul>
-                <li>
-                    @Html.DisplayNameFor(model => model.HeatList.Name): @Html.DisplayFor(modelItem => item.HeatList.Name)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.HeatList.Status): @Html.DisplayFor(modelItem => item.HeatList.Status)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.DanceType.Dance): @Html.DisplayFor(modelItem => item.DanceType.Dance)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1): @Html.DisplayFor(modelItem => item.DanceLevel.DanceLevel1)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Combo.Combo1): @Html.DisplayFor(modelItem => item.Combo.Combo1)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Number): @Html.DisplayFor(modelItem => item.Number)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Pro.Name): @Html.DisplayFor(modelItem => item.Pro.Name)
-                </li>
-            </ul>
-        }
-    }
-
-    @*<h1>In the hole</h1>
-    @foreach (var item in Model)
-    {
-        if (item.HeatList.Status == "In the hole")
-        {
-            <ul>
-                <li>
-                    @Html.DisplayNameFor(model => model.HeatList.Name): @Html.DisplayFor(modelItem => item.HeatList.Name)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.HeatList.Status): @Html.DisplayFor(modelItem => item.HeatList.Status)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.DanceType.Dance): @Html.DisplayFor(modelItem => item.DanceType.Dance)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.DanceLevel.DanceLevel1): @Html.DisplayFor(modelItem => item.DanceLevel.DanceLevel1)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Combo.Combo1): @Html.DisplayFor(modelItem => item.Combo.Combo1)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Number): @Html.DisplayFor(modelItem => item.Number)
-                </li>
-                <li>
-                    @Html.DisplayNameFor(model => model.Pro.Name): @Html.DisplayFor(modelItem => item.Pro.Name)
-                </li>
-            </ul>
-        }
-    }*@

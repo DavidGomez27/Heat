@@ -1,23 +1,19 @@
 ﻿<!DOCTYPE html>
-<html>
+<html >
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800|Coda:400,800|Condiment|Courgette|Mrs+Sheppards|Ranga:400,700|Yellowtail" rel="stylesheet">
-    <link href="~/Content/Site.css" rel="stylesheet" />
-<<<<<<< HEAD
-
-
-    @*<title>@ViewBag.Title - My ASP.NET Application</title>*@
-
-=======
+  
     <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800|Coda:400,800" rel="stylesheet">
-    @*<title>@ViewBag.Title - My ASP.NET Application</title>*@
->>>>>>> 3859f284a965a14f0e043a94915e45a10f3db639
-    <title>@ViewBag.Title - Heat</title>
+
+
 
     @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+   
+    @RenderSection("IndexCSS", required:false)
+    <link href="~/Content/css/Site.css" rel="stylesheet" />
 
 </head>
 <body>
@@ -61,6 +57,9 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/modernizr")
     @RenderSection("scripts", required: false)
+    
+    <script src="~/Scripts/main.js"></script>
 </body>
 </html>

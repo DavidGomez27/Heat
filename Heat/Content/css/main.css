@@ -589,6 +589,11 @@ nav#menu #menu-nav li a:hover {
     height: 1000px;
 }
 
+
+body {
+    padding-top: 0px;
+}
+
 .page-alternate {
 	position: relative;
 	z-index: 99;
