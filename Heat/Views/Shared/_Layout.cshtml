@@ -18,71 +18,18 @@
 </head>
 <body>
 
-    @*<div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    @Html.ActionLink("Heat", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li>@Html.ActionLink("Couples", "Index", "Couples")</li>
-                        <li>@Html.ActionLink("Heat List", "Index", "HeatLists")</li>
-                        @if (User.IsInRole("Admin"))
-                        {
-                        <li>@Html.ActionLink("Manage Users", "Index", "Roles")</li>
-                        }
-                    </ul>
-                    @Html.Partial("_LoginPartial")
-                </div>
-            </div>
-        </div>*@
+   
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
-        <ul>
-            <li>@Html.ActionLink("Couples", "Index", "Couples")</li>
-            <li>@Html.ActionLink("Heat List", "Index", "HeatLists")</li>
-            @if (User.IsInRole("Admin"))
-            {
-                <li>
-                    @Html.ActionLink("Manage Users", "Index", "Roles")
-                </li>
-            }
-            @*<div class="container">*@
-            @*<a class="navbar-brand js-scroll-trigger" href="#page-top">Begin</a>
-                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    @*<i class="fa fa-bars"></i>*@
-            @*</button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">*@
-            @*<ul class="navbar-nav ml-auto">
-                <li>
-                    @Html.ActionLink("Couples", "Index", "Couples")
-                </li>
-                <li>
-                    @Html.ActionLink("Heat List", "Index", "HeatLists")
-                </li>*@
-            @*@if (User.IsInRole("Admin"))
-                {
-                    <li>
-                        @Html.ActionLink("Manage Users", "Index", "Roles")
-                    </li>
-                }*@
-        </ul>
-        @Html.Partial("_LoginPartial")
-        @*</div>
-            </div>*@
-    </nav>
+
 
     <!-- Intro Header -->
-    <header class="masthead">
+    <header class="masthead" id="top">
         <div class="intro-body">
             <div class="container">
+                <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">                   
+                       
+                    @Html.Partial("_LoginPartial")
+                </nav>
                 <div class="row">
                     <div class="col-lg-8 mx-auto">
                         <h1 class="brand-heading">Heat<span class="glyphicon glyphicon-fire"></span></h1>
@@ -102,7 +49,7 @@
 
 
 
-    <div class="container body-content">
+    <div class="container body-content" id="title">
         @RenderBody()
         <hr />
         <footer>
