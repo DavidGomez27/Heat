@@ -5,34 +5,49 @@
 
 }
 
-<h3>@*Heat:*@ @ViewBag.CurrentHeat @*Level: @ViewBag.DanceLevel Combination: @ViewBag.Combo Dance: @ViewBag.DanceType*@ </h3>
-<!--Displays the now list.-->
-<div class="container" id="nowList">
-    <div class="row" id="nowCouples">
-        @foreach (var item in Model)
-        {
-            if (item.HeatList.Status == "Now")
+    <h3>Now:@*Heat:*@ @ViewBag.CurrentHeat @*Level: @ViewBag.DanceLevel Combination: @ViewBag.Combo Dance: @ViewBag.DanceType*@ </h3>
+    <!--Displays the now list.-->
+    <div class="container" id="nowList">
+        <div class="row" id="nowCouples">
+            @foreach (var item in Model)
             {
-                <div class="col-sm-6 col-md-2">
-                    <div class="caption">
-                        <h1>@Html.DisplayFor(modelItem => item.Number)</h1>
+                if (item.HeatList.Status == "Now")
+                {
+                    <div class="col-sm-6 col-md-2">
+                        <div class="caption">
+                            <h1>@Html.DisplayFor(modelItem => item.Number)</h1>
 
-                        <p>@Html.DisplayFor(modelItem => item.Pro.Name)</p>
+                            <p>@Html.DisplayFor(modelItem => item.Pro.Name)</p>
 
-                        <p></p>
+                            <p></p>
+                        </div>
                     </div>
-                </div>
+                }
             }
-        }
+        </div>
     </div>
-</div>
 
-<div class="row">
-    <div class="container col-md-6">
-        <h2>On deck</h2>
+    <div class="row">
+        <div class="container col-md-6">
+            <h2>On deck</h2>
+            @foreach (var item in Model)
+            {
+                if (item.HeatList.Status == "On deck")
+                {
+                    <div class="caption">
+                        <ul>
+                            <li><h3>@Html.DisplayFor(modelItem => item.Number) </h3><p>@Html.DisplayFor(modelItem => item.Pro.Name)</p></li>
+
+                        </ul>
+                    </div>
+                }
+            }
+        </div>
+
+        <h2>In the hole</h2>
         @foreach (var item in Model)
         {
-            if (item.HeatList.Status == "On deck")
+            if (item.HeatList.Status == "In the hole")
             {
                 <div class="caption">
                     <ul>
@@ -43,25 +58,12 @@
             }
         }
     </div>
+</body>
 
-    <h2>In the hole</h2>
-    @foreach (var item in Model)
-    {
-        if (item.HeatList.Status == "In the hole")
-        {
-            <div class="caption">
-                <ul>
-                    <li><h3>@Html.DisplayFor(modelItem => item.Number) </h3><p>@Html.DisplayFor(modelItem => item.Pro.Name)</p></li>
-
-                </ul>
-            </div>
-        }
-    }
-</div>
 
 @section Scripts {
     <script type="text/javascript">
-        $(document).ready(function (){
+        $(document).ready(function () {
             function startRefresh() {
                 $.get('', function (data) {
                     $(document.body).html(data);
@@ -69,7 +71,8 @@
             }
             $(function () {
                 setTimeout(startRefresh, 1000);
-            });})
+            });
+        })
     </script>
 }
 

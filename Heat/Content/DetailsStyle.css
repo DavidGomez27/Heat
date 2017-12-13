@@ -1,12 +1,6 @@
 ﻿body {
     background-image: url('Images/kiz.JPG');
-    color: white;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
-
-h1 {
-    text-align: center;
+    color:white;
 }
 
 .grey-box {
@@ -15,12 +9,4 @@ h1 {
     padding-top:20px;
     margin-top:40px;
     border-radius:20px;
-}
-
-.create {
-    text-align: center;
-}
-
-p{
-    color:white;
 }

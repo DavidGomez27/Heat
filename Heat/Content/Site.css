@@ -1,5 +1,5 @@
 ﻿body {
-    padding-top: 50px;
+    padding-top: 0px;
     padding-bottom: 20px;
     font-family: 'Coda Caption', sans-serif;
     font-family: 'Coda', cursive;
@@ -14,12 +14,22 @@
 
 }
 
+
+
 .dl-horizontal {
     font-family: cursive;
     margin-top: 0px;
     margin-bottom: 0px;
     text-align: left;
     color: white ;
+}
+
+.dl-horizontal2 {
+    font-family: cursive;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+    color: black ;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
