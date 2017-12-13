@@ -1,64 +1,45 @@
-﻿@model Heat.Models.HeatCoupleViewModel
+﻿<head>
+
+
+</head>
+
+<body>
+@model Heat.Models.HeatCoupleViewModel
 
 <div>
     <h3 class="heatlist title">Heat List</h3>
     <hr />
 
     <dl class="dl-horizontal">
-
-        <dt>
-
         <dd>
-
-            @Html.DisplayNameFor(model => model.heatlist.Name)
+            @Html.DisplayFor(model => model.heatlist.Name)
         </dd>
-
         <dd>
             @Html.DisplayFor(model => model.heatlist.Status)
         </dd>
-
-
-        <dt>
-            @Html.DisplayNameFor(model => model.heatlist.Time)
-        </dt>
-
         <dd>
             @Html.DisplayFor(model => model.heatlist.Time)
         </dd>
-        
-    @* I just want to call on Couple.DanceType.Dance here in order to create a header for the detail look. *@
 
-    
+        @* I just want to call on Couple.DanceType.Dance here in order to create a header for the detail look. *@
+
+
     </dl>
     <h3>Couples</h3>
     @foreach (var item in Model.couples)
     {
         <dl class="dl-horizontal">
-            <dt>
-                @Html.DisplayNameFor(model => item.Pro.Name)
-            </dt>
             <dd>
                 @Html.DisplayFor(model => item.Number)
             </dd>
-
             <dd>
                 @Html.DisplayFor(model => item.Pro.Name)
             </dd>
-            <dt>
-                @Html.DisplayNameFor(model => item.Partner)                
-            </dt>
-            <dd>
-                @Html.DisplayFor(modelItem => item.Partner)
             <dd>
                 @Html.DisplayFor(model => item.Partner)
             </dd>
-            <dd>
-                @Html.DisplayFor(model => item.DanceLevel.DanceLevel1)
-            </dd>
-            <dd>
-                @Html.DisplayFor(model => item.Combo.Combo1)
-            </dd>
         </dl>
-        <hr />
+            <hr />
     }
 </div>
+</body>

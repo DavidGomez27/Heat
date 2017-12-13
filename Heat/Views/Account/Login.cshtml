@@ -27,7 +27,6 @@
     <!--// Required Css -->
     <!--My Style Sheet-->
     <link href="~/Content/KaitieStyleSheet.css" rel="stylesheet" />
-    <!--//My Style Sheet-->
     <!--fonts-->
     @*<link href="//fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">*@
     <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800|Coda:400,800" rel="stylesheet">
@@ -40,12 +39,12 @@
     <hr />
     <hr />    
     <!-- Main-Content -->
-    <div class="main-w3layouts-form">
+    <div class="main-w3layouts-form rounded">
         <h2>Login to your account</h2>
         <!-- main-w3layouts-form -->
 
-        <div class="fields-w3-agileits">
-            <section id="loginForm">
+        <div class="fields-w3-agileits rounded">
+            <section id="loginForm rounded">
                 @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
             {
                     @Html.AntiForgeryToken()
@@ -86,7 +85,8 @@
                 }
 
                 <div class="footer_grid-w3ls col-md-offset-2 rounded">
-                    <section id="socialLoginForm">
+                    <section id="socialLoginForm rounded">
+
                         @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
                         <ul class="social-icons-agileits-w3layouts">
                             <li><a href="#" class="fa fa-google-plus"></a></li>

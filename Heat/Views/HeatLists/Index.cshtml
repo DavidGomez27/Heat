@@ -1,74 +1,78 @@
 ﻿@model IEnumerable<Heat.Models.HeatList>
-
+@Styles.Render("~/Content/CouplesIndexStyle.css")
 @{
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h1>Index</h1>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-
-<div class="row">
-    @foreach (var item in Model)
-    {
-        <div class="col-sm-12 col-md-12">
-            <div class="thumbnail">
-                <div class="caption">
-                    <h3 class="heatlistName">@Html.DisplayFor(modelItem => item.Name)</h3>
-                    @Html.ActionLink("Details", "Details", new { id = item.HeatListID }, new { @class = "btn btn-primary", role = "button" })
-
-                    @*<p>@Html.DisplayNameFor(model => model.HeatListID) : @Html.DisplayFor(modelItem => item.HeatListID)</p>*@
-                    @*<p>@Html.ActionLink("Details", "Details", new { id = item.HeatListID }, new { @class = "btn btn-primary", role = "button" })</p>*@
-                    @*<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>*@
-                    @if (User.IsInRole("Admin") || User.IsInRole("Pro"))
-                    {
-                        <p>
-
-                            @Html.ActionLink("Edit", "Edit", new { id = item.HeatListID }) |
-                            @Html.ActionLink("Details", "Details", new { id = item.HeatListID }) |
-
-                        </p>
-                    }
-                </div>
-            </div>
-        </div>
-    }
-</div>
-
-@*<table class="table">
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Time)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Status)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Time)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Status)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.HeatListID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.HeatListID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.HeatListID })
-        </td>
-    </tr>
+@if (User.IsInRole("Admin") || User.IsInRole("Pro"))
+{
+    <div class="create">
+        <p>
+            @Html.ActionLink("Create New", "Create")
+        </p>
+    </div>
 }
 
-</table>*@
+    @* The display for Heat Members is commented out. *@
+
+    <div class="row gre-box">
+        @foreach (var item in Model)
+            {
+            <div class="col-sm-12 col-md-12">
+                <div class="thumbnail">
+                    <div class="caption">
+                        <h3 class="heatlistName">@Html.DisplayFor(modelItem => item.Name)</h3>
+
+                        @Html.ActionLink("Details", "Details", new { id = item.HeatListID }, new { @class = "btn btn-primary", role = "button" })
+
+                        @*<p>@Html.DisplayNameFor(model => model.HeatListID) : @Html.DisplayFor(modelItem => item.HeatListID)</p>*@
+                        @*<p>@Html.ActionLink("Details", "Details", new { id = item.HeatListID }, new { @class = "btn btn-primary", role = "button" })</p>*@
+                        @*<p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>*@
+
+                        @*<button id="btn" class="btn btn-primary" data-id="@item.HeatListID">Heat Members</button>
+                            <div id="detailsPlace"></div>*@
+
+                        @if (User.IsInRole("Admin") || User.IsInRole("Pro"))
+                        {
+                            <p>
+
+                                @Html.ActionLink("Edit", "Edit", new { id = item.HeatListID }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.HeatListID }) |
+
+                            </p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    @*@section Scripts{
+
+        <script type="text/javascript">
+           $(function () {
+
+           //alert("in function")
+           $('.btn.btn-primary').click(function () {
+           alert("onclick")
+                   var $buttonClicked = $(this);
+                   var id = $buttonClicked.attr('data-id');
+
+                   $.ajax({
+                       url: '@Url.Action("Details1/")'+id,
+                       type: 'GET',
+                       //data: { id: id },
+                       success: function (partialView) {
+                           $('#detailsPlace').html(partialView);
+                           $('#detailsPlace').show();
+                       }
+                   });
+               });
+           });
+        </script>
+
+            }*@
+
+    @*<div id="detailsPlace"></div>*@
