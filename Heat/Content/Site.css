@@ -14,7 +14,18 @@
 
 }
 
+.container.grey-box {
+    text-align: center;
+}
 
+.col-sm-6 col-md-2 {
+    text-align: center;
+}
+
+#nowCouples {
+    text-align: center;
+    margin-left: 450px;
+}
 
 .dl-horizontal {
     font-family: cursive;
@@ -50,12 +61,26 @@ ul {
     border-color: #383677;
 }
 
+.thumbnailMain {
+    margin-top: 15px;
+    background: rgba(0, 0, 0, 0.70);
+    border-radius: 20px;
+    border-style: outset;
+    border-width: 3px;
+    border-color: #383677;
+}
+
+
 a.btn.btn-primary {
     background-color: #cabdcc;
     border-style: outset;
     border-width: 2px;
     border-color: #383677;
     color: #000000;
+}
+
+row.grey-box {
+    margin-bottom: 20px;
 }
 
 .heatlistName {

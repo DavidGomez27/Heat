@@ -5,61 +5,81 @@
     ViewBag.Title = "Home Page";
 
 }
+<body>
 
-    <h3>Now:@*Heat:*@ @ViewBag.CurrentHeat @*Level: @ViewBag.DanceLevel Combination: @ViewBag.Combo Dance: @ViewBag.DanceType*@ </h3>
-    <!--Displays the now list.-->
     <div class="container grey-box" id="nowList">
-        <div class="row" id="nowCouples">
-            @foreach (var item in Model)
+        <div class="thumbnailMain">
+            <h3>Now:@*Heat:*@ @ViewBag.CurrentHeat @*Level: @ViewBag.DanceLevel Combination: @ViewBag.Combo Dance: @ViewBag.DanceType*@ </h3>
+            <!--Displays the now list.-->
+
+            <div class="row" id="nowCouples">
+
+                @foreach (var item in Model)
             {
                 if (item.HeatList.Status == "Now")
                 {
-                    <div class="col-sm-6 col-md-2">
-                        <div class="caption">
-                            <h1>@Html.DisplayFor(modelItem => item.Number)</h1>
+                        <div class="col-sm-6 col-md-2">
+                            <div class="caption">
+                                <h1>@Html.DisplayFor(modelItem => item.Number)</h1>
 
-                            <p>@Html.DisplayFor(modelItem => item.Pro.Name)</p>
+                                <p>@Html.DisplayFor(modelItem => item.Pro.Name)</p>
 
-                            <p></p>
+                                <p>@Html.DisplayFor(modelItem => item.Partner)</p>
+                            </div>
                         </div>
-                    </div>
+                    }
                 }
-            }
+            </div>
         </div>
-    </div>
 
-    <div class="row">
-        <div class="container col-md-6">
-            <h2>On deck</h2>
-            @foreach (var item in Model)
+        <div class="row">
+            
+                <div class="container col-md-6">
+                    <div class="thumbnailMain">
+                        <h2>On deck</h2>
+                        @foreach (var item in Model)
             {
                 if (item.HeatList.Status == "On deck")
                 {
-                                        
-                    <div class="caption">
-                        <ul>
-                            <li><h3>@Html.DisplayFor(modelItem => item.Number) </h3><p>@Html.DisplayFor(modelItem => item.Pro.Name)</p></li>
 
-                        </ul>
+                                <div class="caption">
+                                    <ul>
+                                        <li>
+                                            <h3>@Html.DisplayFor(modelItem => item.Number) </h3>
+                                            <p>@Html.DisplayFor(modelItem => item.Pro.Name)</p>
+                                            <p>@Html.DisplayFor(modelItem => item.Partner)</p>
+                                        </li>
+
+                                    </ul>
+                                </div>
+
+                            }
+                        }
                     </div>
-                }
-            }
-        </div>
-
-        <h2>In the hole</h2>
-        @foreach (var item in Model)
-        {
-            if (item.HeatList.Status == "In the hole")
-            {
-                <div class="caption">
-                    <ul>
-                        <li><h3>@Html.DisplayFor(modelItem => item.Number) </h3><p>@Html.DisplayFor(modelItem => item.Pro.Name)</p></li>
-
-                    </ul>
                 </div>
-            }
-        }
+            <div class="container col-md-6">
+                <div class="thumbnailMain">
+                    <h2>In the hole</h2>
+                    @foreach (var item in Model)
+            {
+                if (item.HeatList.Status == "In the hole")
+                {
+                            <div class="caption">
+                                <ul>
+                                    <li>
+                                        <h3>@Html.DisplayFor(modelItem => item.Number) </h3>
+                                        <p>@Html.DisplayFor(modelItem => item.Pro.Name)</p>
+                                        <p>@Html.DisplayFor(modelItem => item.Partner)</p>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        }
+                    }
+                </div>
     </div>
+            </div>
+        </div>
 </body>
 
 
