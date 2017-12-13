@@ -332,6 +332,7 @@
     <Content Include="Content\codafont.css" />
     <Content Include="Content\codafont.PNG" />
     <Content Include="Content\CouplesIndexStyle.css" />
+    <Content Include="Content\DetailsStyle.css" />
     <Content Include="Content\Images\All black On Track.jpeg" />
     <Content Include="Content\Images\brit.JPG" />
     <Content Include="Content\Images\britany.jpg" />

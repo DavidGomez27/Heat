@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h1>Index</h1>
+<h1>Heatlist</h1>
 
 @if (User.IsInRole("Admin") || User.IsInRole("Pro"))
 {
@@ -17,7 +17,7 @@
 
     @* The display for Heat Members is commented out. *@
 
-    <div class="row gre-box">
+    <div class="row grey-box">
         @foreach (var item in Model)
             {
             <div class="col-sm-12 col-md-12">
@@ -25,7 +25,7 @@
                     <div class="caption">
                         <h3 class="heatlistName">@Html.DisplayFor(modelItem => item.Name)</h3>
 
-                        @Html.ActionLink("Details", "Details", new { id = item.HeatListID }, new { @class = "btn btn-primary", role = "button" })
+                       <p>@Html.ActionLink("Details", "Details1", new { id = item.HeatListID }, new { @class = "btn btn-primary", role = "button" })</p>
 
                         @*<p>@Html.DisplayNameFor(model => model.HeatListID) : @Html.DisplayFor(modelItem => item.HeatListID)</p>*@
                         @*<p>@Html.ActionLink("Details", "Details", new { id = item.HeatListID }, new { @class = "btn btn-primary", role = "button" })</p>*@
@@ -49,12 +49,11 @@
         }
     </div>
 
-    @*@section Scripts{
+    @section Scripts{
 
         <script type="text/javascript">
            $(function () {
-
-           //alert("in function")
+                          
            $('.btn.btn-primary').click(function () {
            alert("onclick")
                    var $buttonClicked = $(this);
@@ -73,6 +72,6 @@
            });
         </script>
 
-            }*@
+            }
 
-    @*<div id="detailsPlace"></div>*@
+    <div id="detailsPlace"></div>
