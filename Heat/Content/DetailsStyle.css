@@ -1,0 +1,12 @@
+﻿body {
+    background-image: url('Images/kiz.JPG');
+    color:white;
+}
+
+.grey-box {
+    background: rgba(136,136,136,0.7);
+    padding-bottom: 20px;
+    padding-top:20px;
+    margin-top:40px;
+    border-radius:20px;
+}

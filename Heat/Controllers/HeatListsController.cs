@@ -7,6 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using Heat.Models;
+using System.Web.Mvc.Html;
 
 namespace Heat.Controllers
 {
@@ -36,9 +37,10 @@ namespace Heat.Controllers
             {
                 return HttpNotFound();
             }
-                        
+
             var viewModel = new HeatCoupleViewModel
-            {                
+            {
+                heatlist = heatList ,
                 couples = (from couple in db.Couples
                            where couple.HeatList.Name.Contains(heatList.Name)                                                      
                            select couple).ToList()
@@ -137,6 +139,7 @@ namespace Heat.Controllers
             }
             base.Dispose(disposing);
         }
+
         public ActionResult Details1(int? id)
         {
             if (id == null)

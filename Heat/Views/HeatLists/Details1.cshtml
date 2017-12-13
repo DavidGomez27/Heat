@@ -1,8 +1,7 @@
-﻿@model Heat.Models.HeatCoupleViewModel
+@model Heat.Models.HeatCoupleViewModel
 
 
-
-
+<div class="grey-box">
 @foreach (var couple in Model.couples)
 {
     <dl class="dl-horizontal">
@@ -26,9 +25,11 @@
 
         <dd>
             @Html.DisplayFor(model => couple.Partner)
-        </dd>
+        </dd>        
     </dl>
+    <hr/>
 }
+
 @*<p>
     @Html.ActionLink("Create New", "Create")s
 </p>
@@ -66,3 +67,6 @@
 }
 
 </table>*@
+
+</div>
+

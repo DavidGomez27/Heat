@@ -1,6 +1,8 @@
 ﻿body {
-    padding-top: 50px;
+    padding-top: 0px;
     padding-bottom: 20px;
+    font-family: 'Coda Caption', sans-serif;
+    font-family: 'Coda', cursive;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -8,6 +10,18 @@
 */
 .dl-horizontal dt {
     white-space: normal;
+    text-align: left;
+
+}
+
+
+
+.dl-horizontal {
+    font-family: cursive;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: left;
+    color: white ;
 }
 
 /* Set width on the form input elements since they're 100% wide by default */
@@ -17,121 +31,34 @@ textarea {
     max-width: 280px;
 }
 
-.carousel-picture1 {
-    background-image: url('Images/practice makes perfect.jpeg');
-    height: 325px;
-    background-size: 490px;
-    background-position-x: right;
-    background-repeat: no-repeat;
-    background-position-x: center;
+.nowCouples{
+    align-content:center;
 }
 
-.carousel-picture2 {
-    background-image: url('Images/Yellow Dress Great Shot.jpeg');
-    height: 325px;
-    background-size: 490px;
-    background-position-x: right;
-    background-repeat: no-repeat;
-    background-position-x: center;
-}
-
-.carousel-picture3 {
-    background-image: url('Images/All black On Track.jpeg');
-    height: 325px;
-    background-size: 490px;
-    background-position-x: right;
-    background-repeat: no-repeat;
-    background-position-x: center;
-}
-
-.carousel-picture4 {
-    background-image: url('Images/smokey Purple.jpeg');
-    height: 325px;
-    background-size: 490px;
-    background-position-x: right;
-    background-repeat: no-repeat;
-    background-position-x: center;
-}
-
-.carousel-picture5 {
-    background-image: url('Images/smiling practice.jpeg');
-    height: 325px;
-    background-size: 490px;
-    background-position-x: right;
-    background-repeat: no-repeat;
-    background-position-x: center;
-}
-
-.carousel-picture6 {
-    background-image: url('Images/group photo.jpeg');
-    height: 325px;
-    background-size: 490px;
-    background-position-x: right;
-    background-repeat: no-repeat;
-    background-position-x: center;
-}
-
-#gridText {
-    text-align: center;
-}
-
-#firstRow {
-    padding-top: 50px;
-}
-
-#thirdRow {
-    padding-bottom: 50px;
-}
-
-#picture1 {
-    background-image: url('Images/Kaitie Performance.jpeg');
-    height: 325px;
-    background-size: 490px;
-    background-position-x: right;
-}
-
-#picture2 {
-
-}
-
-#picture3 {
-    background-image: url('Images/White dress Smiles all over.jpeg');
-    height: 325px;
-    background-size: 490px;
-    background-position-x: center;
-}
-
-#picture4 {
-
-}
-
-#picture5 {
-    background-image: url('Images/grey shirt hands up.jpeg');
-    height: 325px;
-    background-size: 490px;
-    background-position-x: center;
-}
-
-#picture7 {
-    background-image: url('Images/White Dress Serious Faces.jpeg');
-    height: 325px;
-    background-size: 490px;
-    background-position-x: center;
-}
-
-#picture8 {
-
-}
-
-#picture9 {
-    background-image: url('Images/Kaitie Takes a Pose.jpeg');
-    height: 325px;
-    background-size: 490px;
-    background-position-x: center;
+ul {
+    list-style-type: none;
 }
 
 /*This datalist for thumbnail Layout*/
 
 .thumbnail {
     margin-top: 15px;
+    background: rgba(0, 0, 0, 0.70);
+    border-radius: 20px;
+    border-style: outset;
+    border-width: 3px;
+    border-color: #383677;
+}
+
+a.btn.btn-primary {
+    background-color: #cabdcc;
+    border-style: outset;
+    border-width: 2px;
+    border-color: #383677;
+    color: #000000;
+}
+
+.heatlistName {
+    color: #e4a4dd;
+    font-family: cursive;
 }
