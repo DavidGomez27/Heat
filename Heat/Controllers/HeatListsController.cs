@@ -21,6 +21,10 @@ namespace Heat.Controllers
             return View(db.HeatLists.ToList());
         }
 
+        public ActionResult Heat1()
+        {
+            return View(db.HeatLists.ToList());
+        }
         // GET: HeatLists/Details/5
         public ActionResult Details(int? id)
         {
@@ -46,6 +50,7 @@ namespace Heat.Controllers
 
         }
 
+        
         // GET: HeatLists/Create
         public ActionResult Create()
         {
@@ -159,4 +164,5 @@ namespace Heat.Controllers
 
         }
     }
+    
 }

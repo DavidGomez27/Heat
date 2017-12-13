@@ -444,6 +444,7 @@
     <Content Include="Models\HeatDB.edmx.diagram">
       <DependentUpon>HeatDB.edmx</DependentUpon>
     </Content>
+    <Content Include="MISC\jsonTest.json" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
@@ -482,6 +483,13 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Slider\HtmlPage1.html" />
+    <Content Include="Slider\StyleSheet1.css" />
+    <Content Include="SplashPage\HtmlPage1.html" />
+    <Content Include="SplashPage\StyleSheet1.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\Account\LoginStyleIndex.html" />
     <Content Include="HomePlanB\searchcouples.html" />
     <Content Include="HomePlanB\css\CouplesStyle.css" />
@@ -556,6 +564,8 @@
     <Content Include="Views\Roles\ManageUsers.cshtml" />
     <Content Include="Views\Couples\HeatList.cshtml" />
     <Content Include="Views\UserView\Index.cshtml" />
+    <Content Include="Views\HeatLists\Heat1.cshtml" />
+    <Content Include="Views\Partial\GetPartialResult.cshtml" />
     <Content Include="Views\HeatLists\Details1.cshtml" />
     <Content Include="Views\HeatLists\Details.cshtml" />
   </ItemGroup>

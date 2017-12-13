@@ -23,11 +23,13 @@ namespace Heat.Controllers
             if (!String.IsNullOrEmpty(search))
             {
                 couples = from couple in couples
-                        where couple.Partner.Contains(search) || couple.Number.Contains(search)
-                        || couple.DanceType.Dance.Contains(search) || couple.DanceLevel.DanceLevel1.Contains(search) || couple.Pro.Name.Contains(search)
-                        || couple.Combo.Combo1.Contains(search) || couple.HeatList.Name.Contains(search)
-                        select couple;
+                          where couple.Partner.Contains(search) || couple.Number.Contains(search)
+                          || couple.DanceType.Dance.Contains(search) || couple.DanceLevel.DanceLevel1.Contains(search) || couple.Pro.Name.Contains(search)
+                          || couple.Combo.Combo1.Contains(search) || couple.HeatList.Name.Contains(search)
+                          select couple;
+
             }
+
 
             return View(couples.ToList());
         }
@@ -44,9 +46,11 @@ namespace Heat.Controllers
             {
                 return HttpNotFound();
             }
+
             return View(couple);
         }
 
+       
         // GET: Couples/Create
         public ActionResult Create()
         {
@@ -157,6 +161,23 @@ namespace Heat.Controllers
             base.Dispose(disposing);
         }
 
+        public ActionResult HeatList()
+        {
+            var couples = db.Couples.Include(c => c.HeatList);
+            var heatlist = db.HeatLists.Include(h => h.HeatListID).Include(h => h.Name);
+
+            var coupleList = from couple in couples
+                             join heat in heatlist on couple.HeatListID equals heat.HeatListID
+                             select new
+                             {
+                                 heat.Name,
+                                 couple.Number,
+                                 couple.Pro,
+                                 couple.Partner
+                             };
+
+            return View(coupleList);
+        }
 
         //Couple To Heat List
         // GET: Couples
@@ -188,6 +209,7 @@ namespace Heat.Controllers
 
             //return View(coupleList.ToList()); 
         //}
+
 
 
 
