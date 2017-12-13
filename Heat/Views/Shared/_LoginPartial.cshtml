@@ -6,6 +6,7 @@
     @Html.AntiForgeryToken()
 
     <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
         <li>@Html.ActionLink("Couples", "Index", "Couples")</li>
         <li>@Html.ActionLink("Heat List", "Index", "HeatLists")</li>
         @if (User.IsInRole("Admin"))
@@ -24,6 +25,7 @@
 else
 {
     <ul class="nav navbar-nav navbar-right">
+        <li>@Html.ActionLink("Home", "Index", "Home")</li>
         <li>@Html.ActionLink("Couples", "Index", "Couples")</li>
         <li>@Html.ActionLink("Heat List", "Index", "HeatLists")</li>
         @if (User.IsInRole("Admin"))

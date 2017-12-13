@@ -39,7 +39,7 @@
                         </p>
                         <a href="#title" class="btn btn-circle js-scroll-trigger">
                             @*<i class="fa fa-angle-double-down animated"></i>*@
-                            <span class="glyphicon glyphicon-fire"></span>
+                            <span class="glyphicon glyphicon-fire animated"></span>
                         </a>
                     </div>
                 </div>
@@ -53,7 +53,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - Heat</p>
+            <p>&copy; @DateTime.Now.Year - Heat</p>            
         </footer>
     </div>
 
@@ -61,5 +61,16 @@
     @Scripts.Render("~/bundles/bootstrap")
     @Scripts.Render("~/Scripts/grayscale.min.js")
     @RenderSection("scripts", required: false)
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
 </body>
+
+
+
 </html>

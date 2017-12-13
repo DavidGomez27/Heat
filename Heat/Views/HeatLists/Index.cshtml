@@ -26,7 +26,7 @@
                     <div class="caption">
                         <h3 class="heatlistName">@Html.DisplayFor(modelItem => item.Name)</h3>
 
-                       <p>@Html.ActionLink("Details", "Details1", new { id = item.HeatListID }, new { @class = "btn btn-primary", role = "button" })</p>
+                       <p>@Html.ActionLink("Details", "Details", new { id = item.HeatListID }, new { @class = "btn btn-primary", role = "button" })</p>
 
                         @*<p>@Html.DisplayNameFor(model => model.HeatListID) : @Html.DisplayFor(modelItem => item.HeatListID)</p>*@
                         @*<p>@Html.ActionLink("Details", "Details", new { id = item.HeatListID }, new { @class = "btn btn-primary", role = "button" })</p>*@
@@ -39,8 +39,8 @@
                         {
                             <p>
 
-                                @Html.ActionLink("Edit", "Edit", new { id = item.HeatListID }) |
-                                @Html.ActionLink("Details", "Details", new { id = item.HeatListID }) |
+                                @Html.ActionLink("Edit", "Edit", new { id = item.HeatListID }) 
+                                @*@Html.ActionLink("Details", "Details", new { id = item.HeatListID }) |*@
 
                             </p>
                         }
@@ -50,7 +50,7 @@
         }
     </div>
 
-    @section Scripts{
+    @*@section Scripts{
 
         <script type="text/javascript">
            $(function () {
@@ -75,4 +75,4 @@
 
             }
 
-    <div id="detailsPlace"></div>
+    <div id="detailsPlace"></div>*@

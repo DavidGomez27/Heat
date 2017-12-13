@@ -557,6 +557,7 @@
     <Content Include="Views\Couples\HeatList.cshtml" />
     <Content Include="Views\UserView\Index.cshtml" />
     <Content Include="Views\HeatLists\Details1.cshtml" />
+    <Content Include="Views\HeatLists\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

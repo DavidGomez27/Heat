@@ -1,11 +1,9 @@
-@Styles.Render("~/Content/DetailsStyle.css")
+@*@Styles.Render("~/Content/DetailsStyle.css")*@
 
 @model Heat.Models.HeatCoupleViewModel
 
-@*<div>
-    <h2>@Html.DisplayFor(model => heats.Name)</h2>
-</div>*@
 
+<div class="grey-box">
 @foreach (var couple in Model.couples)
 {
     <dl class="dl-horizontal">
@@ -29,4 +27,4 @@
         </dd>
     </dl>
 }
-
+</div>

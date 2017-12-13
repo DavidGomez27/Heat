@@ -1,5 +1,6 @@
 ﻿@model IEnumerable<Heat.Models.Couple>
 @using Heat.Models
+@Styles.Render("~/Content/CouplesIndexStyle.css")
 @{
     ViewBag.Title = "Home Page";
 
@@ -7,7 +8,7 @@
 
     <h3>Now:@*Heat:*@ @ViewBag.CurrentHeat @*Level: @ViewBag.DanceLevel Combination: @ViewBag.Combo Dance: @ViewBag.DanceType*@ </h3>
     <!--Displays the now list.-->
-    <div class="container" id="nowList">
+    <div class="container grey-box" id="nowList">
         <div class="row" id="nowCouples">
             @foreach (var item in Model)
             {
@@ -34,6 +35,7 @@
             {
                 if (item.HeatList.Status == "On deck")
                 {
+                                        
                     <div class="caption">
                         <ul>
                             <li><h3>@Html.DisplayFor(modelItem => item.Number) </h3><p>@Html.DisplayFor(modelItem => item.Pro.Name)</p></li>

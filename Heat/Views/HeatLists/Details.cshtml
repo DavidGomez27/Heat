@@ -1,45 +1,45 @@
-﻿<head>
+﻿@model Heat.Models.HeatList
 
+@{
+    ViewBag.Title = "Details";
+}
 
-</head>
-
-<body>
-@model Heat.Models.HeatCoupleViewModel
+<h2>Details</h2>
 
 <div>
-    <h3 class="heatlist title">Heat List</h3>
+    <h4>HeatList</h4>
     <hr />
-
     <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
         <dd>
-            @Html.DisplayFor(model => model.heatlist.Name)
-        </dd>
-        <dd>
-            @Html.DisplayFor(model => model.heatlist.Status)
-        </dd>
-        <dd>
-            @Html.DisplayFor(model => model.heatlist.Time)
+            @Html.DisplayFor(model => model.Status)
         </dd>
 
-        @* I just want to call on Couple.DanceType.Dance here in order to create a header for the detail look. *@
+        <dt>
+            @Html.DisplayNameFor(model => model.Time)
+        </dt>
 
+        <dd>
+            @Html.DisplayFor(model => model.Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
 
     </dl>
-    <h3>Couples</h3>
-    @foreach (var item in Model.couples)
-    {
-        <dl class="dl-horizontal">
-            <dd>
-                @Html.DisplayFor(model => item.Number)
-            </dd>
-            <dd>
-                @Html.DisplayFor(model => item.Pro.Name)
-            </dd>
-            <dd>
-                @Html.DisplayFor(model => item.Partner)
-            </dd>
-        </dl>
-            <hr />
-    }
 </div>
-</body>
+
+@Html.Partial("Details1")
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.HeatListID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
