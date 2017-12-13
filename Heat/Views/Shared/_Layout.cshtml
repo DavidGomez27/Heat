@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800|Coda:400,800|Condiment|Courgette|Mrs+Sheppards|Ranga:400,700|Yellowtail" rel="stylesheet">
     <link href="~/Content/Site.css" rel="stylesheet" />
-
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Coda+Caption:800|Coda:400,800" rel="stylesheet">
-   
+    <link href="~/Content/grayscale.min.css" rel="stylesheet" />
+    <link href="~/Content/font-awesome.css" rel="stylesheet" />
+
     <title>@ViewBag.Title - Heat</title>
 
     @Styles.Render("~/Content/css")
@@ -16,29 +18,90 @@
 </head>
 <body>
 
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Heat", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Heat", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Couples", "Index", "Couples")</li>
+                        <li>@Html.ActionLink("Heat List", "Index", "HeatLists")</li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                        <li>@Html.ActionLink("Manage Users", "Index", "Roles")</li>
+                        }
+                    </ul>
+                    @Html.Partial("_LoginPartial")
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Couples", "Index", "Couples")</li>
-                    <li>@Html.ActionLink("Heat List", "Index", "HeatLists")</li>
-                    @if (User.IsInRole("Admin"))
-                    {                                                                      
-                    <li>@Html.ActionLink("Manage Users", "Index", "Roles")</li>                  
-                    }
-                </ul>
-                @Html.Partial("_LoginPartial")
+        </div>*@
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <ul>
+            <li>@Html.ActionLink("Couples", "Index", "Couples")</li>
+            <li>@Html.ActionLink("Heat List", "Index", "HeatLists")</li>
+            @if (User.IsInRole("Admin"))
+            {
+                <li>
+                    @Html.ActionLink("Manage Users", "Index", "Roles")
+                </li>
+            }
+            @*<div class="container">*@
+            @*<a class="navbar-brand js-scroll-trigger" href="#page-top">Begin</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    @*<i class="fa fa-bars"></i>*@
+            @*</button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">*@
+            @*<ul class="navbar-nav ml-auto">
+                <li>
+                    @Html.ActionLink("Couples", "Index", "Couples")
+                </li>
+                <li>
+                    @Html.ActionLink("Heat List", "Index", "HeatLists")
+                </li>*@
+            @*@if (User.IsInRole("Admin"))
+                {
+                    <li>
+                        @Html.ActionLink("Manage Users", "Index", "Roles")
+                    </li>
+                }*@
+        </ul>
+        @Html.Partial("_LoginPartial")
+        @*</div>
+            </div>*@
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="masthead">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <h1 class="brand-heading">Heat<span class="glyphicon glyphicon-fire"></span></h1>
+                        <p class="intro-text">
+                            a cool solution
+                            <br>to a heated problem.
+                        </p>
+                        <a href="#title" class="btn btn-circle js-scroll-trigger">
+                            @*<i class="fa fa-angle-double-down animated"></i>*@
+                            <span class="glyphicon glyphicon-fire"></span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
+
+
+
     <div class="container body-content">
         @RenderBody()
         <hr />
@@ -49,6 +112,7 @@
 
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/Scripts/grayscale.min.js")
     @RenderSection("scripts", required: false)
 </body>
 </html>

@@ -3,9 +3,9 @@
 @{
     ViewBag.Title = "Index";
 }
-
-<h1>Heatlist</h1>
-
+<section id="title">
+    <h1>Heatlist</h1>
+</section>
 @if (User.IsInRole("Admin") || User.IsInRole("Pro"))
 {
     <div class="create">
