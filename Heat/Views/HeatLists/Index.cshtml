@@ -57,7 +57,7 @@
                 //data: { id: id },
                 success: function (partialView) {
                     $('#detailsPlace').html(partialView);
-                    $('#detailsPlace').show();
+                    $('#detailsPlace').fadein("slow");
                 }
             });
         });
@@ -67,51 +67,7 @@
  
     }
 
-@*<button id="btn" class="btn btn-primary" data-id="item.HeatListID" >Heat Members</button>*@
 <div id="detailsPlace"></div>
 
 
-@*<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Time)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Status)
-        </th>
-        <th></th>
-    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Time)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Status)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.HeatListID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.HeatListID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.HeatListID })
-        </td>
-    </tr>
-}
-
-</table>*@
-
-@*<script type="text/javascript">
-$(document).ready(function () {
-    $('#btn').click(function () {
-        alert("Test")
-        $('#result').load('@Url.Action("Index", "HeatLists")');
-});
-});
-
-</script>*@

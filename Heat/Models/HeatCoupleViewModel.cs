@@ -9,7 +9,7 @@ namespace Heat.Models
     {
         public HeatList heatlist { get; set; }
         public ICollection<Couple> couples { get; set; }
-        public string Title { get; set; }
+      
     }
 
 }
