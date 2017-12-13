@@ -1,4 +1,5 @@
 ﻿@model Heat.Models.Couple
+@Styles.Render("~/Content/DetailsStyle.css")
 
 @{
     ViewBag.Title = "Details";
@@ -6,9 +7,9 @@
 
 <h2>Details</h2>
 
-<div>
+<div class="grey-box">
     <h4>Couple</h4>
-    <hr />
+    <br />
     <dl class="dl-horizontal">
         <dt>
             @Html.DisplayNameFor(model => model.Partner)

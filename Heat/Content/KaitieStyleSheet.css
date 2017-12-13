@@ -1,0 +1,18 @@
+﻿/*My adjustments*/
+
+body {
+    background-image: url('Images/brit.JPG');
+    color: white;
+}
+
+.fields-w3-agileits{
+    border-radius: 20px;
+}
+
+.main-w3layouts-form{
+    border-radius: 20px;
+}
+
+.rounded{
+    border-radius: 20px;
+}

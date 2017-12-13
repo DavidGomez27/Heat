@@ -52,7 +52,8 @@ audio:not([controls]) {
 }
 
 html {
-  font-family: sans-serif;
+  font-family: 'Coda Caption', sans-serif;
+  font-family: 'Coda', cursive;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
@@ -103,7 +104,8 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, serif;
+  font-family: 'Coda Caption', sans-serif;
+  font-family: 'Coda', cursive;
   font-size: 1em;
 }
 
@@ -163,7 +165,8 @@ input,
 select,
 textarea {
   margin: 0;
-  font-family: inherit;
+  font-family: 'Coda Caption', sans-serif;
+  font-family: 'Coda', cursive;
   font-size: 100%;
 }
 
@@ -311,7 +314,8 @@ html {
 }
 
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Coda Caption', sans-serif;
+  font-family: 'Coda', cursive;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -322,7 +326,8 @@ input,
 button,
 select,
 textarea {
-  font-family: inherit;
+  font-family: 'Coda Caption', sans-serif;
+  font-family: 'Coda', cursive;
   font-size: inherit;
   line-height: inherit;
 }
@@ -473,7 +478,8 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Coda Caption', sans-serif;
+  font-family: 'Coda', cursive;
   font-weight: 500;
   line-height: 1.1;
 }
@@ -712,7 +718,8 @@ address {
 
 code,
 pre {
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-family: 'Coda Caption', sans-serif;
+  font-family: 'Coda', cursive;
 }
 
 code {

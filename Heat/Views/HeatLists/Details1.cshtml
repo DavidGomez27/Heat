@@ -1,8 +1,17 @@
+<<<<<<< HEAD
 ﻿@model Heat.Models.HeatCoupleViewModel
 
 
 
 
+=======
+@*@Styles.Render("~/Content/DetailsStyle.css")*@
+
+@model Heat.Models.HeatCoupleViewModel
+
+
+<div class="grey-box">
+>>>>>>> KaitieSpikeBranch
 @foreach (var couple in Model.couples)
 {
     <dl class="dl-horizontal">
@@ -29,6 +38,7 @@
         </dd>
     </dl>
 }
+
 @*<p>
     @Html.ActionLink("Create New", "Create")s
 </p>
@@ -66,3 +76,6 @@
 }
 
 </table>*@
+
+</div>
+
