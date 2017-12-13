@@ -25,7 +25,7 @@ namespace Heat.Controllers
                                   where h.HeatList.Status == "Now"
                                   select h).First();
 
-            string currentHeat = firstCouple.HeatList.Name;
+            string currentHeat = firstCouple.HeatList.Name;      
             string danceLevel = firstCouple.DanceLevel.DanceLevel1;
             string combo = firstCouple.Combo.Combo1;
             string danceType = firstCouple.DanceType.Dance;
@@ -34,6 +34,21 @@ namespace Heat.Controllers
             ViewBag.DanceLevel = danceLevel;
             ViewBag.Combo = combo;
             ViewBag.DanceType = danceType;
+
+            Couple secondCouple = (from h in couples
+                                  where h.HeatList.Status == "On deck"
+                                  select h).First();
+
+            string onDeckHeat = secondCouple.HeatList.Name;
+            ViewBag.OnDeckHeat = onDeckHeat;
+
+            Couple thirdCouple = (from h in couples
+                                   where h.HeatList.Status == "In the hole"
+                                   select h).First();
+
+            string inTheHoleHeat = thirdCouple.HeatList.Name;
+            ViewBag.InTheHoleHeat = inTheHoleHeat;
+
 
             return View(couples.ToList()); 
             
