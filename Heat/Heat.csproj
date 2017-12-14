@@ -354,7 +354,6 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="HomePlanB\codafont.PNG" />
     <Content Include="HomePlanB\css\bootstrap-responsive.min.css" />
     <Content Include="HomePlanB\css\bootstrap.min.css" />
     <Content Include="HomePlanB\css\fonts.css" />
@@ -480,7 +479,7 @@
     <Content Include="Views\Account\LoginStyleIndex.html" />
     <Content Include="HomePlanB\searchcouples.html" />
     <Content Include="HomePlanB\css\CouplesStyle.css" />
-    <Content Include="Views\Home\Splash Page NOW first layout.png" />
+    <Content Include="FrontEndDesign\Splash Page NOW first layout.png" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Web.config" />
@@ -555,6 +554,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Service References\" />
+    <Folder Include="TestingandDebugging\" />
     <Folder Include="Views\Test\" />
   </ItemGroup>
   <ItemGroup>
