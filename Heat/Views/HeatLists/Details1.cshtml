@@ -1,28 +1,72 @@
 @model Heat.Models.HeatCoupleViewModel
-@Styles.Render("~/Content/CouplesIndexStyle.css")
+<div class="grey-box">
+    <h2>Competing Couples</h2>
 
+    @foreach (var couple in Model.couples)
+    {
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => couple.Number)
+            </dt>
 
-@foreach (var couple in Model.couples)
-{
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => couple.Number)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => couple.Number)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => couple.Pro.Name)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => couple.Pro.Name)
-        </dd>
-        <dt>
-            @Html.DisplayNameFor(model => couple.Partner)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => couple.Partner)
-        </dd>
-    </dl>
-}
+            <dd>
+                @Html.DisplayFor(model => couple.Number)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => couple.Pro.Name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => couple.Pro.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => couple.Partner)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => couple.Partner)
+            </dd>
+        </dl>
+        <hr />
+    }
+
+    @*<p>
+            @Html.ActionLink("Create New", "Create")s
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Status)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Time)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th></th>
+            </tr>
+
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Time)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id=item.HeatListID }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.HeatListID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.HeatListID })
+                </td>
+            </tr>
+        }
+
+        </table>*@
+
+</div>
 

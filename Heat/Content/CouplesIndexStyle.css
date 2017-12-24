@@ -5,6 +5,10 @@
     background-attachment: fixed;
 }
 
+h3{
+    color:white;
+}
+
 h1 {
     text-align: center;
 }
@@ -19,4 +23,8 @@ h1 {
 
 .create {
     text-align: center;
+}
+
+p{
+    color:white;
 }

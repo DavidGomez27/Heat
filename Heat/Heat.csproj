@@ -332,6 +332,9 @@
     <Content Include="Content\codafont.css" />
     <Content Include="Content\codafont.PNG" />
     <Content Include="Content\CouplesIndexStyle.css" />
+    <Content Include="Content\DetailsStyle.css" />
+    <Content Include="Content\grayscale.css" />
+    <Content Include="Content\grayscale.min.css" />
     <Content Include="Content\Images\All black On Track.jpeg" />
     <Content Include="Content\Images\brit.JPG" />
     <Content Include="Content\Images\britany.jpg" />
@@ -441,6 +444,7 @@
     <Content Include="Models\HeatDB.edmx.diagram">
       <DependentUpon>HeatDB.edmx</DependentUpon>
     </Content>
+    <Content Include="MISC\jsonTest.json" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
@@ -465,6 +469,8 @@
     <Content Include="HomePlanB\php\.DS_Store" />
     <Content Include="HomePlanB\php\contact.php" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\grayscale.js" />
+    <Content Include="Scripts\grayscale.min.js" />
     <Content Include="Scripts\HeatDisplay.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -477,9 +483,17 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="Slider\HtmlPage1.html" />
+    <Content Include="Slider\StyleSheet1.css" />
+    <Content Include="SplashPage\HtmlPage1.html" />
+    <Content Include="SplashPage\StyleSheet1.css" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\Account\LoginStyleIndex.html" />
     <Content Include="HomePlanB\searchcouples.html" />
     <Content Include="HomePlanB\css\CouplesStyle.css" />
+    <Content Include="Views\Home\index.html" />
     <Content Include="Views\Home\Splash Page NOW first layout.png" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
@@ -550,7 +564,10 @@
     <Content Include="Views\Roles\ManageUsers.cshtml" />
     <Content Include="Views\Couples\HeatList.cshtml" />
     <Content Include="Views\UserView\Index.cshtml" />
+    <Content Include="Views\HeatLists\Heat1.cshtml" />
+    <Content Include="Views\Partial\GetPartialResult.cshtml" />
     <Content Include="Views\HeatLists\Details1.cshtml" />
+    <Content Include="Views\HeatLists\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
